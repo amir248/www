@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://meb70.ru/sitemap.xml
+Host: https://meb70.ru/

@@ -177,7 +177,7 @@
         let trY;
         trY='3';
 
-        readTextFile("generation-objects/LP-json-bd.json", function(text){
+        readTextFile("/generation-objects/LP-json-bd.json", function(text){
         let data = JSON.parse(text);
         console.log(Object.values(data));
         console.log(Object.values(data[`${number}`]));

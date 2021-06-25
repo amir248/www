@@ -27,11 +27,11 @@ $obj = new ArrayObject($ArrayTextPost);
 
   if(file_exists($file_json_bd)){
     file_put_contents($file_json_bd,json_encode($obj));
-    echo "file est!";
+
   }else{
   file_get_contents($file_json_bd);
     file_put_contents($file_json_bd,json_encode($obj));
-    echo "file ". $file_json_bd. " none isCho nedavno Nebylo";
+
   }
 
 echo '<pre>';
@@ -40,8 +40,8 @@ var_dump($textPost);
 echo '</pre>';
 if(isset($_POST['connect'])){
   echo "post:connect;";
-
 }
+
 mysql_select_db($database);
 $sqll = "SELECT * FROM `article` ORDER BY `article`.`id` ASC";
 $sql=mysqli_query($connect,$sqll);

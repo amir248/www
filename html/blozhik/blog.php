@@ -41,9 +41,9 @@ $allPostsText=mysqli_fetch_all($posText);
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="icon" href="../images/elephant.svg">
     <title><?= $title ?></title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="images/elephant.svg">
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Navrutdinov">
     <meta name='description' cotnent="<?= $description ?>">
@@ -119,13 +119,13 @@ $allPostsText=mysqli_fetch_all($posText);
             break;
           }else if(!$_GET){
             // echo $_SERVER['SERVER_NAME'];
-            $srrokys = '<h3 style="color:green; text-shadow:1px 1px 2px black;">'.$revers[$i][1].'</h3><p style="background:green; color:white; max-width:100%; width:100%;">'.$revers[$i][2].'<a href="/blozhik/blog.php?post'.$i.'"><strong>...читать далее =></strong></a></p>';
+            $srrokys = '<h3 style="color:green; text-shadow:1px 1px 2px black;">'.$revers[$i][1].'</h3><p style="background:green; color:white; max-width:100%; width:100%;">'.$revers[$i][2].'<a href="/blozhik/blog.php?'.$revers[$i][4].'"><strong>...читать далее =></strong></a></p>';
             echo $srrokys;
             break;
           }else if(isset($_GET[$revers[$i][4]])){
                   $uno ='<h1 style="color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;">'.$title=$revers[$i][1].'</h1><br>';
                   $do= $revers[$i][3];
-                  $preso= '<p style="display:flex;align-items:center; justify-content:center; max-width:100%; width:100%; background:yellow; border-radius:7px; font-size:25px;"><a href="/blozhik/blog.php"><strong>обратно!</strong></a></p>';
+                  $preso= '<p style="display:flex;align-items:center; justify-content:center; max-width:100%; width:100%; background:yellow; border-radius:7px; font-size:25px;"><a href="/blozhik/blog.php" style="width:100%; text-align: center;"><strong>На главную страницу BloZhik{a}!</strong></a></p>';
                   // echo $revers[$i][4]; // указывает в начале статьи урл
                   echo $uno. $do. $preso;
                   break;
