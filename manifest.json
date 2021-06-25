@@ -1,0 +1,17 @@
+{
+  "lang": "ru",
+  "dir": "ltr",
+  "name": "Веб мастерская имени Барона Сайтоверстаузена",
+  "short_name": "Мастерская Барона Сайтоверстаузена",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Веб мастерская имени Барона Сайтоверстаузена",
+  "icons": [{
+      "src": "images/icon9.svg",
+      "sizes": "960x960",
+      "type": "image/svg"
+  }],
+  "related_applications": [{
+    "platform": "web"
+  }
