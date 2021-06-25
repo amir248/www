@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="canonical" href="https://nasobe.ru/enable-disable-on-javascript.html">
+        <meta name="robots" content="all">
+        <meta name="autor" content="Amir Navrutdinov">
+        <title>Открыть, зарыть на джейэсе</title>
+        <meta name="title" content="Пример скрипта для меню: открыть, закрыть для отображения менющки на лендинге. Или одностраничнике.">
+
+        <style>
+            *{
+                margin:0;
+                font-size: 4vh;
+            }
+            body{
+                background:linear-gradient(rgb(255, 255, 105), rgb(136, 136, 253));
+            }
+            @media(max-width:300px){
+                *{
+                    word-break: break-all;
+                }
+            }
+            .first{
+                display: flex;
+                justify-content: center;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            main{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width: 700px;
+                max-width: 100%;
+                max-height: 100%;
+                flex-direction: column;
+            }
+            article{
+                display:flex;
+                max-width: 100%;
+            }
+            aside{display: none;}
+            @media(min-width:500px){
+                aside{
+                    display:flex;
+                    position:sticky;
+                    top:0px;
+                    align-items: center;
+                    /* justify-content: center; */
+                    /* background-color: aquamarine; */
+                    width:200px;
+                    height: 500px;
+                    max-height: 100%;
+                    font-size:25px;
+                    flex-direction: column;
+                }
+            }
+            .openMenu{
+                display:flex;
+                
+            }
+            #un{
+                display:none;
+            }
+            h1,h2{
+                background-color: coral;
+                width: 100%;
+                text-align: center;
+            }
+            section{
+                width: 100%;
+            }
+            img{
+                max-width: 100%;;
+            }
+            p{
+                margin:1%;
+            }
+            .claSsHover{
+               display: none;
+            }
+            .uno:hover .claSsHover{
+                display:flex;
+                flex-direction: column;
+                position:relative;
+                justify-content: center;
+                align-items: center;
+                background:rgba(255, 121, 121, 0.534);
+            }
+            footer{
+                display:flex;
+                text-align: center;
+                width: 700px;
+                max-width: 100%;
+                align-items: center;
+                justify-content: center;
+                background: rgba(123, 199, 47, 0.144);
+            }
+        </style>
+        <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Меню или список. Открыть, закрыть на js.",
+      "headline": "Пример скрипта на яваскрипте: открыть- зарыть",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Amir Navrutdinov",
+        "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nasobe.ru/enable-disable-on-javascript.html"
+     },
+      "datePublished" : "2021-03-28",
+      "dateModified": "2021-03-29",
+      "image" : "https://nasobe.ru/images/imagesWindow.png",
+      "articleSection" : "Пример на javascript который можно вставить прямо отсюда.",
+      "articleBody" : "Самый простой вариант установить счетчик кликов по элементу и при достижении порога 2, обнулять. В javascript можно столкнуться с тем что namber определиться как строка и не произведет математическое вычисление. Поэтому надо записать перед новой функцией let number =+0; // это добавит уверенности что переменная number будет числом",
+      "url" : "https://nasobe.ru/enable-disable-on-javascript.html",
+      "publisher" : {
+        "@type" : "Organization",
+        "name" : "Веб мастерская имени Барона Cайтоверстаузена",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nasobe.ru/images/lol/spa.webp"
+        }
+      }
+    }
+    </script>
+    </head>
+    <body>
+        <div class="first">
+          
+            <main>
+                <br>
+                <h1>Меню или список. Открыть, закрыть на js.</h1>
+                <p>При наведении можно обойтись псевдоклассом <strong class="uno">:hover.<span class="claSsHover"><a href='#StrannyJ-script'>Странный скрипт</a><a href='#sigCommentsBlock'>Коментарии</a><a href='https://wa.me/79528885656'>Написать</a></span></strong></p>
+                <picture>
+                    <img src="/images/cSsm.png" alt='css стили: открыть,закрыть.'>
+                </picture>
+                <p>Что можно назвать из раздела: “и так сойдет”. Псевдокласс :hover на мобильном может работать как кнопка. )</p>
+                <h2>Дальше скрипт. Открыть, закрыть. С помощью javascript.</h2>
+                <picture>
+                    <img src="/images/imagesWindow.png" alt='imagesWindow'>
+                </picture>
+                <p>Самый простой вариант установить счетчик кликов по элементу и при достижении порога 2, обнулять. В javascript можно столкнуться с тем что namber определиться как строка и не произведет математическое вычисление. Поэтому надо записать перед новой функцией let number =+0; // это добавит уверенности что переменная number будет числом.</p>
+
+                <p>Пример на javascript который можно вставить прямо отсюда.
+                Но как обычно получилось, порыв вдохновения вынудил дописать еще парочку удобных фишек. В яваскрипте есть очень много готовых решений, но когда дело начинает касаться реальной жизни. Решения написанные для определенных задач могут показать не многофункциональными.
+                </p>
+                <div style="display:flex; flex-direction: column; justify-content:center; background: rgba(137, 43, 226, 0.39); word-break: break-all; width:700px; max-width: 100%; color:yellow;">
+                    <p style="max-width: 100%;">
+                        <div>
+                            <div><span>&lt;</span><span>style</span><span>&gt;</span></div>
+                            <div><span> </span><span>#un</span><span>{</span></div>
+                            <div><span> </span><span>display</span><span>:</span><span>none</span><span>;</span></div>
+                            <div><span> </span><span>background</span><span>: </span><span>azure</span><span>;</span></div>
+                            <div><span> </span></div>
+                            <div><span> }</span></div>
+                            <div><span>&lt;/</span><span>style</span><span>&gt;</span></div>
+                            <div><span> </span><span>&lt;/</span><span>head</span><span>&gt;</span></div>
+                            <div><span> </span><span>&lt;</span><span>body</span><span>&gt;</span></div>
+                            <div><span> </span><span>&lt;</span><span>button</span><span>&gt;</span><span>Button</span><span>&lt;/</span><span>button</span><span>&gt;</span></div>
+                            <div><span> </span><span>&lt;</span><span>p</span><span> </span><span>id</span><span>=</span><span>"un"</span><span>&gt;</span><span>Menu Ёсть!</span><span>&lt;/</span><span>p</span><span>&gt;</span></div>
+                            <div><span>&lt;</span><span>script</span><span>&gt;</span></div>
+                            <div><span> </span><span>let</span><span> </span><span>number</span><span>=+</span><span>0</span><span>;</span></div>
+                            <div><span>document</span><span>.</span><span>querySelector</span><span>(</span><span>'button'</span><span>).</span><span>addEventListener</span><span>(</span><span>'click'</span><span>,()</span><span>=&gt;</span><span>{</span></div>
+                            <div><span>console</span><span>.</span><span>log</span><span>(</span><span>number</span><span>);</span></div>
+                            <div><span>number</span><span>++;</span></div>
+                            <br />
+                            <div><span>if</span><span>(</span><span>number</span><span>==</span><span>1</span><span>){</span></div>
+                            <div><span>document</span><span>.</span><span>querySelector</span><span>(</span><span>'#un'</span><span>).</span><span>style</span><span>.</span><span>display</span><span>=</span><span>"flex"</span><span>;</span><span>//изменения с none on flex</span></div>
+                            <div><span>// console.log('bolshe'+document.documentElement.clientWidth);}</span></div>
+                            <br />
+                            <div><span>}</span><span>else</span><span>{</span></div>
+                            <div><span>document</span><span>.</span><span>querySelector</span><span>(</span><span>'#un'</span><span>).</span><span>style</span><span>.</span><span>display</span><span>=</span><span>"none"</span><span>;</span><span>//вернуть на свои круги</span></div>
+                            <div><span>number</span><span>=</span><span>0</span><span>;</span></div>
+                            <div><span> </span></div>
+                            <div><span>}</span></div>
+                            <div><span>});</span></div>
+                            <div><span>&lt;/</span><span>script</span><span>&gt;</span></div>
+                            </div>
+                    </p>
+                </div>
+                <p>В этом примере стайл для баттона записан как display:none; потому что в айдишнике записан список. И если бы записи в стайле не было, то нужно было бы записать в яваскрипте отключение айдишника что символов на пятнадцать больше.</p>
+                <p>Многие кто столкнулся с необходимостью найти решения на отображение менюшки при изменении положения окна. Ищут готовое решение или пытаюсь по быстренькому написать своё. Иногда это выходит, не очень, а иногда и очень. Странно.</p>
+                <p id='StrannyJ-script'><a href="https://docs.google.com/document/d/1pifL4_Cf_kv-fnb94cqqNB5fqJBLP932XJCuoQe2KkI/edit?usp=sharing">Странный скрпт</a></p>
+                <p>Что было ясно из “странного скрипта”. Как говорят программисты по настоящему разбирающиеся в программировании - Это же функция: Флугегенхайнемен”. На такие функции все смотрят с презрением и стараются держаться подальше. И так ясно что она делает, но непонятно зачем. 
+                По такому же принципу можно написать свою функцию для прослушки изменения окна браузера. Это было нужно на тот случай чтобы записать наглядное оповещение. Визуально оценивая как изменятся содержимое контента при “ресайзе” окна. 
+                </p>
+                <div style="display:flex; justify-content:center; background: rgba(137, 43, 226, 0.39); word-break: break-all; width:700px; max-width: 100%; color:yellow;">
+                    <p style="max-width: 100%;">
+                        <div>
+                        <span>&lt;script></span>
+                        <div><span></span><span>function</span><span> </span><span>flash</span><span>(){</span></div>
+                        <div><span> (</span><span>console</span><span>.</span><span>log</span><span>(</span><span>window</span><span>.</span><span>innerWidth</span><span>));</span></div>
+                        <div><span> </span><span>if</span><span>(</span><span>window</span><span>.</span><span>innerWidth</span><span>&gt;</span><span>500</span><span>){</span></div>
+                        <div><span> </span><span>console</span><span>.</span><span>log</span><span>(</span><span>'Ahtung, ahtung!'</span><span>)</span></div>
+                        <div><span> }</span></div>
+                        <div><span> }</span></div>
+                        <div><span> </span><span>setInterval</span><span>(</span><span>flash</span><span>,</span><span>1500</span><span>);</span></div>
+                        <div><span>&lt;/script&gt;</span></div>
+                        </div>
+                    </p>
+                </div>
+             
+                <p>И window.innerWidth и так прекрасно прослушивает размеры окон. Хотя может показаться что неплохо было бы написать функцию с прослушкой по типу аддЕвентЛистенер на ресайз. На самом деле ИвентЛуп работает и без уведомлений по таймеру. :-D</p>
+            <footer>
+                <script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit,surfingbird"></div>
+            </footer>
+                
+                <section>       
+                    <div id="sigCommentsBlock"></div>
+                    <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+                    <script type="text/javascript">
+                        setTimeout(()=>(function(){
+                            var host_id = '5152';
+                            var script = document.createElement('script');
+                            script.type = 'text/javascript';
+                            script.async = true;
+                            script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                            var ss = document.getElementsByTagName('script')[0]; 
+                            ss.parentNode.insertBefore(script, ss);
+                        })(),2500);
+                    </script>
+                </section>
+            </main>
+
+           
+ 
+            <aside>
+               
+                <div id="un">
+                   
+                        <ul>
+                            <p id="byXXX"></p>
+                        </ul>
+                   
+                </div>
+                <div>
+                    <a href="https://fozzy.com/aff.php?aff=16418" target="_blank"><img src="https://fozzy.com/images/partners/fozzy-is-faster-white-200x300-ru.png"></a>
+                </div>
+            </aside>
+        
+            <button style="display: flex; position:fixed;">menu</button>
+            <script>
+                    let MenuShkA = "<nav style='margin:2%;'><a href='/'><li>Home</li></a><a href='#'><li>Вверх!</li></a><a href='#StrannyJ-script'><li>Странный скрипт.</li></a><a href='#sigCommentsBlock'><li>Коментарии</li></a><a href='https://wa.me/79528885656'><li>Написать в ватсап</li></a></nav>";
+                    document.querySelector('#byXXX').innerHTML= `${MenuShkA}`;
+                document.querySelector('#un').style.display="none";
+                let number=+0;
+                document.querySelector('button').addEventListener('click',()=>{
+                    console.log('ypa');
+                    number++;
+                    if(number==1){
+                        document.querySelector('#un').style.display="flex";//изменения с none on flex
+                        console.log('bolshe'+document.documentElement.clientWidth);
+                        if(window.innerWidth<500){ // будет отображаться менюшка от кнопки если экран маленький
+                            console.log('>500');
+                            let newMenu = document.createElement('div');
+                            newMenu.className="OOjj"; // Надо было добавить класс, чтобы потом его можно было удалить.
+                            newMenu.style.cssText=`
+                            color:red;
+                            display:flex;
+                            flex-direction:column;
+                            position:fixed;
+                            top:25px;
+                            align-items: center;
+                            justify-content: center;
+                            max-width:100%;
+                            width:100%;
+                            font-size:25px;
+                            background:brown;
+                            border-radius:15px;
+                            `;
+                            newMenu.innerHTML = `${MenuShkA}`;
+                            New_Menu = document.getElementById("Cool");
+                            document.body.insertBefore(newMenu,New_Menu);
+
+                            document.querySelector('.OOjj').addEventListener('click', ()=>{
+                                 document.querySelector('#un').style.display="none";//вернуть на свои круги
+                        document.querySelector('.OOjj').remove();
+                        number=0;
+                    })
+                        }
+                    }else{
+                        document.querySelector('#un').style.display="none";//вернуть на свои круги
+                        number=0;
+                        if(window.innerWidth<500){
+                        document.querySelector('.OOjj').remove();// Удалить потому что так работает.
+                        }
+                        // document.getElementById("Cool").remove();
+                    }
+               
+                });
+                    // console.log(widthWindow);
+
+                    // function flash(){
+                    //     (console.log(window.innerWidth));
+                    //     if(window.innerWidth>500){
+                    //     console.log('Ahtung, ahtung!')
+                    //     }
+                    // }
+                    // setInterval(flash,1500);
+
+                    // document.addEventListener(setInterval(widthWindow),100),()=>{
+                    //     console.log(window.innerWidth);
+                    // })
+
+            </script>
+           
+        </div>
+           <!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ 
+    ym(57628999, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true,
+         ecommerce:"dataLayer"
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+
+    </body>
+</html>

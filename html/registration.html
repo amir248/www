@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        background:linear-gradient(rgb(255,255,120),rgb(110,255,255));
+        /* background:linear-gradient(orange, green, cyan); */
+        min-height:100vh;
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+
+      }
+      article{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:900px;
+        background: rgba(0,255,0,0.1);
+        height:100vh;
+      }
+      button{
+        margin:3%;
+        border:1%;
+        background:orange;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <form action="blozhik/test.php" method="post">
+          <div style="background:green;">
+            <fieldset>
+            <legend>Login</legend>
+            <input type="login" name="login" placeholder="login">
+            </fieldset>
+            <fieldset>
+            <legend>Email</legend>
+              <input type="email" name="email" placeholder="email">
+            </fieldset>
+            <fieldset>
+              <legend>Password</legend>
+              <input type="password" name="uno_password" placeholder="password" autocomplete="current-password"><p id="pas"></p>
+              <input type="password" name="confirm_password" placeholder="confirm_password">
+            </fieldset>
+            <script>
+            let int=document.querySelector('input[name=uno_password]');
+            if(int>0){
+              console.log('yh');
+            }
+            // document.querySelector('input[name=uno_password]').addEventListner('input',()=>{
+              document.querySelector('#pas').innerHTML=document.querySelector('input[name=uno_password]');
+              console.log(document.querySelector('input[name=uno_password]'));
+              console.log(int);
+              // console.log($_POST['uno_password']);
+            // });
+            </script>
+          </div>
+          <fieldset>
+            <legend>Name</legend>
+            <input type="text" name="Name" placeholder="Name">
+          </fieldset>
+          <fieldset>
+          <legend>Lastname</legend>
+            <input type="text" name="Lastname" placeholder="Lastname">
+          </fieldset>
+          <fieldset>
+          <!-- <legend>age</legend>
+            <input type="number" name="age" placeholder="age">
+          </fieldset>
+          <fieldset>
+          <legend>floor</legend>
+            <input type="text" name="floor" placeholder="floor">
+          </fieldset>
+          <fieldset>
+          <legend>blod_type</legend>
+            <input type="text" name="blod_type" placeholder="blod_type">
+          </fieldset>
+          <fieldset>
+          <legend>profession</legend>
+            <input type="text" name="profession" placeholder="profession">
+          </fieldset>
+          <fieldset>
+          <legend>Hobby</legend>
+            <input type="text" name="hobby" placeholder="Hobby">
+          </fieldset>
+          <fieldset>
+          <legend>having_children</legend>
+            <input type="text" name="having_children" placeholder="having_children">
+          </fieldset>
+          <fieldset>
+          <legend>marital_status</legend>
+            <input type="text" name="marital_status" placeholder="marital_status">
+          </fieldset> -->
+          <button name='button'>to apply</button>
+        </form>
+      </article>
+    </main>
+  </body>
+  <script>
+  const form=document.getElementsByTagName('form');
+    // document.querySelectorAll('input,select,textarea').addEventListner('submit',()=>{
+    //
+    // })
+  </script>
+</html>

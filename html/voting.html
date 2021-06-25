@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Full stack на html/js благодаря подгрузки json через PHP</title>
+    <meta name="description" content="JSON формат для подгрузки с бекенда всего что можно передать с помощью php">
+    <!-- VAZhnoE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="/voting.html">
+    <meta name="robots" content="all">
+    <meta name="autor" content="Amir Navrutdinov">
+    <link rel="icon" href="images/icon9.svg">
+    <meta name="theme-color" content="#a0ffed">
+    <style>
+    *{
+      margin:0;
+    }
+    body{
+      background: linear-gradient(rgba(0,255,0,0.3),rgba(255,0,0,0.5));
+      min-height: 100vh;
+      font-size: 20px;
+    }
+    main{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    article{
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      min-height: 100vh;
+      max-width: 100%;
+      width:900px;
+      background:rgba(0,255,0,0.1);
+      flex-direction: column;
+    }
+    form{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      word-wrap: break-word;
+      flex-wrap: wrap;
+      /* flex-direction: column; */
+
+    }
+    button{
+      max-width: 100%;
+      width:300px;
+      background: none;
+      border:none;
+    }
+    .txt{
+      font-size:75px;
+    }
+    .txtZ{
+      font-size: 35px;
+    }
+    @media(max-width:500px){
+      button{
+        max-width: 100%;
+        width:130px;
+        font-size: 15px;
+      }
+      .txtZ{
+        font-size:15px;
+      }
+      .txt{
+        font-size: 35px;
+      }
+    }
+    .first{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      flex-direction: column;
+    }
+    section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width:900px;
+      flex-direction: column;
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width:900px;
+      text-align: center;
+    }
+    #sigCommentsBlock{
+      max-width: 100%;
+      width:900px;
+    }
+    h1,h2{
+      background: rgba(0,255,0,0.3);
+      color:white;
+      text-shadow:2px 2px 3px black;
+      text-align: center;
+      width:900px;
+      max-width: 100%;
+    }
+    p{
+      margin:1%;
+    }
+    img{
+      max-width: 100%;
+    }
+    </style>
+
+<!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Full stack на голом html/js благодаря подгрузки json на PHP",
+  "headline": "PHP крадется тайком… и запускает 'сюрикены'",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Amir Navrutdinov",
+    "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nasobe.ru/voting.html"
+ },
+  "datePublished" : "2021-06-23",
+  "image" : "https://nasobe.ru/images/imagesWindow.png",
+  "articleSection" : "вариант чтобы прощупать все варианты работы json формата через php.",
+  "articleBody" : "Вытащить пост из бд, все что угодно, легко. Когда надо обрабатывать точечные посылы на бекенде. Тогда то и возникает конвертация json формата в переменные для модификации и перебора многомерного массива. Чтобы экзистенциализировать упаковку его в ту же самую конвертацию и отправку во фронтенд.",
+  "url" : "https://nasobe.ru/voting.html",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Веб мастерская имени Барона Cайтоверстаузена",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://nasobe.ru/images/lol/spa.webp"
+    }
+  }
+}
+</script>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Full stack на html/js благодаря подгрузки json на PHP</h1>
+        <p>Вытащить пост из бд, все что угодно, легко. Когда надо обрабатывать точечные посылы на бекенде. Тогда то и возникает конвертация json формата в переменные для модификации и перебора многомерного массива. Чтобы экзистенциализировать упаковку его в ту же самую конвертацию и отправку во фронтенд.<p>
+          <h2>PHP крадется тайком… и запускает “сюрикены”.</h2>
+          <picture>
+            <source srcset="images/imagesWindow.webp" type="image/webp">
+            <img src="images/imagesWindow.png" alt="php крадется тайком чтобы запустить свои сюрикены и JSON">
+          </picture>
+          <p>Что может быть легче, как ни взять и написать, свой собственный скрипт на php в тайной подгрузки, данных с сервера. Кнопки голосовалок. И написаный скрипт формы, передачи голосовалки с button возвращается ответом через json, генерируемый php где то там в далеко в Нидерландах. Мчится на край света... в глухую Сибирь, а потом обратно в Европу. Чтобы высчитать все голоса и показать сразу всем. Всю правду! Все это, очень долго. Еще загадочно. И задержка. Возможно есть, по необъяснимым причинам. Все таки собрать в путь и отправить. Передачу, json формата, полного стека массивов. Расчет происходит уже через javascript. Потому что так оказалось проще. Весь порыв вдохновения встал перед ковырянии в многомерным ассоциативном массиве. Несмотря на то что перезаписать многомерный ассоциативный массив в json формат и обратно, можно. Но, если осторожно. Легким способом оказалось пройтись регуляркой. Единственное что может оправдать такую лень и беспечность. Все таки скрипт был написан отличным двоечником, еще и чистокровным чуркой. Но если учесть тот “необъяснимый” факт что на стекОверфлоу, до сих пор не ответили на простой вопрос: “почему мой коТ, не работает”. Самое простое решение нашлось на сайте <a href="https://delay-delo.com/content/rabota-php-c-json-dobavlenie-udalenie-i-obnovlenie-v-fayle">https://delay-delo.com/content/rabota-php-c-json-dobavlenie-udalenie-i-obnovlenie-v-fayle</a> Своими руками и своими силами. Модификация из примера поможет сократить на пол сотни строчек. Чтобы получить шикарный и главное рабочий скрипт.</p>
+          <h2>Теперь о самом главном.</h2>
+          <p>Почему же регуляркой, зачем все это надо?
+          Трудности возникают с записыванием ассоциативного массива конвертируемого из json формата. Записать, а потом переписать, конвертируя массив из php чтобы его потом открыть на javascript. Хотя может показать что все это очень просто. Тогда стоит учесть “ необъяснимый факт”, на стековерфлоу целая куча вопросов без ответа с похожей темой про конвертацию массивов с php в json для javascripta. И честно признаться, на решение этой задачи ушло три дня и три ночи. + три дня уже только на писательство. Да и то, в конечном итоге: регулярка с php стекла в javascript, как и подсчет голосов.</p>
+          <p>Это тестовый вариант чтобы прощупать все варианты работы json формата через php.</p>
+        <form action="generation-objects/voting.php" method="post">
+            <button name="excellent" class="txtZ">
+          <fieldset>
+            <legend>EXCELLENT</legend>
+          <span class="txt">👌</span>
+            <p id="exc"></p>
+            <!-- <meter min='0'  max='99' optimum="500" value=""id="exc">excellent</meter><p id="exc"></p> -->
+          </fieldset>
+          </button>
+          <!-- <button name="result">result</button> -->
+    <button name="VO" class="txtZ">
+          <fieldset>
+            <legend>Very GOOD</legend>
+          <span class="txt">👍</span>
+          <p id="vo"></p>
+                <!-- <meter min='0'  max='99' optimum="500" value="" id="vo"></meter><p id="vo"></p> -->
+          </fieldset>
+          </button>
+            <button name="NO" class="txtZ">
+          <fieldset>
+            <legend>not_good</legend>
+          <span class="txt">👎</span>
+          <p id="no"></p>
+            <!-- <meter min='0'  max='99' optimum="500" value="" id="no"></p></meter><p id="v"></p> -->
+          </fieldset>
+          </button>
+          <!-- <button name="OO" style="background:none; border:none;font-size:75px;">👊</button> -->
+        </form>
+        <!-- <div id="text"></div> -->
+              <!-- <meter min='0'  max='99' optimum="500" value=""id="exc">excellent</meter> -->
+    <!-- <p id="exc"></p> -->
+  </article>
+  <div class="first">
+    <footer>
+      <script src="https://yastatic.net/share2/share.js"></script>
+      <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
+    </footer>
+        <section>
+        <div id="sigCommentsBlock"></div>
+        <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+        <script type="text/javascript">
+        setTimeout(()=>(function(){
+            var host_id = '5451';
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = '//sigcomments.com/chat/?host_id='+host_id;
+            var ss = document.getElementsByTagName('script')[0];
+            ss.parentNode.insertBefore(script, ss);
+          })(),3000);
+        </script>
+        </section>
+  </div>
+    </main>
+  </body>
+<script>
+'`${excellentV}`'
+
+// document.getElementById('exc').value = '29';
+// document.getElementById('vo').value = 50;
+// document.getElementById('no').value = 9;
+  function readTextFile(file, callback) {
+    let rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+      }
+    rawFile.send(null);
+    }
+    //usage:
+    readTextFile("generation-objects/voting.json", function(text){
+    let data = JSON.parse(text);
+    console.log(JSON.stringify(data));
+//.join(" ");
+// Начало написательства для отображения голосовалки
+let str= JSON.stringify(data);
+let result;
+resultExcellent=str.match(/excellent/gi);
+resultNo=str.match(/noy/gi);
+resultVo=str.match(/gut/gi);
+// console.table(data[3]);
+// console.log(resultVo+"_"+resultVo.length+"-_-"+resultExcellent+'_'+resultExcellent.length+"-_-"+resultNo+"-_-"+resultNo.length);
+// console.log(Array.from('OBJ'));
+
+// console.table(Object.getOwnPropertyNames(data));
+
+let votingNo;
+let votingVo;
+let excellentV;
+excellentV=resultExcellent.length;
+votingVo=resultVo.length;
+votingNo=resultNo.length;
+console.log(excellentV);
+console.log(votingVo);
+console.log(votingNo);
+  document.getElementById('vo').innerHTML=votingVo;
+  document.getElementById('exc').innerHTML=excellentV;
+  document.getElementById('no').innerHTML=votingNo;
+//     console.log(votingVo);
+    });
+
+  </script>
+  <!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(57628999, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true,
+ecommerce:"dataLayer"
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="/trade-racks-from-chipboard.html">
+    <meta name="robots" content="all">
+    <title>Торговое оборудование</title>
+    <meta name="description" content="Заказать торговое оборудование под размеры пространства">
+    <link rel="stylesheet" href="site/css-menu.css">
+    <link rel="icon" href="favicon.png">
+    <meta name="theme-color" content="#a3ffa9">
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        background:linear-gradient(rgb(255, 255, 155),rgb(79, 255, 255));
+        min-height:100vh;
+        font-size:20px;
+        max-width:100%;
+        font-family: Noto Sans;
+      }
+      main{
+        display:flex;
+        justify-content:space-around;
+        align-items:stretch;
+        max-width:100%;
+        min-height:100vh;
+      }
+      article{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        max-width:100%;
+        width:700px;
+        flex-direction:column;
+      }
+      h1,h2{
+        background:coral;
+        max-width:100%;
+        width:700px;
+        color:white;
+        text-align:center;
+        text-shadow: black 2px 2px 3px;
+        font-family: Noto Sans;
+      }
+      @font-face {
+      font-family: Noto Sans; /* Имя шрифта */
+      src: url(site/online.ttf); /* Путь к файлу со шрифтом */
+     }
+    </style>
+
+<!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Заказать торговые витрины из лдсп",
+  "image" : "https://meb70.ru/images/chipboard/4.png",
+  "telephone" : "+7913 820-01-22",
+  "email" : "prokuhni.tomsk@gmail.com",
+  "priceRange" : "от 15 000 до 3000000",
+  "address" : {
+    "@type" : "PostalAddress",
+    "streetAddress" : "Пропиточная ул., 25",
+    "addressLocality" : "Томск",
+    "addressRegion" : "Сибирский",
+    "addressCountry" : "Россия",
+    "postalCode" : "634009"
+  },
+  "openingHoursSpecification" : {
+    "@type" : "OpeningHoursSpecification",
+    "dayOfWeek" : {
+      "@type" : "DayOfWeek",
+      "name" : "каждый день"
+    }
+  },
+  "url" : "https://meb70.ru/trade-racks-from-chipboard.html"
+  }
+</script>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Заказать торговые витрины из лдсп</h1>
+        <p style="margin:1%; font-family:Noto Sans; color:rgb(82, 104, 234); text-shadow:black 1px 1px 1px; font-size:25px; text-align:center;"><strong>Барные стойки, ресепшены застекленные витрины, стеллажи, выставки для презентации.</strong></p>
+          <div id="menu">menu</div>
+        <div class='imagesWindow'>
+          <div id="news"></div>
+        </div>
+        <div class="buttony">
+            <div id="leftButton"><span style="font-size:75px;">⏪</span></div>
+            <div id="rightButton"><span style="font-size:75px;">⏩</span></div>
+        </div>
+      </article>
+    </main>
+
+<script>
+    console.log(window.location.hash +'_ '+'proverka');
+let imgPod = ['images/chipboard/chipboard.html','images/chipboard/chipboard2.html','images/chipboard/chipboard3.html','images/chipboard/chipboard4.html','images/chipboard/chipboard5.html'];
+let i= +0;
+if(window.location.hash=="#1"){
+i=1;
+nextImages();
+}else if(window.location.hash=="#2"){
+i=2;
+nextImages();
+}else if(window.location.hash=="#3"){
+i=3;
+nextImages();
+}else if(window.location.hash=="#4"){
+i=4;
+ nextImages();
+}else if(window.location.hash=="#0"){
+i=0;
+ nextImages();
+}
+else{
+// i=2;
+nextImages();
+}
+
+
+
+// прослушка ширины изображения
+
+console.log(window.innerWidth+" _"+window.innerHeight); // не прокатило! :-D
+if(window.innerWidth<=700){
+
+let rpoZh=700-window.innerWidth;
+ let andE =(700*100)/window.innerWidth;
+ console.log(rpoZh+"____"+andE+'_Prosto andE');
+ let height = (400*100)/(andE);
+ console.log(height+'_proverka height');
+ document.querySelector('.imagesWindow').style.cssText=`
+display:flex;
+height: ${height}px;
+`;
+console.log(`${andE}`+'Туту написано из оттдуа');
+}else{
+document.querySelector('.imagesWindow').style.cssText=`
+display:flex;
+height:400px;
+width:700px;
+`;
+}
+
+
+ function nextImages(){
+     let podimgl = new XMLHttpRequest();
+     podimgl.open('GET', `${imgPod[i]}`);
+     podimgl.send();
+     podimgl.onload = function(){
+         if(podimgl.status ==200){
+             responseType ="Text";
+             document.querySelector('#news').innerHTML = this.response;
+         }
+     }
+ }
+
+    nextImages();
+     leftButton.addEventListener('click',function(){
+         if(i>0){
+             i--;
+             window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log(imgPod);
+             console.log(i);
+         }else if(i==4){
+             i=0;
+               window.location= '/trade-racks-from-chipboard.html#'+[i];
+             console.log(imgPod);
+             console.log(i);
+         }else{
+             i=5;
+               window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log('ну незнаю!');
+         }
+     });
+     rightButton.addEventListener('click',function(){
+         if(i<4){
+             i++;
+               window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log(imgPod);
+             console.log(i);
+         }else if(i==4){
+             i=0;
+               window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log(imgPod);
+             console.log(i);
+           }else if(i==4){
+             i=0;
+               window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log(imgPod);
+             console.log(i);
+         }else{
+           i=0;
+             window.location= '/trade-racks-from-chipboard.html#'+[i];
+             setTimeout(nextImages(),10);
+             console.log('ну незнаю2!');
+             console.log(imgPod);
+             console.log(i);
+         }
+     });
+
+
+</script>
+<!-- THE END ------>
+<!--  костылеи  ---->
+<!-------------------->
+<script src="site/menu.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE479X6FKD"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-KE479X6FKD');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+ (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+ m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+ (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ ym(76815187, "init", {
+      clickmap:true,
+      trackLinks:true,
+      accurateTrackBounce:true,
+      webvisor:true
+ });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/76815187" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  </body>
+</html>

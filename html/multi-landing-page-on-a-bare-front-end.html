@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="all">
+        <meta name="autor" content="Amir Navrutdinov">
+        <title>мультилендинг на голом фронтенде</title>
+        <meta name='description' cotnent="🤓💻Пример исользования мультиленди на голом фронтенде с примером техники на js. Яваскрипт скрипт прилагается и уже написан">
+        <link rel="canonical" href="https://nasobe.ru/multi-landing-page-on-a-bare-front-end.html">
+        <link rel="icon" href="images/icon9.svg">
+        <style>
+            *{
+                margin:0;
+            }
+            body{
+                background:linear-gradient(yellow,blue);
+                font-size: 20px;
+
+            }
+            main{
+                display:flex;
+                max-width: 100%;
+                justify-content: center;
+            }
+            article{
+                display:flex;
+                max-width: 100%;
+                width: 700px;
+                flex-direction:column;
+                background-color: rgba(189, 183, 107, 0.288);
+            }
+            .boxRow{
+                display:flex;
+                max-width: 100%;
+            }
+            .margin{
+                margin: 1%;
+            }
+            .utm{
+                background-color: brown;
+                /* border: 2px solid black; */
+                /* margin: 1%; */
+                text-align: center;
+            }
+            .bgBlackGray{
+                background-color: rgba(17, 16, 16, 0.5);
+                border: chocolate 3px solid;
+                /* margin:1%; */
+                padding:1%;
+                color: rgb(255, 235, 196);
+                word-wrap: break-word;
+            }
+            h1,h2{
+                background-color: chocolate;
+                text-align: center;
+                word-wrap: break-word;
+            }
+            .disKus{
+                width: 700px;
+                max-width: 100%;
+                background:linear-gradient(rgba(255, 255, 255, 0.322),rgba(134, 128, 128, 0.26));
+            }
+            .first{
+                display:flex;
+                max-width: 100%;
+                justify-content: center;
+            }
+            .boxColumn{
+                display:flex;
+                max-width: 100%;
+                justify-content: center;
+                flex-direction: column;
+            }
+            footer{
+                background-color: darkkhaki;
+                display: flex;
+                text-align: center;
+                width: 700px;
+                max-width: 100%;
+            }
+            .boxRow2{
+                display: flex;
+                max-width: 100%;
+            }
+            img{
+                max-width: 100%;
+                min-width: 300px;
+            }
+            @media(max-width:500px){
+                .boxRow2{
+                    max-width: 100%;
+                    flex-direction: column;
+                }
+                img{
+                    min-width:100%;
+                }
+            }
+        </style>
+        <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Пример скрипта мультилендинга на одном яваскрипте.",
+      "headline": "Пример скрипта мультилендинга на одном яваскрипте.",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Амир Наврутдинов",
+        "alternateName": ["Amir Shikarno", "Amir Navrutdinov"]
+      },
+      "datePublished" : "2021-01-13",
+      "dateModified" : "2021-05-07",
+      "image" : "https://nasobe.ru/images/programming.jpeg",
+      "articleSection" : "Яваскрпт этой страницы с выборкой ютем меток и подстановке по ним заголовков и аннотаций.",
+      "articleBody" : "Пример работающего скрипта с определением подставленнх ютем меток. Когда данная техника может пригодиться? В случае если возникает необходимость сконструировать сайт со смежными ключами в точной идентификации по назначению для стопроцентной конверсии запроса. Что собственно еще стоит упомянуть что в шапке метатегов не стоит забывать модифицировать каноническую ссылку. Интересно что если добавить ютем  метку в канонический адрес, то страница проиндексируется в серч консоле и добавится в индекс. На практики какого то особенно огромного прироста по трафику пока замечено не было, но и ничего отрастающего в минуc тоже не наблюдалось.",
+      "url" : "https://nasobe.ru/multi-landing-page-on-a-bare-front-end.html",
+      "publisher" : {
+        "@type" : "Organization",
+        "name" : "веб мастерская имени Барона Сайтоверстаузена",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nasobe.ru/images/logo.png"
+             }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nasobe.ru/multi-landing-page-on-a-bare-front-end.html"
+     }
+    }
+    </script>
+    </head>
+    <body>
+        <main>
+            <article>
+            <h1><p id="headers"></p></h1>
+            <p class="margin" id="annotation"></p>
+            <div class="boxRow">
+                <p style="font-size:5vh">🤖</p>
+                <p class="margin">Роботы обходят эти ссылки и вполне довольны. О чем можно убедится в сёрч консоле.</p>
+            </div>
+            <p class="margin">Пример работающего скрипта с определением подставленнх ютем меток. Когда данная техника может пригодиться? В случае если возникает необходимость сконструировать сайт со смежными ключами в точной идентификации по назначению для стопроцентной конверсии запроса.</p>
+            <p class="margin">Что собственно еще стоит упомянуть что в шапке метатегов <a href="https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls?hl=ru">каноникал</a> не стоит забывать модифицировать каноническую ссылку. Интересно что если добавить ютем  метку в канонический адрес, то страница проиндексируется в серч консоле и добавится в индекс. На практики какого то особенно огромного прироста по трафику пока замечено не было, но и ничего отрастающего в минуc тоже не наблюдалось.
+            </p>
+            <div class="boxRow">
+                <p class="margin">Это лишь показывает что запрограммировать мультилендю можно на любом хостинге и даже без поддержки серверных языков. Используя лишь голые руки и смекалку!</p>
+                <p style="font-size:5vh">👩‍💻</p>
+            </div>
+            <div class="boxRow2">
+                <picture>
+                    <source type="image/webp" srcset="images/programming.webp">
+                    <img src="images/programming.jpeg" alt="девушка программст">
+                </picture>
+                <p class="margin">Скрипт в готов к использованию с любыми ютем метками. Поэтому его можно использовав сразу скопировав к себе прям как есть. Заменить лиш заголовки и аннотацию или добавив свои переменные с нужными значениями в подстанновку в строчную яваскрипт переменную ${let} с динамическим свойством. Как в вышеуказанном примере: если условие “true” в переменную заносится значение, иначе выводится запись что поcле “else”.
+                </p>
+            </div>
+            <h2>Яваскрпт этой страницы с выборкой ютем меток и подстановке по ним заголовков и аннотаций.</h2>
+            <p class="bgBlackGray">&lt;script&gt;<br>
+                let header;<br>
+                let annotatio;<br>
+                if(window.location.search== &quot;?utm_metka&quot;){<br>
+                    header = &#039;Заголовок!. Специально для утем метки /?utm_metka&#039;;<br>
+                    annotatio = &#039;Анотация к этому заголовку. Тут объяснени что это мультилендя на яваскрипте без серверного языка.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_1&#039;){<br>
+                    header = &#039;Заголовок1.&#039;;<br>
+                    annotatio = &#039;Первая анотация говорит что все началось!&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_2&#039;){<br>
+                    header = &#039;Заголовок2.&#039;;<br>
+                    annotatio = &#039;Под второй заголовок, по логике событий и здравого смысла это будет анотация объясняющая всю последовательность.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_3&#039;){<br>
+                    header = &#039;Заголовок3.&#039;;<br>
+                    annotatio = &#039;Продолжние следует, тут то и возникает тройственность как самая демократическая сила, благодаря минимуму при котором возможно идентифицировать закономерноть.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_4&#039;){<br>
+                    header = &#039;Заголовок4.&#039;;<br>
+                    annotatio = &#039;Кавадро!&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_5&#039;){<br>
+                    header = &#039;Заголовок5.&#039;;<br>
+                    annotatio = &#039;Наверное больше уже нечего сказать и так все понятно.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_6&#039;){<br>
+                    header = &#039;Заголовок6.&#039;;<br>
+                    annotatio = &#039;шишстое, анотация практически исчерпала все свои силы &#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_7&#039;){<br>
+                    header = &#039;Заголовок7.&#039;;<br>
+                    annotatio = &#039;Для седьмой понадобится чуть больше вдохновения, потому что число семь по всем законам удачи считается удачным числом и притягивет успех.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_8&#039;){<br>
+                    header = &#039;Заголовок8.&#039;;<br>
+                    annotatio = &#039;Восьмая &#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_9&#039;){<br>
+                    header = &#039;Заголовок9.&#039;;<br>
+                    annotatio = &#039;Девятая&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_source=yandex&#039;){<br>
+                    header = &#039;Ловим клиентов из яндекса&#039;;<br>
+                    annotatio = &#039;Тут пойманные из яндекса.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else if(window.location.search==&#039;?utm_source=google&#039;){<br>
+                    header = &#039;Ловим клиентов из гугла&#039;;<br>
+                    annotatio = &#039;Тут пойманные из яндекса.&#039;;<br>
+                    console.log(`${header} ${annotatio}`);<br>
+                }else{<br>
+                    console.log(&#039;utm_metka ne vpisana!&#039;);<br>
+                    annotatio = &#039;Если нет запланированных ютем меток в ссылке, выводится это сообщение. &#039;+&#039;&lt;p class=&quot;utm&quot;&gt;&#039;+window.location.search+&#039;&lt;/p&gt;&#039;;<br>
+                    header = &#039;Пример скрипта мультилендинга на одном яваскрипте.&#039;;<br>
+                }<br>
+
+            let site = window.location.search;<br>
+            headers.innerHTML = `${header}`;<br>
+            annotation.innerHTML=`${annotatio}`;<br>
+            console.log(window.location); // посмотреть чё там есть<br>
+            &lt;/script&gt;</p><br>
+            </article>
+        </main>
+        <script>
+            let header;
+            let annotatio;
+            if(window.location.search== "?utm_metka"){
+                header = 'Заголовок!. Специально для утем метки /?utm_metka';
+                annotatio = 'Анотация к этому заголовку. Тут объяснени что это мультилендя на яваскрипте без серверного языка.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_1'){
+                header = 'Заголовок1.';
+                annotatio = 'Первая анотация говорит что все началось!';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_2'){
+                header = 'Заголовок2.';
+                annotatio = 'Под второй заголовок, по логике событий и здравого смысла это будет анотация объясняющая всю последовательность.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_3'){
+                header = 'Заголовок3.';
+                annotatio = 'Продолжние следует, тут то и возникает тройственность как самая демократическая сила, благодаря минимуму при котором возможно идентифицировать закономерноть.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_4'){
+                header = 'Заголовок4.';
+                annotatio = 'Кавадро!';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_5'){
+                header = 'Заголовок5.';
+                annotatio = 'Наверное больше уже нечего сказать и так все понятно.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_6'){
+                header = 'Заголовок6.';
+                annotatio = 'шишстое, анотация практически исчерпала все свои силы ';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_7'){
+                header = 'Заголовок7.';
+                annotatio = 'Для седьмой понадобится чуть больше вдохновения, потому что число семь по всем законам удачи считается удачным чилсом и притягивет успех.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_8'){
+                header = 'Заголовок8.';
+                annotatio = 'Восьмая ';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_9'){
+                header = 'Заголовок9.';
+                annotatio = 'Девятая';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_source=yandex'){
+                header = 'Ловим клиентов из яндекса';
+                annotatio = 'Тут пойманные из яндекса.';
+                console.log(`${header} ${annotatio}`);
+            }else if(window.location.search=='?utm_source=google'){
+                header = 'Ловим клиентов из гугла';
+                annotatio = 'Тут пойманные из яндекса.';
+                console.log(`${header} ${annotatio}`);
+            }else{
+                console.log('utm_metka ne vpisana!');
+                annotatio = 'Если нет запланированных ютем меток в ссылке, выводится это сообщение. '+'<p class="utm">'+window.location.search+'</p>';
+                header = 'Пример скрипта мультилендинга на одном яваскрипте.';
+            }
+        let site = window.location.search;
+        headers.innerHTML = `${header}`;
+        annotation.innerHTML=`${annotatio}`;
+        console.log(window.location); //
+        </script>
+        <div class="first">
+            <div class="boxColumn">
+                <footer>
+                    <script src="https://yastatic.net/share2/share.js"></script>
+                    <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
+                </footer>
+                <div class="disKus">
+                    <div id="disqus_thread" class="margin"></div>
+                </div>
+                   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+        </div>
+<script id="dsq-count-scr" src="//nasobe-ru.disqus.com/count.js" async></script>
+<script>
+    function stop(){
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://nasobe-ru.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    }
+    setTimeout(stop, 4000);
+</script>
+<!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(57628999, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+    </body>
+</html>

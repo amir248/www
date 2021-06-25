@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Верстка лендинг пейджа из фигмы. Из готовых макетов или по обстрактному описанияю.">
+        <link rel="canonical" href="https://nasobe.ru/landing-page.html">
+        <meta name="robots" content="all">
+        <meta name="autor" content="Amir Shikarno">
+        <title>Верска из фигмы.</title>
+        <style>
+            *{
+                margin:0;
+            }
+            body{
+                background-color: rgb(255, 242, 242);
+                display:flex;
+                justify-content: center;
+                max-width: 100%;
+                font-family: Gilroy-Bold;
+                font-size:18px;
+            }
+            main{
+               display: flex;
+               flex-direction: column;
+               max-width: 100%;
+               width: 946px;
+            }
+            .menu{
+                display: flex;
+                justify-content: space-between;
+                width:940.6px;
+                max-width: 100%;
+            }
+            .hr{
+                display:flex;
+                flex-direction: row;
+                width:940.6px;
+                border:1px sloid black;
+                max-width: 100%;
+            }
+            .twoBlock{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                max-width: 100%;
+                flex-wrap: wrap;
+            }
+            #about{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                max-width:100%;
+                width: 485px;
+                flex-direction: column;
+
+            }
+            .aboutBox{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 506px;
+                background: #F6F6F6;
+            }
+            #skills{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                height: 610px;
+                max-width: 100%;
+                max-height: 100%;
+                background-color: rgb(255, 255, 255);
+                flex-direction: column;
+
+            }
+            .skil{
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                background-color: rgb(255, 255, 255);
+                flex-direction: column;
+
+            }
+            .imG{
+                width: 150px;
+                height: 150px;
+            }
+            .column{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .row{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+                width: 485px;
+                max-height: 100%;
+                max-width: 100%;
+            }
+            a{
+                text-decoration: none;
+                color:black;
+            }
+            a:hover{
+
+                border-radius: 50%;
+                color:red;
+            }
+            #portfolio{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 506px;
+                max-height: 100%;
+                background: #F6F6F6;
+            }
+            #contacts{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                height: 506px;
+                max-height: 100%;
+                background-color: white;
+            }
+           .hover:hover{
+
+                color:darkorange;
+            }
+            img{
+                max-width:100%;
+            }
+
+            #cross>p{
+                display:none;
+            }
+            #cross{
+                display:none;
+            }
+
+            @media(max-width:500px){
+                .menu{
+                    display:none;
+
+                }
+                #cross{
+                    display:flex;
+                    justify-content: end;
+                    position:absolute;
+                    top:1;
+                }
+                *{
+                    margin: 1%;
+                }
+
+            }
+            .lang{
+                transform: rotate(-90deg);
+            }
+            @media(max-width:570px){
+                .lang{
+                    display:none;
+                }
+            }
+
+            .minka{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 50px;
+            }
+            .un{
+                display:flex;
+            }
+        </style>
+        <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+            <script type="application/ld+json">
+                {
+                "@context" : "http://schema.org",
+                "@type" : "Article",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://nasobe.ru/figma-landing-page.html"
+                 },
+                "name" : "Верстка лендинга из фигмы",
+                "headline": "Примерная страница сверстанная с помощью html/css/js",
+                "author" : {
+                    "name" : "Amir Navrutdinov",
+                    "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+                },
+                "datePublished" : "2021-02-20",
+                "image" : "http://nasobe.ru/images/saitoverstauzen.jpg",
+                "articleSection" : "I'm interested in programming",
+                "articleBody" : "I write more than code. When I have to solve too complex problems, I write a statement to the police, the prosecutor&#39;s office, and in the most force majeure case to the President.",
+                "url" : "https://nasobe.ru/figma-landing-page.html",
+                "publisher" : {
+                    "@type" : "Organization",
+                    "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://nasobe.ru/images/lol/spa.webp"
+                      }
+                }
+                }
+                </script>
+    </head>
+    <body>
+        <main>
+            <br><p id='cross'>menu</p>
+            <p id="cross2"></p>
+
+            <script>
+                document.querySelector('#cross').addEventListener('click', function(){
+                    // document.querySelector('.close').addEventListener('click', function(){
+
+                    // });
+                    document.querySelector('#cross2').style.cssText=`
+                    display:flex;
+                    position:fixed;
+                    width:375px;
+                    height:812px;
+                    max-width:100%;
+                    max-height:100%;
+                    background-color: white;
+                    `;
+                    document.querySelector('body').style.cssText=`overflow:hidden;`;
+                    document.querySelector('#cross2').innerHTML='<ul class="minka"><p class="un">_</p><a href="#">Home</a> <a href="#about">About_me</a><a href="#skills">Skills</a><a href="#portfolio">Portfolio</a><a href="#contacts">Contacts</a><hr><a href="https://www.figma.com/file/5D9pDuLtS042hzaoN69Kd7/Free--Landing--Page-Template?node-id=0%3A1" target="_blank">Figma</a><span>_</span></ul>';
+                    document.querySelector('#cross2').addEventListener('click', function(){
+                        document.querySelector('#cross2').innerHTML='<ul class="minka"><a href="#">Home</a> <a href="#about">About_me</a><a href="#skills">Skills</a><a href="#portfolio">Portfolio</a><a href="#contacts">Contacts</a></ul>';
+                        document.querySelector('#cross2').removeAttribute('style');
+                        document.querySelector('#cross2').innerHTML='';
+                        document.querySelector('body').style.cssText=`overflow:scroll;`;
+                    })
+                });
+
+            </script>
+            <div class='menu'>
+                <a href="/">Home</a>
+                <a href="#about">About me</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contacts">Contacts</a>
+
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class='twoBlock'>
+                <strong style="font-size: 47px;">Baron<br> Siteverstausen</strong>
+
+                <p>Wizard, Magician, Witch<br>999 years old, Earth</p>
+
+                <p class='lang'>RU | ENG</p>
+            </div><br>
+            <img src="images/saitoverstauzen.jpg" alt="Baron Siteverstausen">
+            <br>
+            <div class="aboutBox">
+                <div id="about">
+                    <h2>About me</h2>
+                    <p>Hi, I'm Siteverstausen - frontEmd developer from Earth.</p>
+                    <p>I'm interested in programming</p>
+                    <p>I write more than code
+                        When I have to solve too complex problems, I write a statement to the police, the prosecutor's office, and in the most force majeure case to the President.</p>
+                </div>
+            </div>
+            <div id="skills" class="skil"><br>
+                <h2>Skills</h2><br>
+                <p>I work in areas such as writing, programming, responsive page layout.</p>
+                <div style="display:flex; flex-direction: row; flex-wrap: wrap; height:100%; justify-content:center;">
+                    <div class="column">
+                        <img src="images/figma/fot.png" alt="фотографирование" class="imG">
+                        <p>★★★★★✩</p>
+                    </div>
+                    <div class="column">
+                        <img src="images/figma/vera-v-uspeh.png" alt="хорошо мотивирован" class="imG">
+                        <p>★★★★★★</p>
+                    </div>
+                    <div class="column">
+                        <img src="images/figma/kod.png" alt="Программирование" class="imG">
+                        <p>★★★★✩✩</p>
+                    </div>
+                    <div class="column">
+                        <img src="images/figma/pisatelstvo.png" alt="Писательство" class="imG">
+                        <p>★★★✩✩✩</p>
+                    </div>
+                </div>
+            </div>
+            <div id='portfolio'>
+                <h2>Portfolio</h2>
+                <a href="https://nasobe.ru/landing-page.html"><img src="images/figma/site.png" alt="сайт"></a>
+                <a href="https://nasobe.ru/landing-page.html">Online site store - Homepage</a>
+            </div>
+            <div id="contacts">
+                <h2>Contacts</h2>
+                <p>Want to know more or just chat?<br>you are welcome!</p>
+                <a href="https://nasobe.ru/feedback-form.html"><button style="border-radius: 15px; background-color: black; color:white; margin:15px; padding:5px; width:180px"><strong class="hover">Send message</strong></button></a>
+                    <div class="row">
+                    <a href="https://www.linkedin.com/in/amir-navrutdinov-76374a119?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BhNUdUn0eTLqXB6ai0VQTwg%3D%3D"><p style="width: 40px; height:40px;border:solid black 4px; border-radius:10px;display:flex;justify-content: center; align-items: center;font-size: 35px;"><strong>in</strong></p></a>
+                    <a href="https://www.instagram.com/nasobe.ru/?hl=ru"><p style="width: 40px; height:40px;border:solid black 4px; border-radius:10px;display:flex;justify-content: center; align-items: center;font-size: 35px;"><strong style="margin-left: 7px;">O</strong><span style="display:flex;margin-bottom: 50px;">.</span></p>
+                    </a>
+                    <a href="https://nasobe.ru"><p style="width: 40px; height:40px;border:solid black 4px; border-radius:50%;display:flex;justify-content: center; align-items: center;">Site</p></a>
+                    </div><br>
+                <p style="color:grey;">Like me on<br>Linkedin, Instagram</p>
+            </div>
+
+        </main>
+
+    </body>
+       <!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57628999, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true,
+         webvisor:true,
+         ecommerce:"dataLayer"
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+</html>

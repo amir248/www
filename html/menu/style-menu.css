@@ -1,0 +1,61 @@
+
+    .burg{
+        right: 7%;
+        /*background-image: url("bur.svg");*/
+        width: 70px;
+        height: 70px;
+        display: block;
+        position: fixed;
+        top: 5%;
+        opacity: 0.8;
+    }
+    button{
+        background: rgba(2, 134, 2, 0.5);
+        border: rgba(255, 5, 5, 0.5) solid;
+        border-radius: 50px;
+        padding: 1px;
+    }
+    /* body{
+        overflow: hidden;
+    } */
+    button:hover{
+        background: rgb(255, 5, 5);
+        border: rgb(2, 134, 2) solid;
+    }
+    .openmenu{
+        top:0;
+        max-height: 90%;
+        max-width: 80%;
+        opacity: 0.9;
+        background-color:rgb(64, 150, 56);
+        border: 1px solid red;
+        font-size: 24px;
+        padding-bottom: 3%;
+        visibility: visible;
+        /* overflow: hidden;
+        display: none;
+        visibility: hidden;  */
+    }
+    #offmenu{
+        position: fixed;
+        overflow:auto;
+        z-index: 0;
+    }
+    .font{
+        display: flex;
+        flex: 0 100%;
+        justify-content: center;
+        align-items: center;
+        margin: 2%;
+        background-color:rgb(65, 184, 56);
+        min-height: 50px;
+    }
+    .font:hover{
+        background-color:rgba(0, 255, 0, 0.3);
+        color: white;
+        border: 1px solid red;
+    }
+    #offmenu a{
+        text-decoration: none;
+        text-shadow: rgba(196, 18, 18, 0.8) 1px 1px 1px;
+    }

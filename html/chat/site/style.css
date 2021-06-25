@@ -1,0 +1,171 @@
+
+            .blockhead{
+                
+                width:80%;
+                background-image: url(tesla-hall.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-left: auto;
+                margin-right: auto;
+                border: 4px;
+                padding: 25px;
+                color: white;
+                outline: 10px solid red;
+                text-shadow: black 2px 1px 3px;
+            }
+                            
+              
+          
+            
+            
+                    ul {
+                    
+                    width: 100%;
+                    list-style: none; /*убираем маркеры списка*/
+                    margin: 0; /*убираем отступы*/
+                    padding-left: 0; /*убираем отступы*/
+                    margin-top:0px; /* делаем отступ сверху*/
+                    background:#FF4444; /*добавляем фон всему меню (заменив этот параметр, вы поменяете цвет всего меню)*/
+                    height: 50px; /*задаем высоту*/
+                    }
+                    a {
+                
+                    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+                    background:#FF4444; /*добавляем фон к пункту меню (заменив этот параметр, вы поменяете цвет всех пунктов меню)*/
+                    color:#fff; /*меняем цвет ссылок*/
+                    padding:0px 15px; /*добавляем отступ*/
+                    font-family: arial; /*меняем шрифт*/
+                    line-height:50px; /*ровняем меню по вертикали*/
+                    display: block; 
+                    border-right: 1px solid #F36262; /*добавляем бордюр справа*/
+                    -moz-transition: all 0.3s 0.01s ease; /*делаем плавный переход*/
+                    -o-transition: all 0.3s 0.01s ease;
+                    -webkit-transition: all 0.3s 0.01s ease;
+                    }
+                    a:hover {
+                    background:#D43737;/*добавляем эффект при наведении*/
+                    }
+                    li {
+                    float:left; /*Размещаем список горизонтально для реализации меню*/
+                    
+                    }
+                    .tex2{
+                        vertical-align: middle;
+                        text-align: center;
+                        font-size: 30px;
+                        position: relative;
+                        text-shadow: blue 2px 3px 4px;
+                        
+                    }
+                    .fon2{
+                        background-image: black;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        opacity: 0.7;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                    
+                    .tex{
+                        color: white;
+                        vertical-align: middle;
+                        text-align: center;
+                        font-size: 25px;
+                        position: relative;
+                        text-shadow: black 2px 2px 3px;
+                        
+                        font-weight: bold;
+                    }
+                    .fon{
+                        background: wheat;
+                        
+                        width: auto;
+                        height: auto;
+                    }
+                    @media(min-width: 900px)
+                    {
+                        .tex2{
+                            text-align: center;
+                            font-size: 24px;
+                            min-height: 100px;
+                            min-width: 10px;
+                            width: 600px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        .tex{
+                            text-align: center;
+                            font-size: 24px;
+                            min-height: 100px;
+                            min-width: 10px;
+                            width: 600px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            height: 500px;
+                        }
+                        .fon{
+                            text-align: center;
+                            font-size: 24px;
+                            min-height: 100px;
+                            min-width: 10px;
+                            width: 600px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                        
+                    }
+                    @media(min-width: 400px){
+                        .tex{
+                            text-align: center;
+                            font-size: 24px;
+                            min-height: 100px;
+                            min-width: 10px;
+                            width: 400px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            height: 500px;
+                        }
+                    }
+                    @media(min-width:600){
+                        .tex2{
+                            width: 400px;
+                            margin-left: 10px;
+                            margin: 10px;
+                            padding: 10px;
+                        }
+                        .tex{
+                            width:400px;
+                        }
+                    }
+                    .bodyimg{
+                        position: relative;
+                        background-image: url(52.png);
+                        width:auto;
+                        height:auto;
+                        -moz-background-size: 100%; /* Firefox 3.6+ */
+                        -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+                        -o-background-size: 100%; /* Opera 9.6+ */
+                        background-size: 100%; /* Современные браузеры */
+                        background-size: cover;
+                        background-attachment: scroll fixed; 
+                        background-repeat: no-repeat;
+                        margin: 4px 10px 2px 0px;
+                    }
+                    
+                    .footer{
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                       
+                        vertical-align: middle;
+                        text-align: center;
+                        position: relative;
+                       
+                        width: 100%;
+                      
+                       
+                    }
+                    .color{
+                        background-color: rgba(137, 137, 161, 0.5);
+                        padding: 3%;
+                        border: 1px color red solid;
+                    }

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_1" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(42.6047 0 0 4.65101 -4870.35 -246.272)" x="122.399305" xml:space="preserve" y="91.847227"/>
+  <text fill="#003f7f" font-family="serif" font-size="24" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(9.23117 0 0 7.29486 -661.265 -336.684)" x="106.336112" xml:space="preserve" y="62.582279">HTML</text>
+  <text fill="#007f3f" font-family="serif" font-size="24" id="svg_3" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(20.0121 0 0 9.96602 -5351.65 -1899.76)" x="283.156791" xml:space="preserve" y="214.602176">css</text>
+  <text fill="#ff7f00" font-family="serif" font-size="24" id="svg_4" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(20.5719 0 0 14.2141 -5903.01 -4563.43)" x="302.835829" xml:space="preserve" y="354.500179">JS</text>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_5" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="213.399305" xml:space="preserve" y="343.847227"/>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_6" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" x="214.399305" xml:space="preserve" y="391.847227"/>
+ </g>
+</svg>

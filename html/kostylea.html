@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="robots" content="all">
+        <meta name="autor" content="Amir Navrutdinov">
+        <title>Быстрая фото галерея на javascript 'Котылея'</title>
+        <meta name='description' cotnent="Костылея, как обычная галерея только на костылях для ускоренной загрузки, потому что на костылях все происходит быстрее.">
+        <link rel="icon" href="images/icon9.svg">
+        <style>
+            *{
+                margin:0px;
+            }
+            body{
+                background: linear-gradient(rgb(255, 255, 126), rgb(83, 83, 255));
+                font-size: 20px;
+            }
+            main{
+                display: flex;
+                max-width: 100%;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                /* background-color: bisque; */
+            }
+            article{
+                display:flex;
+                max-width: 100%;
+                width: 700px;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(240, 224, 255, 0.253);
+                flex-direction: column;
+            }
+
+            .stFir{
+                display:flex;
+                max-width: 100%;
+                width: 700px;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(rgba(240, 224, 255, 0.253), rgba(255, 255, 255, 0.164));
+                flex-direction: column;
+            }
+            #button{
+                display:flex;
+                width: 70px;
+                height: 40px;
+                background: linear-gradient(darkgreen, rgb(0, 187, 0));
+                justify-content: center;
+                align-items: center;
+                border-radius: 25px;
+                margin:1%;
+                border:1%;
+                color: cyan;
+            }
+
+        .margin{
+            margin:1%;
+        }
+        h1,h2{
+            background:rgb(255, 242, 56);
+            width: 100%;
+            text-align: center;
+            border: orange solid 1px;
+        }
+        footer{
+            display:flex;
+            background-color: thistle;
+            max-width: 100%;
+            width: 700px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        .first{
+            display: flex;
+            max-width: 100%;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        li{
+          list-style-image: url(images/red_star.png);
+        }
+        #sigCommentsBlock{
+          max-width: 100%;
+          width:700px;
+        }
+        </style>
+            <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Костылея",
+  "headline": "Легкая фото галерея с адаптацией для скорости.",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Amir Navrutdinov",
+    "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nasobe.ru/kostylea.html"
+ },
+  "datePublished" : "2021-02-07",
+  "dateModified" : "2021-05-25",
+  "image" : "https://nasobe.ru/spaa/images/3.jpg",
+  "articleSection" : "Ускоренная галерея на яваскрипте с оптимизацией.",
+  "articleBody" : "Галерея с подгрузкой.",
+  "url" : "https://nasobe.ru/kostylea.html",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Веб мастерская имени Барона Сайтоверстаузена.",
+
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://nasobe.ru/images/logo.png"
+     }
+    }
+}
+</script>
+    </head>
+    <body>
+        <main>
+            <article>
+                <h1><span style="color: purple">Костылея.</span></h1>
+                <p class="margin">Костылея - это обычная фото галерея, только на костылях.</p>
+                <h2>Modified</h2>
+                <p class="margin">С недавного момента Костылея “адаптивная фотогалерея на костылях(для быстроты и удобства)”, еще и дополнилась изрядными модификациями:
+                  <ul style="color:green; text-shadow:1px 1px 2px black; background:rgba(255,150,150,0.3); border:1px solid black;">
+                    <li>Прослушка ширины изображения. Модифицирующий периметр для вставки в страницу пространства подстраивающийся в процентном соотношении, чтобы пролистывая галерею не было прыжков. И нижние блоки и текст не прыгали создавая ассоциации хлипкой конструкции, кое-как держащейся на плаву. Успех пришел с помощью математической формулы = (width*100)/window.innerWidth;
+                    Это хоть и дает моргание при загрузке нового изображения, но предотвращает прыжки текста, как это было без формулы вычитания процентного соотношения периметра.
+                    </li>
+                    <li>Изображение отображается с якорем для видимости снаружи того места на котором удалось остановится листая фотографии. С помощью виндов локейшин.</li>
+                    <li>Изощренная методика обхода массива на условиях с учетом виндов локейшин “якоря ссылки”, что даёт точечную сегментацию положения в галереи и отображении её с неописуемой точностью во всех двадцати шести измерениях! Ну и напоследок система комментариев без рекламных блоков от сиг коммент вместо дешевого дискуса.</li>
+                  </ul></p>
+                <h2><span style="color:blue">Идея костылеи.</span></h2>
+                    <p class="margin">На костылях быстрее! Это единственная причина почему костылею лучше использовать. Скорость в интернете это важный параметр ранжирования способствующий улучшению поведенческого фактора. И для её увеличения, был пройден долгий путь оптимизаций и обрезания лишнего.
+                        Костылея это не самый простой способ. Потому что написать костылею на серверном языке для генерации подходящий параметров установленного движка очень сложно. И куда проще запиливать костылею тегами, дополняя её яваскриптом для работоспособности.
+                        </p>
+                <!------------АХТУНГ------------>
+                <!-- Это Настоящая Костылея! -->
+                <!------------------------------>
+    <style>
+        .boxFirst{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            max-width: 100%;
+        }
+        #leftButton{
+            display:flex;
+            border:blueviolet solid 2px;
+            /* border-radius: 50%; */
+            background-color: burlywood;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        }
+        #leftButton:hover{
+            background-color: rgb(247, 177, 85);
+        }
+        #leftButton:active{
+            background-color: rgb(212, 67, 0);
+        }
+        #rightButton{
+            display:flex;
+            border:blueviolet solid 2px;
+            /* border-radius: 50%; */
+            background-color: burlywood;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        }
+        #rightButton:hover{
+            background-color: rgb(247, 177, 85);
+        }
+        #rightButton:active{
+            background-color: rgb(212, 67, 0);
+        }
+        .buttony{
+            display: flex;
+            justify-content: space-around;
+            /* text-align: center; */
+            width: 100%;
+            background-color: rgb(80, 135, 255);
+        }
+        /* .imagesWindow{
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            max-width: 100%;
+            max-height: 100%;
+            background-color: rgba(0, 100, 0, 0.144);
+        } */
+    </style>
+    <div class="boxFirst">
+        <div class='imagesWindow'>
+            <div id="news"></div>
+        </div>
+        <div class="buttony">
+            <div id="leftButton" style="font-size:25px;">⬅</div>
+            <div id="rightButton" style="font-size:25px;">➡</div>
+        </div>
+    </div>
+    <script>
+    if(window.innerWidth<=700){
+
+      let rpoZh=700-window.innerWidth;
+        let andE =(700*100)/window.innerWidth;
+        console.log(rpoZh+"____"+andE+'_Prosto andE');
+        let height = (300*100)/(andE);
+        console.log(height+'_proverka height');
+        document.querySelector('.imagesWindow').style.cssText=`
+      display:flex;
+      height: ${height}px;
+      `;
+      console.log(`${andE}`+'Туту написано из оттдуа');
+    }else{
+      document.querySelector('.imagesWindow').style.cssText=`
+      display:flex;
+      height:300px;
+      width:700px;
+      `;
+    }
+         let imgPod = ['/spaa/images/images1.html','/spaa/images/images2.html','spaa/images/images3.html', 'spaa/images/images4.html', 'spaa/images/images5.html','spaa/images/images6.html'];
+        let i=+0;
+
+        if(window.location.hash=="#1"){
+        i=1;
+       nextImages();
+        }else if(window.location.hash=="#2"){
+          i=2;
+       nextImages();
+        }else if(window.location.hash=="#3"){
+          i=3;
+          nextImages();
+        }else if(window.location.hash=="#4"){
+          i=4;
+            nextImages();
+        }else if(window.location.hash=="#5"){
+          i=5;
+            nextImages();
+        }else if(window.location.hash=="#6"){
+          i=6;
+            nextImages();
+        }else if(window.location.hash=="#7"){
+          i=7;
+            nextImages();
+}
+            function nextImages(){
+                let podimgl = new XMLHttpRequest();
+                podimgl.open('GET', `${imgPod[i]}`);
+                podimgl.send();
+                podimgl.onload = function(){
+                    if(podimgl.status ==200){
+                        responseType ="Text";
+                        document.querySelector('#news').innerHTML = this.response;
+                    }
+                }
+            }
+               nextImages();
+                leftButton.addEventListener('click',function(){
+                    if(i>=1){
+                        i--;
+                        window.location='/kostylea.html#'+[i];
+                        setTimeout(nextImages(),10);
+                        console.log(imgPod);
+                        console.log(i);
+                    }else if(i==0){
+                        i=6;
+                        window.location='/kostylea.html#'+[i];
+                        console.log(imgPod);
+                        console.log(i);
+                    }else{
+                        window.location='/kostylea.html#'+[i];
+                        setTimeout(nextImages(),10);
+                        console.log('ну незнаю!');
+                    }
+                });
+                rightButton.addEventListener('click',function(){
+                    if(i<5){
+                        i++;
+                        window.location='/kostylea.html#'+[i];
+                        setTimeout(nextImages(),10);
+                        console.log(imgPod);
+                        console.log(i);
+                    }else if(i==5){
+                        i=0;
+                        window.location='/kostylea.html#'+[i];
+                        setTimeout(nextImages(),10);
+                        console.log(imgPod);
+                        console.log(i);
+                    }else{
+                      window.location='/kostylea.html#'+[i];
+                        setTimeout(nextImages(),10);
+                        console.log('ну незнаю2!');
+                        console.log(imgPod);
+                        console.log(i);
+                    }
+                });
+
+
+    </script>
+<!----- THE END ------>
+<!----  костылеи  ---->
+<!-------------------->
+<h2>Принцип работы костылеи.</h2>
+<p class="margin">Начало работы это созданный документ html с одним только тегом picture в котором собственно и прописаны теги img src=”images.jpeg” и для нынешнего ускорения img set type=image/webp, чтобы скорость во всех браузерах была рекордно высокой, а так же обычный img для того чтобы еще и произвести успешное открытие в технологиях apple, потому как изображения webp формата у них до сих пор не поддерживается. И проще поставить на выбор браузеру отдельный html документ с прописанными пикчерами, чем пихать коллекцию одного формата в массив. Проще собрать массив из html документов в котором тег пикчер расфасован форматами и размерами, чтобы браузер сам выбирал лучший для него.
+</p>
+<p class="margin">Далее ява скрипт по технологии аякс и массив с изображениями.
+    В яваскрипте нельзя обратиться к директории чтобы прощупать её содержимое, поэтому в скрипт нужно будет прописывать каждый html документ с картинками в ручную.
+    </p>
+<p class="margin">Останется только записать эти страницы в массив и обращаться к ним через аякс на удобном яваскрипте.
+</p>
+<p class="margin">Скорость работы костылеи обеспечивается тем что изображение загружается отдельно с помощью аякса, то есть соседних картинок нет и не видно на странице, до нажатия кнопки перелистывания. Поэтому их изображение в поиске, не произойдет. Если не модифицировать скрипт до отображения к каждой странице с пикчерами якорной ссылки.
+</p>
+<p class="margin">Тогда все! =) Отображения пикчеров с якорными ссылками будет доступно в поиске для обнаружения!
+</p>
+            </article>
+        </main>
+        <div class="first">
+            <footer>
+                <script src="https://yastatic.net/share2/share.js"></script>
+                <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
+                <div id="sigCommentsBlock"></div>
+                <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
+                <script type="text/javascript">
+                    setTimeout(()=>(function(){
+                        var host_id = '5152';
+                        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.async = true;
+                        script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                        var ss = document.getElementsByTagName('script')[0];
+                        ss.parentNode.insertBefore(script, ss);
+                    })(),4000);
+                </script>
+            </footer>
+
+        </div>
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+
+        <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57628999, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+</body>
+    <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
+                    Начало меню!
+    ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ-->
+    <div id="menu"></div>
+
+    <button class="burg">
+        <svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="40px" height="31px">
+<image  x="0px" y="0px" width="40px" height="31px"  xlink:href="data:img/png;base64,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" />
+</svg>
+    </button>
+    <!--Зря ты стиль кнопки изменил, теперь все кнопки после этого стилая пропадают.-->
+    <script>
+
+        //--------------------------------------------------------------
+        //--------ОТПРАВИТЬ ЗАПРОС ЧТОБЫ ПОЛУЧИТЬ МЕНЮ------------------
+        //--------------------------------------------------------------
+    function run(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", 'menu/menu.html', true);
+        xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+        if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+        document.getElementById("menu").innerHTML = this.responseText;
+            }
+        }
+        xhr.send();
+    }
+    /*--------------------------------------------------------------------------
+    ----------------ТУТ_ПРОИСХОДИТ_ОБНОВЛЕНИЕ_МЕНЮШКИ!--------------------------
+    --------------------------------------------------------------------------*/
+                        //setInterval(run, 700);
+                        run();
+    </script>
+    <link rel="stylesheet" href="menu/style-menu.css">
+    <script src="menu/script-menu.js"></script>
+</html>

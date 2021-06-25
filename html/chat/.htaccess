@@ -1,0 +1,17 @@
+# Заголовок Cache-Control
+<IfModule mod_headers.c>
+        Header append Cache-Control "no-store, no-cache, must-revalidate"
+        Header unset Cache-Control
+</IfModule>
+ 
+# Заголовок Expires
+<IfModule mod_expires.c>
+        ExpiresActive On ExpiresDefault "now"
+        Header unset Cache-Control
+</IfModule>
+
+<FilesMatch ".(pl|php|cgi|spl|scgi|fcgi)$">
+
+Header unset Cache-Control
+
+</FilesMatch>

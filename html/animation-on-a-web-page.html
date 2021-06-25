@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link rel="canonical" href="https://nasobe.ru/animation-on-a-web-page.html">
+  <title>Анимация на веб странице</title>
+  <meta name="description" content="Анимация лендинг пейджа с момощью джейэс с методом через интерсекшин обсервер">
+  <meta name="robots" content="all">
+  <meta name="autor" content="Amir Navrutdinov">
+    <style>
+    *{
+      margin:0;
+    }
+    body{
+      background:linear-gradient(yellow, cyan);
+      min-height: 100vh;
+      font-size: 20px;
+    }
+    main{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+    article{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width:700px;
+      flex-direction:column;
+    }
+    .row{
+      display:flex;
+      flex-direction: row;
+      background: green;
+      min-width:100vh;
+      grid-area: 100px 1fr 200px;
+    }
+    .boxGrid{
+      display:grid;
+      background:linear-gradient(green, red);
+      height:300px;
+      width:500px;
+      /* grid-area: 100px 1fr 200px; */
+      /* grid-auto-flow: row; */
+    }
+
+    .leftBox{
+      display:flex;
+
+      width:250px;
+      background: orange;
+      margin-left: -100px;
+    }
+    .rightBox{
+      display:flex;
+      background: yellow;
+      width:2px;
+    /* border-right:500px; */
+      opacity:0;
+    }
+    h1{
+      background: orange;
+      color:white;
+      width:100%;
+      text-align: center;
+    }
+    .nlo2{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      position:fixed;
+      bottom:0;
+      font-size:1px;
+    }
+    .first{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      flex-direction:column;
+    }
+    footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width:700px;
+      text-align: center;
+    }
+    section{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      width:700px;
+      flex-direction: column;
+    }
+    img{
+      max-width: 100%;
+    }
+    nav a{
+      color: yellow;
+      text-decoration: none;
+    }nav a:hover{
+      color:red;
+      text-shadow:black 2px 2px 2px;
+    }
+    </style>
+    <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Анимация на веб странице",
+  "headline": "Анимация на js с помощью intersectionObserver",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Amir Navrutdinov",
+    "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://nasobe.ru/"
+ },
+  "datePublished" : "2021-04-19",
+  "dateModified" : "2021-04-20",
+  "image" : "http://nasobe.ru/images/alf.jpg",
+  "articleSection" : "Применить джейэс(“JS”). Интерсекшен обсервер.",
+  "articleBody" : "Для красоты, шикарности и пущей забугорности. Обычную страницу лендинга, одностраничника. Для убежденной уверенности что делал её самый что ни на есть “профессионал”, мастер, своего дела! Съевший на верстки адаптивных страниц собаку. И совсем не кореец, а просто “суровый верстальщик”.",
+  "url" : "https://nasobe.ru/animation-on-a-web-page.html",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "веб мастерская имени Барона Сайтоверстаузена",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://nasobe.ru/images/lol/spa.webp"
+    }
+  }
+}
+</script>
+  </head>
+  <body>
+    <main>
+      <article>
+        <!-- <div id='menu'>menu</div> -->
+        <h1 id="one1">Анимация на веб странице.</h1>
+        <div style="display:flex; align-items:center; justify-contern:center;">
+        <span style="font-size:45px; color:red;">+</span> в самом конце БОНУС! можно послушать: "как ползет улитка!"<span style="font-size:25px;color:red">😱</span>
+        </div>
+<p style="background:rgba(43, 255, 142,0.5);">Внимание: Звуки ползущей улитки, выполнены профессиональными улитками! Не пытайтесь повторить это дома!</p>
+        <div>
+        <p id='one' style="font-size:75px; float:right;">👽</p>
+        <p>Для красоты, шикарности и пущей забугорности. Обычную страницу лендинга, одностраничника. Для убежденной уверенности что делал её самый что ни на есть “профессионал”, мастер, своего дела! Съевший на верстки адаптивных страниц собаку. И совсем не кореец, а просто “суровый верстальщик”.</p>
+      </div>
+        <picture>
+          <img src='images/alf.jpg' alt="alf">
+        </picture>
+
+        <p>Простой способ анимировать лендинг пейдж. Применить джейэс(“JS”). Интерсекшен обсервер. Несмотря на то что существуют и более разнообразные методы. Например такие как прощупывать скрол и сравнивать его с offsetHeight и другими весьма изощренными способами. При стопроцентной адаптивности и широты использования. Интерсекшен обсервер занимает безогаворочное лидерство <a href="https://developer.mozilla.org/ru/docs/Web/API/IntersectionObserver#examples" title="Permalink to Examples">Examples</a></p>
+        <p class="nlo2">🛸</p>
+        <p>И с помощью интерсекшина обсервера проще делать все. Ищя простые и надежные способы в силу великой лени, вдобавок: простого животного желания “по быстренькому”, запилить в этом месте то что надо было “запиливать”. Приходится вернуться к интерсекшину обсерверу. Потому что даже в забугорной литературе. Интерсекшин обсервер - это достаточно уважаемый и почитаемый способ идентифицировать то место что необходимо быстренько открыжить(“пометить красным крестом”). На хабре можно найти немало постов на эту тему. Самый исчерпывающий <a href="https://habr.com/ru/post/494670/" target="_blank">https://habr.com/ru/post/494670/</a> . О_о Великий Интерсешин Обсервер - ты шикарен.</p>
+        <div id="NLO"></div>
+        <p>Простой способ использовать интерсекшин обсервер под силу простым смертным. Описан на сайте мозилы  <a href="https://developer.mozilla.org/ru/docs/Web/API/Intersection_Observer_API#пример_использования" title="Permalink to Пример использования">Пример использования</a></p>
+        <p>Похожие модификации на сложных функциях прослушки скрола и замудренных новомодных модификаций вероятно заставят все равно вернуться к интерсекшину обсерверу… И снова. Здравствуйте!</p>
+
+          <p class='leftBox'>Интерсешин обсервер из первого варианта с мозилы влючает создание классов и в завершении транзишинЕнд.</p>
+<div id="box"></div>
+          <p class="rightBox"></p>
+      </article>
+    </main>
+    <div class="first">
+      <footer>
+        <script src="https://yastatic.net/share2/share.js"></script>
+  <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit"></div>
+      </footer>
+      <section>
+         <div id="sigCommentsBlock" style="width:100%;"></div>
+         <a href="http://sigcomments.com" style="font-size: 0.6em; width:100%;">Система комментирования SigComments</a>
+         <script type="text/javascript">
+             setTimeout(()=>(function(){
+                 var host_id = '5152';
+                 var script = document.createElement('script');
+                 script.type = 'text/javascript';
+                 script.async = true;
+                 script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                 var ss = document.getElementsByTagName('script')[0];
+                 ss.parentNode.insertBefore(script, ss);
+             })(),2500);
+         </script>
+     </section>
+    </div>
+    <script>
+
+      document.addEventListener("DOMContentLoaded", ()=>{
+      let intersectionObserver = new IntersectionObserver(function(entries) {
+  // Если intersectionRatio равен 0, цель вне зоны видимости
+  // и нам не нужно ничего делать
+  if (entries[0].intersectionRatio <= 0) return;
+  let nlo = document.createElement('p');
+  nlo.className='nlo';
+  document.body.append(nlo);
+  document.querySelector('.nlo').style.cssText=`
+  display:flex;
+  position:fixed;
+  top:0;
+  margin-left:10%;
+  align-items:center;
+  justify-content:center;
+  font-size:75px;
+  `;
+  document.querySelector('.nlo2').style.cssText=`transition:7s; font-size:950px; opacity:1; top:0;`;
+  document.querySelector('.nlo').innerHTML=`<p id='menu'>🛰</p>`;
+  document.querySelector('#menu').addEventListener('click',()=>{
+              // _____-----------------------------_____
+              //````````````````````````````````````````
+              let menuShka = '<nav><a href="/"><h3>home</h3><a href="https://chat.whatsapp.com/KrsudYJi5e1HXdFeLFgTYX"><h3>Chat WhatSapp</h3></a></nav>';
+              //----------------------------------------------------------------------
+              let PressButton=+1;
+
+                  PressButton+=1;
+                  function PressButtonToggle(){
+                      let PressButtonValue=(PressButton>=2)?'open':'close'; // один клик дает open PressButton==1
+                      console.log(PressButton+"button.nazhata");
+                      if(PressButtonValue=='open'){
+                      document.getElementsByTagName("body")[0].style.cssText=`
+                      overflow:hidden;
+                      `;
+                      let divMenu = document.createElement('div');
+                      divMenu.className='menu';
+                      divMenu.innerHTML=' '+`${menuShka}`;
+                      document.body.append(divMenu);
+                      document.querySelector('.menu').style.cssText=`
+                      display:flex;
+                      position:fixed;
+                      top:0;
+                      flex-direction:column;
+                      background-color: rgba(156, 85, 232,0.7);
+                      width:100%;
+                      height:100%;
+                      max-height:100%;
+                      max-width:100%;
+                      justify-content:center;
+                      align-items:center;
+                      overflow:hidden;
+                      `;
+                      PressButton=0; // сброс кликов до нуля 'close' когда PressButton==2
+                      }else if(PressButtonValue=='close'){
+                        document.querySelector('.menu').remove(); //эта ремув удаляет все с надписями
+                        // document.querySelector('.menu').removeAttribute('style');
+                      document.getElementsByTagName('body')[0].style.cssText=`
+                      overflow:scroll;
+                      `;
+                      }
+                      else{
+                        console.log('nu-neznay');
+                      }
+                      document.querySelector('.menu').addEventListener('click', ()=>{
+                          document.querySelector('.menu').remove();
+                          console.log('but');
+                          PressButton=1;
+                          document.getElementsByTagName('body')[0].style.cssText=`
+                          overflow:scroll;
+                          `;
+                          });
+                  }
+                  PressButtonToggle();
+
+  });
+    setTimeout(()=>{document.querySelector('.nlo2').style.cssText=`bottom:10px;`},2000);
+
+  document.querySelector('.leftBox').style.cssText=`margin-left:2px; transition: 2s;`;
+  document.querySelector('.rightBox').style.cssText=`width: 250px; opacity:1; transition:5s;`;
+    setTimeout(()=>{document.querySelector('.rightBox').textContent= "   _"},100);
+  setTimeout(()=>{document.querySelector('.rightBox').innerHTML= "Excellent!!!";},
+  1000);
+  document.querySelector('.rightBox').addEventListener('transitionend',()=>{
+    let divText=document.createElement('div');
+    divText.className='text';
+    document.body.appendChild(divText);
+    document.querySelector('.text').style.cssText=`
+    display:flex;
+    justify-content:center;
+    aling-items:center;
+    background:violet;
+    width:100%;
+    `;
+    document.querySelector('.text').textContent="Вот и все! Спасибо за внимание! Дорогие друзья. И в подарок Вы 'наконец-то' сможете послушать как ползет улитка! :-D ";
+    let divBox=document.createElement('div');
+    divBox.className='BoBo';
+    document.body.appendChild(divBox);
+    document.querySelector('.BoBo').style.cssText=`
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:green;
+    width:100%;
+    `;
+
+    document.querySelector('.BoBo').innerHTML="<audio autoplay controls><source src='the_sounds/3c5fc6b8afd8669.mp3'></audio>";
+    console.log('end');
+  })
+    // document.querySelector('.rightBox').style.cssText=`opacity:1; transition:10s;`;
+    if(window.scrollY<=100){
+      console.log('scrollY<=100');
+      document.querySelector('.nlo').remove();
+    }
+});
+// начать наблюдение
+intersectionObserver.observe(document.querySelector('#NLO'));
+intersectionObserver.observe(document.querySelector('#box'));
+intersectionObserver.observe(document.querySelector('#one1'));
+});
+
+  </script>
+      <!-- <script src='site/menu.js'></script> -->
+      <link rel="stylesheet" href="menu/style-menu.css">
+      <script src="menu/script-menu.js"></script>
+  </body>
+  <!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+ym(57628999, "init", {
+clickmap:true,
+trackLinks:true,
+accurateTrackBounce:true,
+webvisor:true,
+ecommerce:"dataLayer"
+});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+</html>

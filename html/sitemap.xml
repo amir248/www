@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- created with www.majento.ru -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>https://meb70.ru/</loc>
+	<lastmod>2021-04-29T01:15:56+03:00</lastmod>
+	<priority>1.0</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://meb70.ru/order-a-kitchen.html</loc>
+	<lastmod>2021-04-29T01:15:56+03:00</lastmod>
+	<priority>0.7</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://meb70.ru/closet.html</loc>
+	<lastmod>2021-04-29T01:15:56+03:00</lastmod>
+	<priority>0.7</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://meb70.ru/trade-racks-from-chipboard.html</loc>
+	<lastmod>2021-05-03</lastmod>
+	<priority>0.5</priority>
+	<changefreq>weekly</changefreq>
+</url>
+<url>
+	<loc>https://meb70.ru/furniture-to-order-tomsk.html</loc>
+	<lastmod>2021-05-11</lastmod>
+	<priority>0.5</priority>
+	<changefreq>weekly</changefreq>
+</url>
+</urlset>

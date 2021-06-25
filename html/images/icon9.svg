@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<svg width="640" height="640" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
+ <g class="layer">
+  <title>Layer 1</title>
+  <text fill="#0000ff" font-family="serif" font-size="24" id="svg_1" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(8.6425 0 0 4.50841 -552.25 -208.362)" x="100.813855" xml:space="preserve" y="68.199602">HTML</text>
+  <text fill="#007f00" font-family="serif" font-size="24" id="svg_2" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(11.5507 0 0 9.78126 -3397.28 -843.366)" x="321.609926" xml:space="preserve" y="114.387912">CSS</text>
+  <text fill="#ff7f00" font-family="serif" font-size="24" id="svg_3" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(28.4088 0 0 18.823 -9378.31 -6321.27)" x="341.722301" xml:space="preserve" y="367.921089">JS</text>
+ </g>
+</svg>

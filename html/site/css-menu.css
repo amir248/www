@@ -1,0 +1,71 @@
+
+          nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+        nav>a{
+         font-size: 50px;
+          color:green;
+          text-decoration:none;
+          text-shadow: black 2px 2px 3px;
+        }
+#menu{
+  background: yellow;
+  border: cyan 2px solid;
+  border-radius: 5px;
+  padding:2%;
+  color:blue;
+  transition: 2s;
+}
+#menu:hover{
+  background: blue;
+  color:yellow;
+  border: orange 2px solid;
+  transition: 2s;
+}
+@media(max-width:500px){
+  #menu{
+    background: rgb(255, 255, 132);
+  }
+}
+
+/* button */
+.buttony{
+display:flex;
+align-items: center;
+justify-content: center;
+margin:1%;
+}
+#leftButton{
+background: orange;
+/* border: rgb(160, 56, 56) solid 2px; */
+/* border-radius: 10px; */
+padding: 1%;
+border-bottom-left-radius: 5px;
+border-top-left-radius: 5px;
+}
+#leftButton:hover{
+text-shadow: black 2px 2px 2px;
+}
+#leftButton:active{
+text-shadow: green -2px -2px 3px;
+}
+#rightButton{
+background: orange;
+/* border: rgb(160, 56, 56) solid 2px; */
+/* border-radius: 10px; */
+padding: 1%;
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+}
+#rightButton:hover{
+text-shadow: black 2px 2px 2px;
+}
+#rightButton:active{
+text-shadow: green -2px -2px 3px;
+}
+a:hover{
+  color:red;
+}

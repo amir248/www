@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="canonical" href="/reviews.html">
+    <meta name="robots" content="all">
+    <title>Отзывы</title>
+    <meta name="description" content="Отзывы, о нашей работе.">
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        background:linear-gradient(yellow,cyan);
+        min-height:100vh;
+        font-size:20px;
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+      }
+      article{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <style>
+.toggle{
+background: green;
+}
+.one{
+background: purple;
+border: violet 2px solid;
+}
+</style>
+<button class="toggle">Toggle<button>
+<script>
+const toggle = document.querySelector('.toggle');
+toggle.onclick=function(){
+this.classList.toggle('one');
+}
+</script>
+      </article>
+    </main>
+  </body>
+</html>

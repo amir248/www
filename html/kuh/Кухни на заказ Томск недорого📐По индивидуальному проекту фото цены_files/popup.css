@@ -1,0 +1,464 @@
+html.iosInputsFix,
+.iosInputsFix body {
+    -webkit-overflow-scrolling : touch !important;
+    overflow: auto !important;
+    height: 100% !important;
+}
+
+#page-add-popup .popupBody{
+    padding: 10px 0 0;
+}
+
+#page-add-popup form{
+    overflow: hidden;
+    font-size: 0;
+}
+
+#page-add-popup form > div{
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: top;
+    height: 450px;
+    box-sizing: border-box;
+}
+
+#page-add-popup form > div.hidden{
+    display: none;
+}
+
+#page-add-popup .preview{
+    width : 66%;
+    padding-top: 10px;
+    overflow-x: auto;
+}
+
+#page-add-popup .preview .add-block{
+    text-align: center;
+    padding: 0 0 30px;
+}
+
+#page-add-popup .preview .add-block select{
+    vertical-align: middle;
+    width: 350px;
+}
+
+#page-add-popup .preview .line{
+    position: relative;
+    cursor: pointer;
+}
+
+#page-add-popup .preview .controls{
+    position: absolute;
+    width: 85px;
+    left : 103%;
+    top : 50%;
+    margin-top: -18px;
+    display: none;
+    text-align: center;
+    font-size: 0;
+
+    background: #fff;
+    border-radius: 5px;
+    padding: 8px 0;
+    border: 1px solid #ccc;
+}
+
+#page-add-popup .preview .controls div{
+    position: absolute;
+    left : -6px;
+    top : 12px;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 6.2px 5px 0;
+    border-color: transparent #fff transparent transparent;
+}
+
+#page-add-popup .preview .controls.show{
+    display: block;
+}
+
+#page-add-popup .preview .controls a{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image:url(https://static.lpgenerator.ru/media/css/upgrade/widget/popup/buttons.png);
+    cursor: pointer;
+    vertical-align: top;
+    margin: 0 4px;
+}
+
+#page-add-popup .preview .controls a.down{
+    background-position: 0 0;
+}
+
+#page-add-popup .preview .controls a.up{
+    background-position: -18px 0;
+}
+
+#page-add-popup .preview .controls a.del{
+    background-position: -36px 0;
+}
+
+#page-add-popup .preview .line{
+    border: 1px dashed transparent;
+}
+#page-add-popup .preview .line:hover{
+    border: 1px dashed #000;
+}
+
+#page-add-popup .preview .line input{
+    cursor: pointer;
+}
+
+#page-add-popup .panel{
+    width: 34%;
+    border-left : 1px solid #e5e5e5;
+    overflow: auto;
+    padding: 0 20px;
+    font-family: Arial, serif;
+}
+
+#page-add-popup .panel a{
+    color: #0575a4;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page-add-popup .panel a:hover{
+    text-decoration: none;
+}
+
+#page-add-popup .panel .name{
+    font-weight: bold;
+    padding: 10px 0;
+    color : #2b2b2b;
+    font-size: 18px;
+}
+
+#page-add-popup .panel .name a{
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+#page-add-popup .panel .block{
+    border-top: 1px solid #e5e5e5;
+}
+
+#page-add-popup .panel label > span{
+    display: inline-block;
+    width: 32%;
+    vertical-align: middle;
+}
+
+#page-add-popup .panel .title{
+    margin: 0;
+    padding: 10px 0 5px;
+    color: #2b2b2b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#page-add-popup .panel label{
+    padding: 2px 0;
+    font-size: 14px;
+    color: #2b2b2b;
+    font-weight: normal;
+}
+
+#page-add-popup .panel label input[type=text]{
+    width: 64%;
+    border-color: #c3ced7;
+    height: 29px;
+    line-height: 25px;
+    vertical-align: middle;
+    margin: 8px 0;
+}
+
+#page-add-popup .panel label textarea{
+    box-sizing: border-box;
+    width: 64%;
+    vertical-align: top;
+    border-color: #c3ced7;
+    border-radius: 6px;
+    margin: 0 0 5px 0;
+    height: 50px;
+}
+
+#page-add-popup .panel label input[rel=color]{
+    width : 70px;
+    text-align: center;
+}
+
+#page-add-popup .panel label input[type=checkbox]{
+    vertical-align: top;
+    margin-top: 6px;
+}
+
+#page-add-popup .panel label input[rel=slider]{
+    width : 12%;
+    text-align: center;
+}
+
+#page-add-popup .panel label select{
+    border-color: #c3ced7;
+    height: 30px;
+    vertical-align: middle;
+    width: 64%;
+    margin: 8px 0;
+}
+
+
+#page-add-popup .panel label .slider_inside{
+    width: 47%;
+    margin: 0 2% 0 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#page-add-popup .widget.popup{
+    margin: 0 auto;
+    display: block;
+}
+
+.widget.popup{
+    background: #c7d6de;
+    border-radius: 10px;
+    width: 350px;
+    min-height: 200px;
+    padding: 50px;
+    z-index: 650;
+    position: relative;
+    font-size: 14px;
+    line-height: normal;
+    display: none;
+    margin: 0 auto;
+}
+
+.widget.popup .close{
+    text-align: right;
+    position: absolute;
+    top : 10px;
+    right : 10px;
+    display: inline-block;
+    width : 25px;
+    height: 25px;
+    background: url(https://static.lpgenerator.ru/media/css/upgrade/widget/popup/close.png);
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.widget.popup .close:hover{
+    opacity: 1;
+}
+
+.widget.popup .line.text{
+    text-align: center;
+    color : #2c2c2c;
+    font-size: 26px;
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+.widget.popup .line.input{
+    padding-bottom: 2px;
+}
+.widget.popup .line.checkbox {
+    margin: 3px 0;
+}
+
+.widget.popup .line.checkbox.disabled > label {
+    opacity: .3;
+}
+
+.widget.popup .line.input input{
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 6px;
+    border-width: 0;
+    margin:0;
+    color: #67737b;
+    font-family: Verdana;
+    width: 100%;
+    vertical-align: top;
+}
+
+.widget.popup .line.checkbox input[type="checkbox"] {
+    width: auto;
+    padding: 0;
+    margin: 3px 3px 0 0;
+}
+
+.widget.popup .line.textarea{
+    padding-bottom: 2px;
+}
+
+.widget.popup .line.textarea textarea{
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+    border-radius: 6px;
+    border-width: 0;
+    vertical-align: top;
+    font-size: 14px;
+    color: #67737b;
+    font-family: Verdana;
+}
+
+.widget.popup .line.submit{
+    text-align: center;
+}
+
+.widget.popup .line.submit input{
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+    padding: 0 10px;
+    font-size: 22px;
+    color: #fff;
+    font-family: Verdana;
+    border-radius: 6px;
+    border-width: 0;
+    background-color: #0575a4;
+    vertical-align: top;
+    border-width: 0;
+    height: 50px;
+    line-height: 50px;
+}
+.widget.popup .line.submit input:disabled {
+    background-color: #acacac;
+}
+
+.widget.popup .line.submit button{
+    cursor: pointer;
+}
+
+.widget.popup .line.bigText{
+    text-align: left;
+    color : #2c2c2c;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: normal;
+}
+
+.widget.popup .line.bigText .styledText{
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-right: -10px;
+}
+
+.widget.popup.overlay{
+    background: rgba( 0, 0, 0, 0.5);
+    border-radius: 0;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: none;
+}
+
+.widget.popup.overlay > .widget.popup{
+    display: block;
+    margin-top: 200px;
+}
+
+.widget.popup .confirmation{
+    text-align: center;
+    font-size: 26px;
+    font-family: Verdana;
+    color: #2c2c2c;
+    text-align: center;
+    padding-bottom: 28px;
+    display: none;
+    vertical-align: middle;
+    height: 160px;
+}
+
+.widget.popup .confirmation.show{
+    display: table-cell;
+}
+
+
+/* new */
+
+#page-add-popup .menu-buttons{
+    position: absolute;
+    height: auto;
+    border-bottom: 1px solid #e3e3e3;
+    padding-bottom: 10px;
+    width: 66%;
+    z-index: 1000;
+    background: #fff;
+}
+
+#page-add-popup .menu-buttons.fullWidth{
+    width: 100%;
+}
+
+#page-add-popup form > .preview,
+#page-add-popup form > .actions{
+    padding-top: 60px;
+}
+
+#page-add-popup .menu-buttons a{
+    font-family: Arial,serif;
+    font-size: 14px;
+    color: #8d9eab;
+    display: inline-block;
+    padding: 7px 14px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#page-add-popup .menu-buttons a.active{
+    background: #e4edf2;
+    border-radius: 5px;
+    color: #2c2c2c;
+    text-decoration: none;
+    cursor: default;
+}
+
+#page-add-popup form > .actions{
+    width: 100%;
+    padding-left: 10px;
+}
+
+#page-add-popup form > .actions label{
+    font-weight: normal;
+}
+
+#page-add-popup form > .actions label span{
+    display: inline-block;
+    color: #2b2b2b;
+    font-family: Arial, serif;
+    font-size: 14px;
+    width: 140px;
+    vertical-align: middle;
+}
+
+#page-add-popup form > .actions label input,
+#page-add-popup form > .actions label select{
+    width: 290px;
+    vertical-align: middle;
+}
+
+#page-add-popup form > .actions label input.small{
+    width: 65px;
+    margin-right: 10px;
+}
+
+#page-add-popup form > .actions label input[type=checkbox]{
+    width: auto;
+    margin: 10px 0;
+}
+
+#page-add-popup form > .actions label input[type=checkbox] + span{
+    width: auto;
+}

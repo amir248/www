@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="canonical" href="https://nasobe.ru/resume/resume.html">
+    <meta name="description" content="💻Резюме верстальщика. СЕО оптимизация, адаптивня верстка лендинг пейдж или сайта визитки, реклама в Директе.">
+    <title>😊 Резюме вертальщика💻, адаптивная верстка и СЕО</title>
+    <meta name="autor" content="Amir Shikarno">
+    <script data-ad-client="ca-pub-6824659625881284" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+        body{
+            background-color:rgb(214, 255, 205);
+            margin:0;
+        }
+        main{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+        }
+        article{
+            display:flex;
+            /* flex-direction:column; */
+            justify-content: center;
+            width:700px;
+            max-width:100%;
+            flex-wrap:wrap;
+            background-color: rgb(226, 255, 224);
+        }
+        footer{
+            display:flex;
+            flex-direction: column;
+            text-align: center;
+            background-color: rgb(223, 179, 255);
+            width:700px;
+            max-width: 100%;
+        }
+        .row{
+            display:flex;
+            flex-direction: row;
+            flex-wrap:wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .column_35{
+            display:flex;
+            flex-direction: column;
+            max-width: 100%;
+            flex-wrap:wrap;
+            flex-basis: 348px; /* two pixel*/
+            justify-content: center;
+            align-items: center;
+            /* border: red solid 1px; */
+        }
+        .margin{
+               margin:2%;
+        }
+        .padding{
+            padding:5%;
+        }
+        .box{
+            display:flex;
+            flex-direction: column;
+            max-width: 100%;
+            /* border:indigo solid 1px; */
+            flex-basis:348px; /* two pixel*/
+            justify-content:center;
+            align-items: center;
+        }
+        .border_red{
+            border: red solid 1px;
+            /* background-color: green; */
+        }
+        img{
+            max-width: 100%;
+        }
+        .orange{
+            background-color:rgb(255, 186, 59);
+            width:100%;
+            max-width: 100%;
+            text-align: center;
+        }
+        .color-green{
+            color:green;
+        }
+        .color-red{
+            color:red;
+        }
+        .min-font{
+            font-size: 12px;
+        }
+        .max-font{
+            font-size:40px;
+            color:red;
+        }
+    </style>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "person",
+          "url": "https://nasobe.ru/resume/resume.html",
+          "name": "Амир Наврутдинов",
+          "alternateName": ["Amir Shikarno", "Амир Шикарно"],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+7-952-888-5656",
+            "email": "chikchicly@gmail.com",
+            "contactType": "frontend developer html, css, js",
+            "url": "https://www.facebook.com/Amir.Shikarno/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <article>
+            <h1 class="orange">резюме: developer html/css/js<span class="max-font">*</span></h1>
+            <div class="margin" id="textP"></div>
+            <p class="margin" id="textG"></p>
+            <!-- <a href="/resume/resume.html"><button>glav</button></a> -->
+            <div class="row">
+              <script>
+              </script>
+                <p class="column_35">
+                    <a href="resume.html?talk">
+                    <picture>
+                        <source srcset="/resume/img-resume/imgfoto.webp" type="image/webp">
+                        <img src="img-resume/imgfoto.jpg" width="100%" alt="Амир Наврутдинов" data-tooltip="Хай, Доброго времени суток! <br>P.S. Кликнув по изображению со мной можно познакомится по ближе!">
+                        <!-- title="Где то. На этой фотографии изображен аффтор резюме :-)" -->
+                    </picture>
+
+                    </a>
+
+            <style>
+                .tooltip {
+      position: fixed;
+      padding: 10px 20px;
+      border: 1px solid #b3c9ce;
+      border-radius: 4px;
+      text-align: center;
+      font: italic 14px/1.3 sans-serif;
+      color: #333;
+      background: #fff;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+    }
+            </style>
+            <script>
+               let tooltipElem;
+    document.onmouseover = function(event) {
+      let target = event.target;
+      // если у нас есть подсказка...
+      let tooltipHtml = target.dataset.tooltip;
+      if (!tooltipHtml) return;
+      // ...создадим элемент для подсказки
+      tooltipElem = document.createElement('div');
+      tooltipElem.className = 'tooltip';
+      tooltipElem.innerHTML = tooltipHtml;
+      document.body.append(tooltipElem);
+      // спозиционируем его сверху от аннотируемого элемента (top-center)
+      let coords = target.getBoundingClientRect();
+      let left = coords.left + (target.offsetWidth - tooltipElem.offsetWidth) / 2;
+      if (left < 0) left = 0; // не заезжать за левый край окна
+      let top = coords.top - tooltipElem.offsetHeight - 5;
+      if (top < 0) { // если подсказка не помещается сверху, то отображать её снизу
+        top = coords.top + target.offsetHeight + 5;
+      }
+      tooltipElem.style.left = left + 'px';
+      tooltipElem.style.top = top + 'px';
+    };
+    document.onmouseout = function(e) {
+      if (tooltipElem) {
+        tooltipElem.remove();
+        tooltipElem = null;
+      }
+    };
+    // if(window.location.href!='/resume/resume.html?talk'){
+    //     console.log(window.location.href);
+    // }
+
+    if(window.location.search=='?talk'){
+        console.log(window.location.search);
+
+        // textP.innerHTML = `${person}`;
+        textG.innerHTML = "Успех! Вот с такими мыслями (позитивными), выходят хорошие дела. Если конечно на них настроится. Проявить чуточку смелости для творчества... и можно со спокойной совестью (и чистой душой), творить и вытворять всевозможные (дела)!";
+        console.log(localStorage.name);
+
+        if(localStorage.name==null){
+            textP.innerHTML = localStorage.getItem(name);
+            let person = prompt('Как Вас зовут?', "Уважаемый персонаж!");
+            alert('Очень приятно Достопочтейнейший '+ ' ' + `${person}` + ' , а я ЧикЧикли СпайсХендс Форсмажорович! (верстальщик📲)! (\"Со стажем\"⌨(\"адаптивной верстки\") 💻). и с зависимостью от javascript 🧐 , and PHP 😱'  );
+            localStorage.setItem('name', person);
+        }else{
+            textP.innerHTML = "Приветствую Вас : "+'<span style="color:red; font-size:24px;">'+ localStorage.getItem('name')+'</span>' +'<span style="font-size:50px">😉</span> ';
+        }
+    }
+            </script>
+                    <div class="box">
+                    <h2 class="orange">Amir Navrutdinov</h2><span>(Амир Наврутдинов)</span><span>(ChikChicly)</span><span>(Amir Shikarno)</span><span>(Space Hands)</span><span>(ForsMazhorovich)</span>
+                            <span class="row">
+                        17/07/1987</span>
+                        <span class="padding">ЦЕЛЬ: Получение работы frontend developer <br>Основной стек: html css js php и работа с базой</span>
+
+                    </div>
+                </p>
+                <p class="column_35"><span class="padding"><span class="orange">Ключевые навыки:</span> html,css,js/ Практикую full stack (на js+php)- писать связь с сервером через php передавая данные через json формат. С помощью json_encode($lile); <br><a href="https://nasobe.ru/?spa">Веб Мастреской имени Барона Сайтоверстаузена</a>. Все страницы домена, тоже порфолио для примера.</span></p>
+                <p class="column_35">
+                    <span class="padding" onmouseover="this.innerHTML='Скрытое послание для тех кто шарит! У всех есть мечта! А тут хочется чтобы большой палец на фотографии начал разговаривать. Тоесть смотришь на фотку с мыслями: “как то странно выглядит это” и тут палец открывает глаза и говорит: “Хей привет аболтус! и начинает нести, прям как в жизни. И всё чтобы было так, когда ни у одного из фантастов не хватит фантазии сказать что мы живем в “матрице” или еще что то подобное: Далее... Гениальный фантаст, выключает компьютер со словами ну вот, теперь я видел всё...'
+                    "onmouseout="this.innerHTML='Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt veniam, corporis velit asperiores vel, fugiat nemo nisi voluptatum voluptate temporibus rerum voluptas ullam quas, minus voluptatibus cum nihil. Fugit voluptate, iste accusantium ipsa laborum saepe exercitationem iusto quia sit repudiandae error debitis veritatis corrupti eos. Quo quibusdam quam cupiditate Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit consequuntur obcaecati quam voluptate fugiat debitis doloribus assumenda et facere! Ducimus sequi quod repellendus nulla in?'">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nesciunt veniam, corporis velit asperiores vel, fugiat nemo nisi voluptatum voluptate temporibus rerum voluptas ullam quas, minus voluptatibus cum nihil. Fugit voluptate, iste accusantium ipsa laborum saepe exercitationem iusto quia sit repudiandae error debitis veritatis corrupti eos. Quo quibusdam quam cupiditate?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit consequuntur obcaecati quam voluptate fugiat debitis doloribus assumenda et facere! Ducimus sequi quod repellendus nulla in?</span>
+                </p>
+                <style>
+                    .singlePage{
+                        background-color:rgba(93, 199, 93, 0.233);
+                        margin:2%;
+                        padding:3%;
+                        border-radius:5px;
+                    }
+                    .singlePage:hover{
+                        background-color: chartreuse;
+                    }
+                    .singlePage:active{
+                        background-color: rgb(255, 252, 89);
+                    }
+                </style>
+                <p class="singlePage">singlePage</p><p class="singlePage2">подгрузить<br> погоду<br>отЯндекса.</p>  <div id="singlePage2"></div>
+                <script>
+                    document.querySelector('.singlePage').addEventListener('click', function(){
+                        let slideIMG = '/resume/spaImage.html';
+                        let singlePage = new XMLHttpRequest();
+                        singlePage.open('GET',`${slideIMG}`);
+                        singlePage.send();
+                        singlePage.onload = function(){
+                        if(singlePage.status !=200){
+                            alert(`Ошибка ${singlePage.status}: ${singlePage.statusText}`);
+                        }else { // если всё прошло гладко, выводим результат
+                        // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                        responseType ="Text";
+                        document.querySelector('#singlePage').innerHTML = this.response;
+                            }
+                        }
+                    });
+
+                </script>
+                  <div id="singlePage"></div>
+<!-- подгруз два -->
+<style>
+    .singlePage2{
+        background-color:rgba(68, 160, 68, 0.233);
+        margin:2%;
+        padding:3%;
+        border-radius:5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .singlePage2:hover{
+        background-color: rgb(129, 182, 76);
+    }
+    .singlePage2:active{
+        background-color: rgb(218, 215, 70);
+    }
+</style>
+
+<script>
+    document.querySelector('.singlePage2').addEventListener('click', function(){
+        let slideIMG2 = '/resume/spaImage2.html';
+        let singlePage2 = new XMLHttpRequest();
+        singlePage2.open('GET',`${slideIMG2}`);
+        singlePage2.send();
+        singlePage2.onload = function(){
+        if(singlePage2.status !=200){
+            alert(`Ошибка ${singlePage2.status}: ${singlePage2.statusText}`);
+        }else { // если всё прошло гладко, выводим результат
+        // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+        responseType ="Text";
+        document.querySelector('#singlePage2').innerHTML = this.response;
+            }
+        }
+    });
+
+</script>
+<p style="display:flex;margin:1%;width:100%;"></p>
+
+
+            </div>
+            <div class="row border_red">
+                <h2 class="orange">Примеры заверстаных страниц:</h2>
+                        <span class="column_35">
+                            <h2 class="margin">Сайт электрику</h2>
+                            <a href="https://nasobe.ru/chat/site/el.html">
+                            <img src="img-resume/el.png" ></a>
+                            </span>
+
+                        <span class="column_35">
+                        <h2 class="margin">Чат на php без б/д.</h2>
+                        <a href="https://nasobe.ru/chat/">
+                            <img src="img-resume/chat.png" ></a>
+                        </span>
+                        <!--Two page-->
+
+                        <div class="row">
+
+                        <span class="column_35">
+                            <p class="margin">Сайт тетрадный лист <strong>Блокнот</strong><a href="https://nasobe.ru/notepad/">
+                                <img src="img-resume/pade.png" >
+                                </a></p>
+                        </span>
+                        <br>
+                        <span class="column_35">
+                            <p class="margin">Игра на javascript против искуственного интелекта! <strong>Кркстики, нолики.</strong>
+                        <a href="https://amir248.github.io/game/">
+                                <img src="img-resume/xo.png" >
+                                </a></p>
+                        </span>
+                        <span class="column_35">
+                            <h3 class="margin">Мультилендинг с сигментацией трафика</h3>
+                            <a href="https://nasobe.ru/?multi_lending">
+                                <img src="img-resume/iconki.png" ></a>
+                            </span>
+                            <span class="column_35">
+                                <span class="margin">Все страницы сайта веб мастерская имени <strong>Барона Сайтоверстаузена</strong>
+                                <a href="https://nasobe.ru/?seo">
+                                    <img src="img-resume/nasoberu.png" ></a>
+                                </span><br>
+                                </span>
+                                </div>
+            </div>
+
+
+
+
+            <!-- перенесенные со старого резюме -->
+
+            <div class="column_35"><br>
+                <h1 class="orange">Skills</h1><br>
+                <span class="padding">
+                    <h3>HTML<br><span class="color-green">///////////////////////////</span><span class="color-red">///</span><sup>90%</sup></h3>
+                    <h3>CSS<br><span class="color-green">/////////////////////</span><span class="color-red">/////////</span><sup>70%</sup></h3>
+                    <h3>JS<br><span class="color-green">///////////////</span><span class="color-red">///////////////</span><sup>50%</sup></h3>
+                    <h3>PHP<br><span class="color-green">//////////</span><span class="color-red">////////////////////</span><sup>30%</sup></h3>
+                    <h3>Photoshop<br><span class="color-green">/////////////////////////////</span><span class="color-red">/</span><sup>99%</sup></h3>
+                    <h3>the photo<br><span class="color-green">/////////////////////////////</span><span class="color-red">/</span><sup>99%</sup></h3>
+                </span>
+            </div>
+            <div class="column_35">
+                <span class="padding">
+                <h3>Курсы:</h3>
+                    <p>PHP<br><img src="img-resume/php.jpg" width="200px"></p>
+                    <p>HTML<br><img src="img-resume/html.jpg" width="200px"></p>
+                    <p>JS<br><img src="img-resume/js.jpg" width="200px"></p>
+                    <p>CSS<br><img src="img-resume/css.jpg" width="200px"></p>
+                </span>
+            </div>
+            <div class="column_35">
+                <span class="padding">
+                    <h2>Образование:</h2><br>
+                    <p>Средне специальное: ТСХТ
+                    <br>Cпециальность: "экономика и бухучёт". <br></p>
+                </span>
+            </div>
+            <div class="column_35">
+                <span class="padding">
+                <h2>Хобби</h2>
+                    <p>Веб технологии, СЕО.<br>
+                    Рыбалка, фотография, спорт. <br>Aдминистрирую сайт <a href="https://foto248.ru" target="_blank">клуб фанатов геометрической прогрессии see the visible</a> Который имеет свою аудиторию и кучу фоловеров на <a href="https://news.google.com/publications/CAAqBwgKMNuOkwsw27yoAw?oc=3&ceid=RU:ru">Google News</a></p>
+                </span>
+            </div>
+            <div id="footerN"></div>
+            <style>
+                .dydy{
+                    background-color: rgba(245, 117, 117, 0.219);
+                }
+            </style>
+            <script>
+                if(window.location.search=='?talk'){
+                    footerN.innerHTML= "<p style='background: rgba(245, 117, 117, 0.5); margin:3%; padding:3%; max-width:100%; height:25px; text-align:center;'>И если Вам понадобятся услуги верстальщика. Пишите в ватсап."+"<a href='https://wa.me/79528885656'>+79528885656</a></p>";
+                }
+            </script>
+
+            <p class="margin"><span class="max-font">*</span><span class="min-font">"это модифицированная версия старого <a href="https://nasobe.ru/resume/old_resume.html">резюме</a> и в этом расправлены краюшки на блоках, усовершенствованна цветовая палитра по рекомендации Иоганнеса Иттена с применением цветового круга Иттена."</span></p>
+        </article>
+        <footer>
+
+            <p class="width-fozzy">Старница расположена на сверхбыстром хостинге <a href="https://fozzy.com/aff.php?aff=16418">fozzy</a>, на скоростных SSD дисках и с подключенным кешем.</p>
+            <a href="https://nasobe.ru/?spa"><h4>При поддержки веб мастреской имени Барона Сайтоверстаузена.</h4></a>
+        </footer>
+    </main>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+ <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57628999, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+</body>
+</html>

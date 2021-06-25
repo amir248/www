@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        background:linear-gradient(orange, green, cyan);
+        min-height:100vh;
+      }
+      main{
+        display:flex;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        min-height:100vh;
+      }
+      article{
+        display:flex;
+        max-width: 100%;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        min-height:100vh;
+      }
+      h1{
+        display:inline-block;
+        align-items:center;
+      }
+      .circle{
+        width:70px;
+        height:70px;
+        background:green;
+        border:solid #007aaa 3px;
+        border-radius:50%;
+      }
+      .box{
+        background:radial-gradient(rgba(250,0,0,0.9), rgba(255,255,250,0.1));
+        width:100vh;
+        height:50vh;
+
+      }
+      h2{
+        background: rgba(0,255,0,0.5);
+        max-width: 100%;
+        width:900px;
+        color:red;
+        text-shadow: 2px 2px 3px black;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article><h1 class="RandomColor">anxiety</h1> <br> Big alarm script
+        <p class="RandomColor">stroka</p>
+        <p class="circle"><p class="box">s</p></p>
+        <!-- //// -->
+        PHP выборка для передачи в фронтенд через JSON
+ <p>О_о не, только не это… НёеееооТ! Этот php опять запускает свои “сюрикены”. Ну воТ …. опять приехали? Он вообще нормальный этот PHP?</p>
+
+<p>Нормальные языки программирования работают в одном всем понятном направлении.
+А, это, что опять такое: Выборку из базы данный отправить в голый фронтенд! Для специалиста с “высоченно высшим образованием” - HTML CODER!</p>
+
+<h2>СТОП! Подождите! Неужели: HTML CODER существует?</h2>
+<p><span style=”background:rgba(255,0,0,0.3);”>- И, да, еще как существует. -Но, только для тех у кого высшее образование, на пол шишки выше чем у всех остальных “других html coder{ow}”.</span></h2>
+
+<p>Самый хороший и лучший способ был описан в сайте учебного курса. И лучше не тащить всю кучу постов, а конвертировать в json только один точечный пост.</p>
+<a href="https://www.mousedc.ru/learning/65-sql-select-where-like-and-or/">https://www.mousedc.ru/learning/65-sql-select-where-like-and-or/</a>
+<blockquote cite=”https://www.mousedc.ru/learning/65-sql-select-where-like-and-or/”>
+<p style="background:rgba(255,5,0,0.3); text-align:center;">SELECT * FROM `USERS` WHERE `NAME` LIKE 'Мышь%';</p>
+<p>В таком случае отображение поста отобразится по имени “NAME”, а если искать по айдишнику, то по этому принципу ‘id’ LIKE ‘%170%’ отобразит строку всей записи в базе с ключом по айдишнику.</p>
+</blockquote>
+<div>
+<picture>
+  <img src='../images/full-stackDevel.jpg' alt='full stack' style="max-width:100%;width:300px;float:left; padding-right:1%;">
+<picture>
+<p style="margin:3%;">Хоть яваскрипт и так справляется на отлично с перебором многомерного массива из объекта переданного с помощью php в формате json. Но если распределить баланс по нагрузке, выйдет что проще делать выборку на сервере. Таким образом кнопка < button> играет роль щупа или пальца которым можно потыкать базу данных через пиашпи и незамедлительно получить горячий отклик через аякс.</p>
+<p>+к преимуществам PHP на сервере работает куда быстрее чем мобильный телефон.</p>
+    <blockquote cite="http://developer.mozilla.org">
+<p>This is a quotation taken from the Mozilla Developer Center.</p>
+</blockquote>
+</div>
+<blockquote cite=”https://www.mousedc.ru/learning/65-sql-select-where-like-and-or/”>
+<p style="background:rgba(255,5,0,0.3); text-align:center;">SELECT * FROM `USERS` WHERE `NAME` LIKE 'Мышь%';</p>
+В таком случае отображение поста отобразится по имени “NAME”, а если искать о айдишнику, то по этому принципу ‘id’ LIKE ‘%170%’ отобразит строку всей записи в базе с ключом по айдишнику.
+</blockquote>
+
+<a href=”https://nasobe.ru/voting.html”>На один пост с помощью генерации json формата на php и передача данных во фронтенд.</a>
+
+      </article>
+    </main>
+    <script>
+    function randInt(min,max){
+      let rand =min +Math.random()*(max+1-min);
+      return Math.floor(rand);
+    }
+
+    document.querySelector('.RandomColor').style.background=`rgb(${randInt(0,255)},${randInt(0,255)},${randInt(0,255)})`;
+    // console.log(rgb(${randInt(0,255)},${randInt(0,255)},${randInt(0,255)});
+    </script>
+  </body>
+</html>
