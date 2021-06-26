@@ -16,6 +16,7 @@
     body{
       background:linear-gradient(rgba(0,255,0,0.5),rgba(255,0,0,0.5));
       min-height:100vh;
+      font-size:20px;
     }
     main{
       display:flex;
@@ -30,23 +31,271 @@
       max-width:100%;
       width:900px;
       flex-direction:column;
+      /* word-wrap: break-word; */
+      /* word-break:break-all; */
     }
     img{
       max-width:100%;
+    }
+    p{
+      margin:1%;
+    }
+    /* .wordBreak{
+      word-break:break-all;
+    } */
+    button{
+      border-radius:7px;
+      width:290px;
+      height:70px;
+      background:none;
+      background:rgba(0,255,0,0.3);
+      font-size:25px;
+      /* border:none; */
+      vertical-align: middle;
+    }
+    ul{
+      background:yellow;
+      }
+    li{
+      /* background:rgba(0,255,0,0.5); */
+      padding-left:3%;
+      list-style-image: url(images/syriken.png);
+      text-align:center;
+      font-size:33px;
+      width:270px;
+      /* text-shadow:white 1px 1px 1px; */
+      border-radius:5px;
+      vertical-align:middle;
+    }
+    form{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      flex-wrap: wrap;
     }
     </style>
   </head>
   <body>
     <main>
       <article>
-        <h1>Тайная работа пиашпишки!<span style="color:green;font-size:5vh;">"ninja hidden PHP"</span></h1>
-        <p>Это уже не новость. Загуглив JSON в php можно наткнуться на видео с февряля 2020 года где пост запросы отлавливаются пиашпишкой невидимой и скрытой техникой. Там не полная схема, но начало уже ясно. Очень просто с помощью html формы, выполнить пост запрос на “тайный” php скриптик, который поковыряетя в BD и вернет в формате json все нужные данные. Таким образом можно шурудить и туда и обратно. Все что угодно. В этом случае пиашпишка остаётся единственной и незаменимой. Все потому что php старый(древний) язык бекенда, поддержывается абсолютно всеми серверами. И как гласит статистика с хабра 79% мирового бекенда посвящено пиашпишки. https://habr.com/ru/company/skillbox/blog/534684/
-        <img src="https://habrastorage.org/webt/tl/ws/9r/tlws9rxqwmw9t4daxiddwzoftkc.png"></p>
-        <p>И пиашпи остается точно основательным лидером, и все хорошо. Тока! Мы то, люди умные простых путей не ищем. Поэтому если обратить внимание на пейдж спид от гугла. Выйдет что, до полного 100% показателя грин зоны. Остается всегда каких то 3%. Хотя все указания призренно тычат в счетчики аналитики от всемилюбимого яндекса. Но, нам не до яндекса. Ковыряться мы будем в пиашпишки, ибо все равно яндексу уже ничем не помочь.</p>
+
+        <h1><span style="color:rgba(0,255,0,0.1);text-shadow:rgba(255,255,255,0.7) 1px 1px 3px;">Тайная</span> работа <span style="color:rgba(34,25,255,0.5);text-shadow: 1px 1px 1px black;">пиашпишки!</span><span style="border-radius:5px; background:rgba(255,255,0,0.3); color:green;font-size:5vh;text-shadow: 1px 1px 2px black;">"ninja hidden <span style="color:blue;">P</span><span style="color:yellow;">H</span><span style="color:blue;">P</span>"</span></h1>
+        <p>Это уже не новость. Загуглив JSON в php можно наткнуться на видео с февряля 2020 года где пост запросы отлавливаются пиашпишкой невидимой и скрытой техникой. Там не полная схема, но начало уже ясно. Очень просто с помощью html формы, выполнить пост запрос на “тайный” php скриптик, который поковыряетя в BD и вернет в формате json все нужные данные. Таким образом можно шурудить и туда и обратно. Все что угодно. В этом случае пиашпишка остаётся единственной и незаменимой. Все потому что php старый(древний) язык бекенда, поддержывается абсолютно всеми серверами. И как гласит статистика с хабра 79% мирового бекенда...</p>
+        <div class="wordBreak" style="display:flex; justify-content:center; align-items:center;max-width:100%;">
+          <picture>
+            <img src="https://habrastorage.org/webt/tl/ws/9r/tlws9rxqwmw9t4daxiddwzoftkc.png" alt="php">
+          </picture>
+        </div>
+        <p>Пиашпи остается основательным лидером, и все хорошо. Тока! Мы то, люди умные простых путей не ищем. Поэтому если обратить внимание на пейдж спид от гугла. Выйдет что, до полного 100% показателя грин зоны. Остается всегда каких то 3%. Хотя все указания призренно тычат в счетчики аналитики от всемилюбимого яндекса. Но, нам не до яндекса. Ковыряться мы будем в пиашпишки, ибо все равно яндексу ничем не помочь.</p>
         <form action="generation-objects/php-hidden-ninja.php" method="post">
-          <button name="php-ninja">shuriken_throw</button>
+
         </form>
-      </article>
+        <div id="title"></div>
+<div id="text"></div>
+<div class="boxFirst">
+    <div class='imagesWindow'>
+        <div id="news"></div>
+    </div>
+    <div class="buttony">
+        <div id="leftButton" style="font-size:25px;">⬅</div>
+        <div id="rightButton" style="font-size:25px;">➡</div>
+    </div>
+</div>
+    <form action="generation-objects/php-hidden-ninja.php" method="post">
+      <button name="php-ninja-hidden"><li>🐘PHP</li></button>
+
+        <button name="php-ninja">shuriken_throw ✴</button>
+    </form>
+      <button name="RZHACH"><li>😁костылея</li></button>
+        </article>
     </main>
+<!-- // -->
+<style>
+        .boxFirst{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            max-width: 100%;
+        }
+        #leftButton{
+            display:flex;
+            border:blueviolet solid 2px;
+            /* border-radius: 50%; */
+            background-color: burlywood;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        }
+        #leftButton:hover{
+            background-color: rgb(247, 177, 85);
+        }
+        #leftButton:active{
+            background-color: rgb(212, 67, 0);
+        }
+        #rightButton{
+            display:flex;
+            border:blueviolet solid 2px;
+            /* border-radius: 50%; */
+            background-color: burlywood;
+            width: 70px;
+            justify-content: center;
+            align-items: center;
+            padding:10px;
+        }
+        #rightButton:hover{
+            background-color: rgb(247, 177, 85);
+        }
+        #rightButton:active{
+            background-color: rgb(212, 67, 0);
+        }
+        .buttony{
+          display:none;
+        }
+        /* .imagesWindow{
+            display: flex;
+            width: 100%;
+            height: 100%;
+
+            max-width: 100%;
+            max-height: 100%;
+            background-color: rgba(0, 100, 0, 0.144);
+        } */
+    </style>
+<script>
+const KOSTYL= '/testKostyleja.html';
+document.getElementsByTagName('button')[2].addEventListener('click',()=>{
+  document.querySelector('.buttony').style.cssText=`
+  display: flex;
+  justify-content: space-around;
+  /* text-align: center; */
+  width: 100%;
+  background-color: rgb(80, 135, 255);
+  `;
+  if(window.innerWidth<=700){
+
+    let rpoZh=700-window.innerWidth;
+      let andE =(700*100)/window.innerWidth;
+      console.log(rpoZh+"____"+andE+'_Prosto andE');
+      let height = (300*100)/(andE);
+      console.log(height+'_proverka height');
+      document.querySelector('.imagesWindow').style.cssText=`
+    display:flex;
+    height: ${height}px;
+    `;
+    console.log(`${andE}`+'Туту написано из оттдуа');
+  }else{
+    document.querySelector('.imagesWindow').style.cssText=`
+    display:flex;
+    height:300px;
+    width:700px;
+    `;
+  }
+       let imgPod = ['/spaa/images/images1.html','/spaa/images/images2.html','spaa/images/images3.html', 'spaa/images/images4.html', 'spaa/images/images5.html','spaa/images/images6.html'];
+      let i=+0;
+
+      if(window.location.hash=="#1"){
+      i=1;
+     nextImages();
+      }else if(window.location.hash=="#2"){
+        i=2;
+     nextImages();
+      }else if(window.location.hash=="#3"){
+        i=3;
+        nextImages();
+      }else if(window.location.hash=="#4"){
+        i=4;
+          nextImages();
+      }else if(window.location.hash=="#5"){
+        i=5;
+          nextImages();
+      }else if(window.location.hash=="#6"){
+        i=6;
+          nextImages();
+      }else if(window.location.hash=="#7"){
+        i=7;
+          nextImages();
+}
+          function nextImages(){
+              let podimgl = new XMLHttpRequest();
+              podimgl.open('GET', `${imgPod[i]}`);
+              podimgl.send();
+              podimgl.onload = function(){
+                  if(podimgl.status ==200){
+                      responseType ="Text";
+                      document.querySelector('#news').innerHTML = this.response;
+                  }
+              }
+          }
+             nextImages();
+let ow = window.location.href;
+             console.log(ow);
+              leftButton.addEventListener('click',function(){
+                  if(i>=1){
+                      i--;
+                      window.location=ow+'#'+[i];
+                      setTimeout(nextImages(),10);
+                      console.log(imgPod);
+                      console.log(i);
+                  }else if(i==0){
+                      i=6;
+                      window.location=ow+'#'+[i];
+                      console.log(imgPod);
+                      console.log(i);
+                  }else{
+                      window.location=ow+'#'+[i];
+                      setTimeout(nextImages(),10);
+                      console.log('ну незнаю!');
+                  }
+              });
+              rightButton.addEventListener('click',function(){
+                  if(i<5){
+                      i++;
+                      window.location=ow+'#'+[i];
+                      setTimeout(nextImages(),10);
+                      console.log(imgPod);
+                      console.log(i);
+                  }else if(i==5){
+                      i=0;
+                      window.location=ow+'#'+[i];
+                      setTimeout(nextImages(),10);
+                      console.log(imgPod);
+                      console.log(i);
+                  }else{
+                    window.location=ow+'#'+[i];
+                      setTimeout(nextImages(),10);
+                      console.log('ну незнаю2!');
+                      console.log(imgPod);
+                      console.log(i);
+                  }
+              });
+});
+</script>
+<!-- //  -->
+<!--
+    <script type="text/javascript" src="file173.json"></script>
+    <script>
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      //usage:
+      readTextFile("/generation-objects/file173.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      document.querySelector('#title').innerHTML=Object.values(data[0][1]).join('');
+      document.querySelector('#text').innerHTML=Object.values(data[0][3]).join('');
+      document.querySelector('#text').innerHTML=Object.values(data).join('');
+    });
+    </script> -->
   </body>
 </html>

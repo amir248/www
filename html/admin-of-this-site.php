@@ -9,6 +9,9 @@ $text = $_POST['text'];
 $date = date("Y-M-D");
 $dateModified = date("F j, Y");
 
+$url=$_POST['url'];
+$autor=$_POST['autor'];
+
 if($_SERVER['SERVER_NAME']=="localhost"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
@@ -30,7 +33,7 @@ if(isset($_POST["button"])){
 
   }
 mysqli_query($connect, "SET NAMES utf8");
-mysqli_query($connect, "INSERT INTO `article` (`id`, `title`, `description`, `text`) VALUES (NULL, '$title', '$description', '$text')");
+mysqli_query($connect, "INSERT INTO `article` (`id`, `title`, `description`, `text`, `url`,`autor`) VALUES (NULL, '$title', '$description', '$text', '$url', '$autor')");
 
 mysqli_close($connect);
 }
@@ -158,7 +161,8 @@ mysqli_close($connect);
             // echo $posText[$i];
           foreach ($allPosts as $posts){
             $revers = array_reverse($posts);
-            // echo $posts[1].'<br><hr>'.$posts[3].'<br><hr>'; // ГЕНИАЛЬНО"!"
+
+            echo $posts[1].'<br><hr>'.$posts[3].'<br><hr>'; // ГЕНИАЛЬНО"!"
           }
         }
 
@@ -199,6 +203,14 @@ mysqli_close($connect);
                 <fieldset>
                   <legend>text</legend>
                 <textarea name="text"></textarea>
+                </fieldset>
+                <fieldset>
+                  <legend>autor</legend>
+                <textarea name="autor"></textarea>
+                </fieldset>
+                <fieldset>
+                  <legend>url</legend>
+                <textarea name="url"></textarea>
                 </fieldset>
                 <button type="submit" name="button">go</button>
               </form>

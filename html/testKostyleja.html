@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="theme-color" content="#a0ffed">
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:900px;
+      }
+      img{
+        max-width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+            .boxFirst{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                max-width: 100%;
+            }
+            #leftButton{
+                display:flex;
+                border:blueviolet solid 2px;
+                /* border-radius: 50%; */
+                background-color: burlywood;
+                width: 70px;
+                justify-content: center;
+                align-items: center;
+                padding:10px;
+            }
+            #leftButton:hover{
+                background-color: rgb(247, 177, 85);
+            }
+            #leftButton:active{
+                background-color: rgb(212, 67, 0);
+            }
+            #rightButton{
+                display:flex;
+                border:blueviolet solid 2px;
+                /* border-radius: 50%; */
+                background-color: burlywood;
+                width: 70px;
+                justify-content: center;
+                align-items: center;
+                padding:10px;
+            }
+            #rightButton:hover{
+                background-color: rgb(247, 177, 85);
+            }
+            #rightButton:active{
+                background-color: rgb(212, 67, 0);
+            }
+            .buttony{
+                display: flex;
+                justify-content: space-around;
+                /* text-align: center; */
+                width: 100%;
+                background-color: rgb(80, 135, 255);
+            }
+            /* .imagesWindow{
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                max-width: 100%;
+                max-height: 100%;
+                background-color: rgba(0, 100, 0, 0.144);
+            } */
+        </style>
+        <div class="boxFirst">
+            <div class='imagesWindow'>
+                <div id="news"></div>
+            </div>
+            <div class="buttony">
+                <div id="leftButton" style="font-size:25px;">⬅</div>
+                <div id="rightButton" style="font-size:25px;">➡</div>
+            </div>
+        </div>
+        <script>
+        if(window.innerWidth<=700){
+
+          let rpoZh=700-window.innerWidth;
+            let andE =(700*100)/window.innerWidth;
+            console.log(rpoZh+"____"+andE+'_Prosto andE');
+            let height = (300*100)/(andE);
+            console.log(height+'_proverka height');
+            document.querySelector('.imagesWindow').style.cssText=`
+          display:flex;
+          height: ${height}px;
+          `;
+          console.log(`${andE}`+'Туту написано из оттдуа');
+        }else{
+          document.querySelector('.imagesWindow').style.cssText=`
+          display:flex;
+          height:300px;
+          width:700px;
+          `;
+        }
+             let imgPod = ['/spaa/images/images1.html','/spaa/images/images2.html','spaa/images/images3.html', 'spaa/images/images4.html', 'spaa/images/images5.html','spaa/images/images6.html'];
+            let i=+0;
+
+            if(window.location.hash=="#1"){
+            i=1;
+           nextImages();
+            }else if(window.location.hash=="#2"){
+              i=2;
+           nextImages();
+            }else if(window.location.hash=="#3"){
+              i=3;
+              nextImages();
+            }else if(window.location.hash=="#4"){
+              i=4;
+                nextImages();
+            }else if(window.location.hash=="#5"){
+              i=5;
+                nextImages();
+            }else if(window.location.hash=="#6"){
+              i=6;
+                nextImages();
+            }else if(window.location.hash=="#7"){
+              i=7;
+                nextImages();
+    }
+                function nextImages(){
+                    let podimgl = new XMLHttpRequest();
+                    podimgl.open('GET', `${imgPod[i]}`);
+                    podimgl.send();
+                    podimgl.onload = function(){
+                        if(podimgl.status ==200){
+                            responseType ="Text";
+                            document.querySelector('#news').innerHTML = this.response;
+                        }
+                    }
+                }
+                   nextImages();
+let ow = window.location.href;
+                   console.log(ow);
+                    leftButton.addEventListener('click',function(){
+                        if(i>=1){
+                            i--;
+                            window.location=ow+'#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else if(i==0){
+                            i=6;
+                            window.location=ow+'#'+[i];
+                            console.log(imgPod);
+                            console.log(i);
+                        }else{
+                            window.location=ow+'#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log('ну незнаю!');
+                        }
+                    });
+                    rightButton.addEventListener('click',function(){
+                        if(i<5){
+                            i++;
+                            window.location=ow+'#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else if(i==5){
+                            i=0;
+                            window.location=ow+'#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else{
+                          window.location=ow+'#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log('ну незнаю2!');
+                            console.log(imgPod);
+                            console.log(i);
+                        }
+                    });
+
+
+        </script>
+  </body>
+</html>
