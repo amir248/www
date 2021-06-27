@@ -12,7 +12,7 @@ $dateModified = date("F j, Y");
 $url=$_POST['url'];
 $autor=$_POST['autor'];
 
-if($_SERVER['SERVER_NAME']=="localhost"){
+if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
