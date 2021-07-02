@@ -3,6 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="/registration.html">
+    <meta name="robots" content="all">
+    <meta name="autor" content="Amir Navrutdinov">
+    <link rel="icon" href="images/icon9.svg">
+    <meta name="theme-color" content="#a0ffed">
     <style>
       *{
         margin:0;
@@ -27,11 +33,27 @@
         width:900px;
         background: rgba(0,255,0,0.1);
         height:100vh;
+        flex-direction: column;
       }
       button{
         margin:3%;
         border:1%;
         background:orange;
+      }
+      #notificationLogin{
+        color:red;
+        font-size: 14px;
+      }
+      #notificationEmail{
+        color:coral;
+        font-size: 14px;
+      }
+      #notificationPass{
+        color:blue;
+        font-size: 14px;
+      }
+      form{
+        max-width: 100%;
       }
     </style>
   </head>
@@ -43,27 +65,32 @@
             <fieldset>
             <legend>Login</legend>
             <input type="login" name="login" placeholder="login">
+            <p id="notificationLogin"></p>
             </fieldset>
             <fieldset>
             <legend>Email</legend>
               <input type="email" name="email" placeholder="email">
+              <p id="notificationEmail"></p>
             </fieldset>
             <fieldset>
               <legend>Password</legend>
               <input type="password" name="uno_password" placeholder="password" autocomplete="current-password"><p id="pas"></p>
               <input type="password" name="confirm_password" placeholder="confirm_password">
+              <p id="notificationPass"></p>
             </fieldset>
             <script>
             let int=document.querySelector('input[name=uno_password]');
             if(int>0){
               console.log('yh');
             }
-            // document.querySelector('input[name=uno_password]').addEventListner('input',()=>{
-              document.querySelector('#pas').innerHTML=document.querySelector('input[name=uno_password]');
+            // Прослушка пароля! -----------------------
+            document.querySelector('input[name=uno_password]').addEventListener('input',()=>{
+              document.querySelector('#pas').innerHTML=(document.querySelector('input[name=uno_password]').value).length;
               console.log(document.querySelector('input[name=uno_password]'));
               console.log(int);
               // console.log($_POST['uno_password']);
-            // });
+            });
+
             </script>
           </div>
           <fieldset>
@@ -74,8 +101,9 @@
           <legend>Lastname</legend>
             <input type="text" name="Lastname" placeholder="Lastname">
           </fieldset>
-          <fieldset>
-          <!-- <legend>age</legend>
+
+          <!-- <fieldset>
+          <legend>age</legend>
             <input type="number" name="age" placeholder="age">
           </fieldset>
           <fieldset>
@@ -102,15 +130,165 @@
           <legend>marital_status</legend>
             <input type="text" name="marital_status" placeholder="marital_status">
           </fieldset> -->
-          <button name='button'>to apply</button>
+          <button name='button_to_apply'>to apply</button>
         </form>
+        <fieldset style="width:300px;">
+          <legend>loginANDemail</legend>
+          <div style="background:violet;width:300px;text-align:center;"><p>LOGIN:</p> <p id="login"></p></div>
+          <div style="background:yellow;width:300px;text-align:center;"><p>Ёmail:</p> <p id="email"></p></div>
+        </fieldset>
+
       </article>
     </main>
   </body>
   <script>
-  const form=document.getElementsByTagName('form');
+  // const form=document.getElementsByTagName('form');
     // document.querySelectorAll('input,select,textarea').addEventListner('submit',()=>{
     //
     // })
+
+
+document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+// ---------------------------------------------------------
+    var buttON;
+    let LOG;
+    let PASS;
+    let EMAIL;
+    var fileLoginANDemail= 'loginANDemail.json';
+    countNumber=function(){
+      Object.values(data).length;
+    }
+
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      //usage:
+      readTextFile("/blozhik/"+`${fileLoginANDemail}`, function(text){
+      let data = JSON.parse(text);
+      let num =Object.values(data).length;
+      // let aj;
+      // aj='100';
+    for(aj=0;aj<Object.values(data[aj][0]).join(' ').length;aj++){
+      // let logiN= Object.values(data[aj][0]).join('');
+      // let email= Object.values(data[aj][1]).join('');
+      console.log(Object.values(data[aj][0]).join(''));
+}
+      // var logiN= Object.values(data);
+      // console.log(logiN);
+      // document.querySelector('#title').innerHTML=Object.values(data[0][1]).join('');
+      // document.querySelector('#login').innerHTML=Object.values(data[12][0]).join('');
+      // document.querySelector('#email').innerHTML=Object.values(data[12][1]).join('');
+
+//-------------------------------------------
+    // Прослушка LOGIN------
+    //---------------------------------------------------------------
+      document.querySelector('input[name=login]').addEventListener('input',()=>{
+
+
+        let aj;
+        for(aj=0;aj<`${logiN}`.length;aj++){
+          // switch(document.querySelector('input[name=login]').value){
+          //   case `${logiN}`: console.log("sushi is");
+          //   break;
+          // }
+          var logiN= Object.values(data[aj][0]).join('');
+
+          document.querySelector('#login').innerHTML=Object.values(data[aj][0]).join('');
+          document.querySelector('#email').innerHTML=Object.values(data[aj][1]).join('');
+
+        if(`${logiN}`==(document.querySelector('input[name=login]').value)){
+          console.log('Ahtyng: _mainLogin_Est!');
+          document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+          notificationLogin.innerHTML=`Логин ЗАНЯТ`;
+          LOG='false';
+          // return `${logiN}`;
+          break;
+        }else if((document.querySelector('input[name=login]').value).length<3){
+          notificationLogin.innerHTML=`Нам нужно больше символов!`;
+          document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+          LOG='false';
+          break;
+        }else if((document.querySelector('input[name=login]').value).length==0){
+          document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+          LOG='false';
+          break;
+        }else if(`${logiN}`==document.querySelector('input[name=login]').value){
+          LOG='true';
+            // console.log('oK_Vse GOOD!');
+    notificationLogin.innerHTML=`oK! 👌`;
+          // console.log(document.querySelector('input[name=login]'));
+        }else{
+          console.log(`${logiN}`);
+          break;
+        }
+              // console.log(logiN= Object.values(data[aj][0]).join(''));
+      }
+      });
+    //-------------------------------------------------------------------------------
+    //------------------- Email---------------------------------
+    //-----------------------------------------------------------------------
+      document.querySelector('input[name=email]').addEventListener('input',()=>{
+        let aj;
+        for(aj=0;aj<email.length;aj++){
+        let email= Object.values(data[aj][1]).join('');
+        if((`${email}`)==(document.querySelector('input[name=email]').value)){
+          console.log('-_-'+`${email}`+'_Этот емейл уже существует!');
+          document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+          notificationEmail.innerHTML=`email уже существует!`;
+          EMAIL='false';
+          break;
+        }else if((document.querySelector('input[name=email]').value).length<'3'){
+          console.log("шото не то!");
+        document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+        EMAIL='false';
+        break;
+        }else{
+          console.log(`${email}`+'_в базе таких Ёмайлов еще неТ.');
+          notificationEmail.innerHTML=`Ok!👌такого в базе еще нет!`;
+          EMAIL="true";
+          // document.querySelector('button[name=button_to_apply]').removeAttribute('disabled');
+        }
+      }
+      });
+      //----------------------------------------------------------------------------------
+      //----------------PASSWORD-------------------------------------------------
+      //--------------------------------------------------------------------------
+      // document.querySelector('input[name=uno_password]').addEventListener('input',()=>{
+      //   console.log('input_pass');
+      //
+      // });
+      document.getElementsByTagName('form')[0].addEventListener('input',()=>{
+        if(EMAIL=='true'&&LOG=='true'){
+          console.log("--__---");
+          console.log(document.querySelector('input[name=uno_password]').value);
+          console.log(document.querySelector('input[name=confirm_password]').value);
+          if((document.querySelector('input[name=uno_password]').value)==(document.querySelector('input[name=confirm_password]')).value&&(document.querySelector('input[name=confirm_password]').value).length>=3){
+            PASS='true';
+            console.log('PASS_OK');
+            notificationPass.innerHTML=`oK! 👌`;
+            document.querySelector('button[name=button_to_apply]').removeAttribute('disabled');
+            document.querySelector('button[name=button_to_apply]').style.cssText=`
+            width:100px;
+            height:35px;
+            color:blue;
+            `
+          }else{
+              document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+              console.log('Пароли не совпадают или слишком короткие');
+              notificationPass.innerHTML=`Пароль! Не пароль (`;
+          }
+        }
+      });
+
+    });
+
   </script>
 </html>

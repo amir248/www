@@ -1,9 +1,9 @@
 <?php
-$login=$_POST['login'];
-$email=$_POST['email'];
+$login=htmlspecialchars($_POST['login']);
+$email=htmlspecialchars($_POST['email']);
 $GETpassword=md5($_POST['uno_password']);
-$name=$_POST['Name'];
-$lastname=$_POST['Lastname'];
+$name=htmlspecialchars($_POST['Name']);
+$lastname=htmlentities($_POST['Lastname']);
 $age=$_POST['age'];
 $gender=$_POST['floor'];
 $blod_type=$_POST['blod_type'];
@@ -23,7 +23,7 @@ if($_SERVER['SERVER_NAME']=="localhost"){
   $username = "nasoberu_nasite";
   $password = "gfhjkmgfhjkm";
 }
-if(isset($_POST['button'])){
+if(isset($_POST['button_to_apply'])){
   $connect = mysqli_connect($servername, $username, $password,$database);
   if(!$connect){
     die("Connection failed: ". mysqli_connect_error());
@@ -31,7 +31,7 @@ if(isset($_POST['button'])){
     echo "<br>Vse OK!";
   }
   mysqli_query($connect, "SET NAMES utf8");
-  mysqli_query($connect, "INSERT INTO `barbarian`(`id`, `login`, `password`, `email`, `Name`, `Lastname`) VALUES (NULL,'$login','$GETpassword','$email','$name','$lastname')");
+  mysqli_query($connect, "INSERT INTO `barbarians`(`id`, `login`, `password`, `email`, `Name`, `Lastname`) VALUES (NULL,'$login','$GETpassword','$email','$name','$lastname')");
 
 
   //, `age`, `floor`, `blod_type`, `profession`,`having_children`, `marital_status`
@@ -39,6 +39,28 @@ if(isset($_POST['button'])){
 
   mysqli_close($connect);
 }
+//--------------------------
+// Проверка barbarians
+//--------------------------
+$connect= mysqli_connect($servername,$username,$password,$database);
+mysqli_query($connect, "SET NAMES utf8");
+$logANDemail=mysqli_query($connect, "SELECT `login`, `email` FROM `barbarians`");
+$LoginANDemail=mysqli_fetch_all($logANDemail);
+echo "<br><pre>";
+var_dump($LoginANDemail);
+echo "</pre>";
+
+$L_E="loginANDemail.json";
+if(file_exists($L_E)){
+  echo "file est!_";
+  unlink($L_E);
+  file_put_contents($L_E,json_encode($LoginANDemail));
+}else{
+  echo "yvu_";
+  // delete($L_E);
+  file_put_contents($L_E,json_encode($LoginANDemail));
+}
+
 class User{
   public $age;
   public $name;
@@ -47,12 +69,14 @@ class User{
   public $gender;
   public $lastName;
   public $firstName;
-  private $password;
+  public $password;
   public $login;
   public $having_children;
   public $marital_status;
   public $hobby;
 }
+mysqli_close($connect);
+
 header("Location: /registration.html");
 //
 // $ANF->age=$_POST['age'];
