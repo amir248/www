@@ -132,11 +132,11 @@
           </fieldset> -->
           <button name='button_to_apply'>to apply</button>
         </form>
-        <fieldset style="width:300px;">
-          <legend>loginANDemail</legend>
-          <div style="background:violet;width:300px;text-align:center;"><p>LOGIN:</p> <p id="login"></p></div>
-          <div style="background:yellow;width:300px;text-align:center;"><p>Ёmail:</p> <p id="email"></p></div>
-        </fieldset>
+        <!-- <fieldset style="width:300px;">
+          <legend>loginANDemail</legend> -->
+          <div style="background:violet;width:300px; max-width: 100%;text-align:center;"><p>LOGIN:</p> <p id="login"></p></div>
+          <div style="background:yellow;width:300px; max-width: 100%;text-align:center;"><p>Ёmail:</p> <p id="email"></p></div>
+        <!-- </fieldset> -->
 
       </article>
     </main>
@@ -191,8 +191,6 @@ document.querySelector('button[name=button_to_apply]').setAttribute('disabled',t
     // Прослушка LOGIN------
     //---------------------------------------------------------------
       document.querySelector('input[name=login]').addEventListener('input',()=>{
-
-
         let aj;
         for(aj=0;aj<`${logiN}`.length;aj++){
           // switch(document.querySelector('input[name=login]').value){
@@ -200,7 +198,11 @@ document.querySelector('button[name=button_to_apply]').setAttribute('disabled',t
           //   break;
           // }
           var logiN= Object.values(data[aj][0]).join('');
+        // forEach(Object.values(data[aj][0]))=> console.log(`${logiN}`);
+      }
 
+        let= ob=Array.from(Object.values(data[aj][0]).join('').length);
+        ob.forEach(alert);
           document.querySelector('#login').innerHTML=Object.values(data[aj][0]).join('');
           document.querySelector('#email').innerHTML=Object.values(data[aj][1]).join('');
 
@@ -208,29 +210,29 @@ document.querySelector('button[name=button_to_apply]').setAttribute('disabled',t
           console.log('Ahtyng: _mainLogin_Est!');
           document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
           notificationLogin.innerHTML=`Логин ЗАНЯТ`;
-          LOG='false';
+          // LOG='false';
           // return `${logiN}`;
-          break;
-        }else if((document.querySelector('input[name=login]').value).length<3){
-          notificationLogin.innerHTML=`Нам нужно больше символов!`;
-          document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
-          LOG='false';
-          break;
+          return console.log("LOG = false");
+        // }else if((document.querySelector('input[name=login]').value).length<'3'){
+
+        //   document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
+        //   console.log((document.querySelector('input[name=login]').value).length);
+        //   notificationLogin.innerHTML=`Нам нужно больше символов!`;
+        //   return LOG='false';
         }else if((document.querySelector('input[name=login]').value).length==0){
           document.querySelector('button[name=button_to_apply]').setAttribute('disabled',true);
           LOG='false';
-          break;
+
         }else if(`${logiN}`==document.querySelector('input[name=login]').value){
           LOG='true';
             // console.log('oK_Vse GOOD!');
     notificationLogin.innerHTML=`oK! 👌`;
           // console.log(document.querySelector('input[name=login]'));
+          // return LOG='true';
         }else{
-          console.log(`${logiN}`);
-          break;
+          console.log(`${logiN}`+'_ELSE'+'_строка_набора_'+document.querySelector('input[name=login]').value);
         }
               // console.log(logiN= Object.values(data[aj][0]).join(''));
-      }
       });
     //-------------------------------------------------------------------------------
     //------------------- Email---------------------------------

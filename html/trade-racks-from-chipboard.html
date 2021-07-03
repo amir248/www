@@ -23,10 +23,17 @@
       }
       main{
         display:flex;
-        justify-content:space-around;
+        justify-content:center;
         align-items:stretch;
         max-width:100%;
         min-height:100vh;
+      }
+      .first{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        max-width:100%;
+        flex-direction: column;
       }
       article{
         display:flex;
@@ -48,6 +55,10 @@
       @font-face {
       font-family: Noto Sans; /* Имя шрифта */
       src: url(site/online.ttf); /* Путь к файлу со шрифтом */
+     }
+     footer{
+       max-width: 100%;
+       width:900px;
      }
     </style>
 
@@ -95,6 +106,12 @@
         </div>
       </article>
     </main>
+  <div class="first">
+    <section style="max-width:100%; width:700px; text-align:center;background:rgba(0,255,0,0.5);">
+      <script src="https://yastatic.net/share2/share.js"></script>
+    <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,linkedin,lj"></div>
+    </section>
+  </div>
 
 <script>
     console.log(window.location.hash +'_ '+'proverka');

@@ -65,7 +65,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 200px;
-                max-width: 100%;              
+                max-width: 100%;
             }
             footer{
                 display:flex;
@@ -93,7 +93,7 @@
                 /* text-shadow:bisque 3px 3px 3px; */
             }
             @media(max-width: 500px){
-                h1{ 
+                h1{
                     font-size: 3vh;
                 }
                 .webMas{
@@ -191,7 +191,7 @@
     </script>
     </head>
     <body>
-            
+
         <script>
                     window.onload = () => {
                 const observer = new IntersectionObserver((entries, observer) => {
@@ -205,7 +205,7 @@
                     })
                 }, { threshold: 0.1 })
                 document.querySelectorAll('img').forEach(img => observer.observe(img))
-                
+
             }
          </script>
         <div class='main-first'>
@@ -213,7 +213,7 @@
                <h1>Веб мастерская имени Барона Cайтоверстаузена</h1>
               <p class="webMas">💻</p>
             </header>
-    
+
         </div>
         <div class="main2">
         <main>
@@ -225,11 +225,11 @@
             </p>
             <p class='margin'>Все страницы являются наглядным примером показывающим простоту и скорость, и все возможности.</p>
             <p class='margin'><span style="float:left; font-size:75px;">👨‍💻</span>Верстка адаптивного лендинга с сео оптимизацией благодаря структурированной разметки данных и технологией тегов html5. В которой теги имеют свое логическое предназначение. И продвижение в контекстной рекламе дополнит такую семантическую верстку.</p>
-            
+
             <p class='margin'><span style="float:right; font-size:75px;">🎯</span>Данный подход имеет намного больше шансов видеться из серпа на весьма высоком месте. И это не единственное преимущество. К успеху можно отнести простоту и понятность всем и даже школьникам начального уровня. Потому что верстка на флексах совместима со всеми браузерами, а яваскрипт это основа программирования на фронтенде.</p>
-   
+
             <p class='margin'><span style="float:left; font-size:75px;">🌍</span>Если работать на планетарном уровне ”по всей планете”, то часто любопытствующие персонажи испытывают нестерпимое желание получить ответы. Особенно на ценобразовательную технологию. Чтобы разведать обстановку что, как и почему.</p>   <p id='jasno'></p>  <div class="otvet">ВЫЯСНИТЬ!!!</div>
-         
+
             <div id="nos">
                 <picture>
                     <img data-src="images/frontend-developer/nos.jpg" src="/images/frontend-developer/saitoverstauzen.jpg" alt="собачий нос">
@@ -241,12 +241,12 @@
             <picture>
                 <img src="/images/frontend-developer/saitoverstauzen.jpg" data-src="/images/frontend-developer/saitoverstauzen.jpg" width="700px">
             </picture>
-          
+
             <script>
                  let number=+0;
                 document.querySelector('.otvet').addEventListener("click",()=>{
                     document.querySelector('#nos').style.display='none';
-                    number++;                    
+                    number++;
                     if(number>=2){
                         number=0;
                     }
@@ -262,13 +262,13 @@
                         responseType ="Text";
                         document.querySelector('#news').innerHTML = this.response;
                     }
-                } 
+                }
             }
             PoChemu();
                 });
-               
+
             </script>
-         
+
             <p class='margin'>Лендинг по верстки из фигмы или по словестно устным абстрактным описаниям. Из всех возможных вариантов. Для лендинга существуют шаблон конструирования где под заголовком располагаются описания преимущества и решение поставленной задачи, ради собственно зачем на лендинг и приходят из интернета, контекстной рекламы.</p>
             <picture>
                 <img src="images/frontend-developer/saitoverstauzen.jpg" data-src="/images/frontend-developer/structura.jpg" alt="чтобы пейдж спид показывал грин зону">
@@ -301,13 +301,13 @@
         </main>
         </div>
         <div class='main-two'>
-           
-        
+
+
         <footer><p id="pod"></p>
             <script src="https://yastatic.net/share2/share.js"></script>
 <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit,surfingbird"></div>
         </footer>
-        
+
         <div id='menu'><p class="burg">🍔</p></div>
         <script>
           //-----------------------------------------------------------------------
@@ -317,7 +317,7 @@
           //----------------------------------------------------------------------
           let PressButton=+1;
           document.querySelector('#menu').addEventListener("click", ()=>{
-              PressButton+=1;      
+              PressButton+=1;
               function PressButtonToggle(){
                   let PressButtonValue=(PressButton>=2)?'open':'close'; // один клик дает open PressButton==1
                   console.log(PressButton+"button.nazhata");
@@ -345,7 +345,7 @@
                   `;
                   PressButton=0; // сброс кликов до нуля 'close' когда PressButton==2
                   }else if(PressButtonValue=='close'){
-                    document.querySelector('.menu').remove(); //эта ремув удаляет все с надписями
+                  document.querySelector('.menu').remove(); //эта ремув удаляет все с надписями
                     // document.querySelector('.menu').removeAttribute('style');
                   document.getElementsByTagName('body')[0].style.cssText=`
                   overflow:scroll;
@@ -383,7 +383,7 @@
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
     m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
- 
+
     ym(57628999, "init", {
          clickmap:true,
          trackLinks:true,
@@ -396,7 +396,7 @@
  <!-- /Yandex.Metrika counter -->
 
 
- <section>       
+ <section>
     <div id="sigCommentsBlock"></div>
     <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
     <script type="text/javascript">
@@ -406,7 +406,7 @@
             script.type = 'text/javascript';
             script.async = true;
             script.src = '//sigcomments.com/chat/?host_id='+host_id;
-            var ss = document.getElementsByTagName('script')[0]; 
+            var ss = document.getElementsByTagName('script')[0];
             ss.parentNode.insertBefore(script, ss);
         })(),2500);
     </script>

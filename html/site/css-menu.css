@@ -6,10 +6,13 @@
             justify-content: center;
           }
         nav>a{
-         font-size: 50px;
+         font-size: 33px;
           color:green;
           text-decoration:none;
           text-shadow: black 2px 2px 3px;
+        }
+        .secondaryPages{
+            font-size: 17px;
         }
 #menu{
   background: yellow;

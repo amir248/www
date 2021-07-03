@@ -134,12 +134,20 @@
         <select id="post">
           <option value="1">odYn</option>
           <option value="2">Dva</option>
-          <option value="3">Try</option>
+          <option value="3">Three</option>
+          <option value="4">four</option>
+          <option value="5">five</option>
+          <option value="6">six</option>
+          <option value="7">seven</option>
+          <option value="8">eight</option>
+          <option value="9">nine</option>
           <option value="0">Nul</option>
         </select>
         <button>пАказатЪ</button>
         <button name='clear'>Clear</button>
+          <form action="blozhik/landing-full-stack.php" method="post"><button name="go" style="border:none; background:rgba(0,0,0,0.3);width:3px;height:2px;"></button></form>
       </article>
+
     </main>
 <div class="first">
   <footer>
@@ -175,6 +183,20 @@
         }else if(document.getElementById('post').value==1){
           number="1";
             console.log("1");
+          }else if(document.getElementById('post').value==4){
+            number="4";
+              console.log("4");
+            }else if(document.getElementById('post').value==5){
+              number="5";
+
+            }else if(document.getElementById('post').value==6){
+              number="6";
+            }else if(document.getElementById('post').value==7){
+              number="7";
+            }else if(document.getElementById('post').value==8){
+              number="8";
+            }else if(document.getElementById('post').value==9){
+              number="9";
         }else if(document.getElementById('post').value==0){
           number="0";
             console.log("0");
@@ -194,7 +216,7 @@
           rawFile.send(null);
           }
           //usage:
-          readTextFile("/blozhik/sit.json", function(text){
+          readTextFile("/blozhik/fit.json", function(text){
           let data = JSON.parse(text);
           console.log(Object.values(data[`${number}`]));
           document.getElementById('ok').innerHTML=Object.values(data[`${number}`]).join(" ");
