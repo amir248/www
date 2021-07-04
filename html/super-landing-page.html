@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Супер лендинг с сео прибамбахами и турбо приводом в топ один.">
+    <link rel="canonical" href="super-landing-page.html">
+    <meta name="robots" content="all">
+    <meta name="autor" content="Amir Shikarno">
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        min-width:100vh;
+        font-size:20px;
+        background:rgba(0,255,0,0.3)
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+      }
+      article{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:1920px;
+        flex-direction:column;
+      }
+      .mainBox{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width: 900px;
+        height:600px;
+        /* background:rgba(0,0,255,0.5); */
+        flex-wrap:wrap;
+      }
+      .mainMenu{
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        max-width:100%;
+        width: 700px;
+        /* background:rgba(0,0,255,0.5); */
+        flex-wrap:wrap;
+      }
+      .mobilMenu{
+        display:none;
+      }
+      header{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        /* flex-direction:row; */
+        flex-wrap:wrap;
+        max-width:100%;
+        width:900px;
+      /* height:700px; */
+      /* min-height:700px; */
+      }
+      button{
+        width:255px;
+        height:65px;
+        background:#34547A;
+        color:white;
+        font-size:16px;
+        border:none;
+      }
+      @media(max-width:900px){
+        .mainMenu{
+          display:none;
+        }
+        .mobilMenu{
+          display:flex;
+          justify-content:space-around;
+          align-items:center;
+          flex-direction:column;
+          width:40px;
+          height:40px;
+          max-width:100%;
+          background:rgba(0,0,255,0.3);
+          /* border:3px solid red; */
+        }
+        header{
+          justify-content:space-around;
+          margin-right:3%;
+        }
+        .boxRow{
+      justify-content:center;
+        }
+      }
+      @media(max-width:750px){
+        img{
+          max-width:100%;
+          width:100%;
+        }
+      }
+      .obo{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:1920px;
+        height:300px;
+        background:white;
+        flex-direction:column;
+      }
+      .proekt{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:1920px;
+        min-height:250px;
+        background:rgba(0,255,255,0.5);
+      }
+      .navuk{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:1920px;
+        min-height:750px;
+        flex-wrap:wrap;
+      }
+      .boxRow{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        max-width:100%;
+        width:900px;
+        flex-wrap:wrap;
+      }
+      .box300{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:299px;
+        /* flex-direction:row; */
+        flex-wrap:wrap;
+
+      }
+      .box300x2{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        width:599px;
+      }
+      .work{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        /* max-width:calc(100% - 6px); */
+        /* width:calc(1920px - 6px); */
+        max-height:100%;
+        background:rgba(0,255,255,0.5);
+        border:3px solid red;
+      }
+      img{
+        max-width:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <header>
+        <span style="font-size:55px;">👽</span>
+        <div class="mobilMenu"><span style="width:30px; height:3px; background:white;"></span><span style="width:30px; height:3px; background:white;"></span><span style="width:30px; height:3px; background:white;"></span></div>
+        <div class="mainMenu">
+          <ul>Главная</ul>
+          <ul>Об авторе</ul>
+          <ul>Работы</ul>
+          <ul>Процесс</ul>
+          <ul>Контакты</ul>
+        </div>
+
+        <div class="mainBox">
+          <picture>
+            <img src='images/alf.jpg' alt="программист верстальщик высокого уровня" width="200px">
+          </picture>
+          <div style="display:flex; justify-content:center; align-items:space-between; width:600px;max-width:100%; flex-direction:column;margin-left:100px;">
+          <h1 style="margin:3%;">Дизайн и верстка</h1>
+        <p style="margin:3%;">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p> <br> <button>НАПИСАТЬ МНЕ</button></div>
+
+        </div>
+        </header>
+          <div class="obo"><h2>OBO mne</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span>
+          </div>
+          <div class='proekt'>
+            <span style="max-width:900px;">Iconki</span>
+          </div>
+          <div class="navuk">
+            <h2 style="display:flex; justify-content:center; align-items:center;max-width:100%; width:1900px;">Навыки:</h2>
+              <div class="boxRow">
+                  <ul style="width:300px;max-width:100%;">
+                    <li>html</li>
+                    <li>css</li>
+                    <li>javascript</li>
+                    <li>PHP</li>
+                    <li>SQL</li>
+                    <li>Photoshop</li>
+                    <li>photographer</li>
+                    <li>Обработка изображений по цветовой палитре с использованием схемы сочетания цветов по кругу Итена</li>
+                    <li>Контестаная реклама: директ, ads</li>
+                    <li>Сео оптимизация</li>
+                    <li>Поиск и исправление ошибок, модификация внешнего вида html,css, адаптация под мобильные.</li>
+                    <li>Бекенд с помощью невидимой погрузки. PHP прощупывает базу mysql конвертирует данные в json формат с помощью функция json_encode() и отправляет с помощью аякса во фронтенд. "Тут аналогичный пример.(full stack langing(html,css,js,php,sql))" </li>
+                  </ul>
+                  <picture>
+                    <img src="images/SpaceHands.jpg" alt="ChikChicly SpaceHands ForsMazhorovich" width="400px;">
+                  </picture>
+              </div>
+          </div>
+          <div class="work">
+
+<!-- <p style="display:flex;max-width:90%;width:1920px;justify-content:center;">Как я работаю</p>
+<div class="boxRow"><p>123</p><p>987</p>
+
+</div> -->
+
+          </div>
+      </article>
+    </main>
+  </body>
+</html>

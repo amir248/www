@@ -12,7 +12,7 @@ $dateModified = date("F j, Y");
 $url=$_POST['url'];
 $autor=$_POST['autor'];
 
-if($_SERVER['SERVER_NAME']=="localhost9"){
+if($_SERVER['SERVER_NAME']=="localhost"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
@@ -162,7 +162,7 @@ mysqli_close($connect);
           foreach ($allPosts as $posts){
             $revers = array_reverse($posts);
 
-            echo $posts[1].'<br><hr>'.$posts[3].'<br><hr>'; // ГЕНИАЛЬНО"!"
+            // echo $posts[1].'<br><hr>'.$posts[3].'<br><hr>'; // ГЕНИАЛЬНО"!"
           }
         }
 
@@ -173,14 +173,14 @@ mysqli_close($connect);
             <div class='block'>
               <p><?php
               if(isset($_GET['post1'])){
-            echo $posText[3];
+            // echo $posText[3];
             $posText[1]="Это продолжение текста!";
             $posText[2]=' ';
               }
             ?></p>
               <h1 style="background:green; color:coral;">NjashNyj BloZhik</h1>
-              <h2><?= $posText[1] ?></h2>
-              <p><?= $posText[2] ?></p>
+              <!-- <h2><?= $posText[1] ?></h2>
+              <p><?= $posText[2] ?></p> -->
               <a href="/"><p style="width: 100%;height:25px; background:green;color:white; display:flex; align-items:center; justify-content:flex-end;">...читать делее =></p></a>
                 <form atiton="" method="post">
                 <button name="post1">post1</button>
