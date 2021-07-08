@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Отображение контента с вкладок</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <meta name="description" content="Отображение вкладок с эффектом сингл пейдж апликейшин в поиске, благодаря якорным ссылкам их видимость очевидна.">
+        <meta name="robots" content="all">
+        <meta name="autor" content="Amir Shikarno">
+        <script data-ad-client="ca-pub-6824659625881284" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <style>
+            *{
+                margin:0;   
+              
+            }
+            body{
+                font-size:22px;
+                background-color: antiquewhite;
+              
+            }
+            main{
+                display:flex;
+                flex-direction: column;
+                max-width: 100%;
+                justify-content: center;
+                align-items: center;
+                background-color: antiquewhite;
+            }
+            article{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width:700px;
+                max-width: 100%;
+                flex-direction:column;
+                background-color:rgb(243, 227, 207);
+            }
+            .box{
+                display: flex;
+                max-width: 100%;
+                background-color: orangered;
+                padding: 5px;
+                border: solid rgb(0, 0, 0) 1px;
+            }
+            header{
+                background-color: rgb(255, 136, 0);
+              
+            }
+            .zaglab{
+                /* display:block; */
+                max-width: 100%;
+                width: 700px;
+            }
+            .menu{
+                display:flex;
+                flex-direction: row;
+              
+                justify-content: center;
+                align-items: center;
+                word-wrap: break-word;
+                flex-wrap:wrap;
+            }
+            .fon-orange{
+                background-color: rgb(255, 136, 0);
+                width:700px;
+                max-width: 100%;
+            }
+            /*  ____-----------______    */
+
+            #one{
+                display:none;
+            }
+            #one:target{
+                
+                display:block;
+                padding:5px;
+            }
+            #two{
+                display:none;
+            }
+            #two:target{
+               
+                display:block;
+                padding:5px;
+            }
+            #free{
+                display:none;
+            }
+            #free:target{
+              
+                display:block;
+                padding:5px;
+            }
+            .margin{
+                margin:3%;
+                flex-wrap: wrap;
+            }
+            .none{
+                display:none;
+                opacity:0; /* еслит вдруг нон дисплей не сработает.*/
+            }
+            .bobo{
+                display:fixed;
+                height:20%;
+            }
+            footer{
+                background-color:burlywood;
+                text-align: center;
+                padding: 1%;
+            }
+        </style>
+    </head>
+    <body>
+
+<!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Вкладки которые индексируются в поиске",
+      "headline": "подгрузка изображений из собственной разработки мультилендинга с сегментацией трафика, поисковой оптимизацией",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Amir Navrutdinov",
+        "alternateName": ["Amir Shikarno", "Амир Наврутдинов"]
+      },
+      "datePublished" : "2020-11-06",
+      "image" : "https://nasobe.ru/images/lol/i.jpg",
+      "articleSection" : "разработки мультилендинга с сегментацией трафика, поисковой оптимизацией",
+      "articleBody" : "Было проверено что старницы с подгружаемым контентом, тоже хорошо отображаются в поиске, поэтому можно не беспокоится о его видимости.И еще одно преимущество сингл пейдж апликейшина что можно пехепешить бекендные функциии, которые будут работать не перезагружая основную часть.",
+      "url" : "https://nasobe.ru/ranking-tabs.html",
+      "publisher" : {
+        "@type" : "Organization",
+        "telephone": "+7-952-888-5656",
+        "name" : "мастерской имени Барона Сайтоверстаузена”",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nasobe.ru/images/lol/spa.webp"
+          }
+      }
+    }
+    </script>
+        <main>
+         
+            <article>
+              
+
+            
+            <div class="menu fon-orange">
+                <a href="ranking-tabs.html"> <p class="box">Заглавие!</p></a>
+                <a href="#one" onclick="otobrano()"><p class="box">Одын</p></a>      
+                <a href="#two" onclick="otobrano()"> <p class="box">ДаВыА</p></a>            
+                <a href="#free" onclick="otobrano()"><p class="box">Тъыры</p></a>
+            </div>
+          
+        <script>
+        //     let inf= ' d';
+        //   document.inf.innerHTML = 'Новый BODY!'; // заменяем содержимое
+          function otobrano(){
+              
+              document.querySelector('#none').classList.add('none');
+          }
+         
+        </script>
+            <div  id='none'>
+            <p class="margin">Вкладки которые индексируются в поиске, добавляются с якорной сылкой. <a href="https://nasobe.ru/loading-content-to-enter-the-green-zone-on-page-speed.html">Было проверено что старницы с подгружаемым контентом, тоже хорошо отображаются в поиске</a>, поэтому можно не беспокоится о его видимости. <a href="https://nasobe.ru/?spa">И еще одно преимущество сингл пейдж апликейшина что можно пехепешить бекендные функциии, которые будут работать не перезагружая основную часть.</a></p>
+            <picture>
+                <source srcset="images/lol/spaa.webp" type="image/webp">
+                <img src="images/lol/spaa.jpg"  alt="подгрузка контента" width="100%">
+            </picture>
+            <p class="margin">А тут еще и супер фишка, подгрузка изображений из собственной разработки мультилендинга с сегментацией трафика, поисковой оптимизацией. Которые и раньше были изобретены, но я их дополнил + “сео прибамбасами и турбо приводом в топ 1”. Вот и изображения подгружаются с помощью функции XMLHttpRequest и по сути это подгрузка контента html5 с успешном тестировании на гугл хроме. Все достаточно просто и очень легко, поэтому программисты и говорят что: “ну и что такого”, любой сможет сделать эту подгрузку контента. Но почему то никто не делает.
+                Поэтому встречайте впервые! Тут “на сайте веб мастерской имени Барона Сайтоверстаузена”!
+                </p>
+                  <!-- тута картинка! -->
+            <script>
+                
+                    let podimgl = new XMLHttpRequest();
+                    podimgl.open('GET','images/lol/spaImage.html');
+                    podimgl.send();
+                    podimgl.onload = function(){
+                        if(podimgl.status !=200){
+                            alert(`Ошибка ${pogimgl.status}: ${podimgl.statusText}`);
+                        }else { // если всё прошло гладко, выводим результат
+                        // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                                    responseType ="Text";
+                                    document.querySelector('#images').innerHTML = this.response;
+                                     }
+                    }
+                </script>
+                <div id='images'></div>
+            <!-- ЭНД картинкит! -->
+                <p class="margin">И еще вкладки с якоными ссылками! Это когда переход сразу и просто мгновенно туда куда надо! Прям как по щелчку пальца "большого". Можно бесконечно долго писать о преимуществах данного способа, но проще уже понадеятся что и так все будет ясно и понятно. Поэтому все!</p>
+                <script>
+                
+                        let podimgl2 = new XMLHttpRequest();
+                        podimgl2.open('GET','images/lol/image.html');
+                        podimgl2.send();
+                        podimgl2.onload = function(){
+                            if(podimgl2.status !=200){
+                                alert(`Ошибка ${pogimgl2.status}: ${podimgl2.statusText}`);
+                            }else { // если всё прошло гладко, выводим результат
+                            // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                                        responseType ="Text";
+                                        document.querySelector('#images2').innerHTML = this.response;
+                                         }
+                        }
+                    </script>
+                    <div id='images2'></div>
+                <p class="margin">А если Вы оценили мой труд и Вам требуются подобные способы решения аналагичной задачи. То я всегда рад взяться за любое дело, которые приносит какой либо доход любыми ценными вещами которые можно оценить в бартерной или иной системе оценки! <br>P.S. “За любой кипиш, кроме голодовки!” <a href="http://nasobe.ru/resume/resume.html">Резюме!</a></p>
+            </div>
+            <div id="one" class='margin'><h2>Стать  могучей жирной гориллой
+            </h2>
+                <p>Из всех суперсил что могут пригодиться для выживания, это с грохотом крушить врагов и никого не бояться. Прыгать по пальмам и называть себя настоящим Королем “городских” джунглей. После чего на голову сразу же надевают корону… И не все так просто, потому что это история может продолжаться еще очень долго, а пока затронута только малая часть одного цикла, который трансформируется в шикарный и супер большой цикл с циклами.
+                </p>
+            </p>
+            <!-- тута картинка! -->
+      <script>
+              let podimg = new XMLHttpRequest();
+              podimg.open('GET','images/lol/imageOdin.html');
+              podimg.send();
+              podimg.onload = function(){
+                  if(podimg.status !=200){
+                      alert(`Ошибка ${pogimg.status}: ${podimg.statusText}`);
+                  }else { // если всё прошло гладко, выводим результат
+                  // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                              responseType ="Text";
+                              document.querySelector('#gorilla').innerHTML = this.response;
+                               }
+              }
+          </script>
+          <div id='gorilla'></div>
+      <!-- ЭНД картинкит! -->
+                            <div class="bobo"><br><br><br>
+                                
+                                <p> </p>
+                                </div>
+                                <p class="margin">Можно бескончено бегать с видом, очевидного замешательства и полного недоумевания. Подговаривая: "Как же это могла произойти такая непревзойденная форс мажорная обстановка, просто фантастика!".</p>
+                </div>
+          
+            <div id="two" class="margin">
+                <h2>Преимущества очевидны.</h2>
+                <p>Никто не захочет сталкиваться в смертельном бою с гориллой. Тем более с большой и жирной. Мало кто захочет отбирать у Гориллы деньги или телефон. Пусть хоть какое кунг фу применяй, не применяй. На гориллу оно не подействует. Угрозы, шантаж, вымогательство не имеет никакого значения. Горилла бы просто посмотрела, как смотрят интеллигенты на какахи. И вот у скрытной группировки подпольного коммунизма, нет никаких полномочий против гориллы!</p>
+                      <!-- тута картинка! -->
+      <script>
+        let podimg2 = new XMLHttpRequest();
+        podimg2.open('GET','images/lol/gorilla-two.html');
+        podimg2.send();
+        podimg2.onload = function(){
+            if(podimg2.status !=200){
+                alert(`Ошибка ${pogimg2.status}: ${podimg2.statusText}`);
+            }else { // если всё прошло гладко, выводим результат
+            // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                        responseType ="Text";
+                        document.querySelector('#gorilla-two').innerHTML = this.response;
+                         }
+        }
+    </script>
+    <div id='gorilla-two'></div>
+<!-- ЭНД картинкит! -->
+                        <div class="bobo"><br><br><br>
+                          
+                            <p> </p>
+                        </div>
+                        <p class="margin">Тут часто прибывают какие-то странные чудаки. ...и исчо инопланетяни.</p>
+            </div>
+            <div id="free" class="margin">
+            <h2>Недостатки, их нет но есть предположения</h2>
+            <p>По всем шикарным фильмам про обезьян и горилл, Проблема одна, не очень много мозгов. Тогда если у тебя уже все есть, то как еще можно получать удовольствие и наслаждаться успехом если думать уже не приходится? Самое страшное что может случиться еще и “шпрехать компутер” будет нельзя, нельзя будет писать сингалпейджапликейшин, ни каких мультилендингов с сигментацией трафика и поисковой оптимизацией. Тогда путь один и если нельзя в образе Обезьяны или даже Гориллы “великой”, шпрехать компутер. Лучше уж и не надо(быть гориллой).</p>
+        </p>
+                <!-- тута картинка! -->
+        <script>
+          let pod = new XMLHttpRequest();
+          pod.open('GET','images/lol/gorilla-three.html');
+          pod.send();
+          pod.onload = function(){
+              if(pod.status !=200){
+                  alert(`Ошибка ${pog.status}: ${pod.statusText}`);
+              }else { // если всё прошло гладко, выводим результат
+              // alert(`Готово, получили ${podimg.response.length} байт`); // response -- это ответ сервера
+                          responseType ="Text";
+                          document.querySelector('#gorilla-three').innerHTML = this.response;
+                           }
+          }
+      </script>
+      <div id='gorilla-three'></div>
+  <!-- ЭНД картинкит! -->
+                <div class="bobo"><br><br><br>
+                   
+                    <p> </p>
+                </div>
+                <p class="margin">И исчо, в веб мастерскую имени Барона Сайтоверстаузена "возможно" требуются новобранцы.</p>
+          </div>
+            </article>
+
+        </main>
+      <footer>
+        <script src="https://yastatic.net/share2/share.js"></script>
+        <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,linkedin,lj,blogger,reddit"></div>
+      </footer>
+    <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
+                    Начало меню! 
+    ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ-->
+    <div id="menu"></div>
+
+    <button class="burg">
+    <svg 
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="40px" height="31px">
+    <image  x="0px" y="0px" width="40px" height="31px"  xlink:href="data:img/png;base64,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" />
+    </svg>
+    
+    </button>
+   <!-- Счетчики -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(57628999, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+
+<script>
+
+    //--------------------------------------------------------------
+    //--------ОТПРАВИТЬ ЗАПРОС ЧТОБЫ ПОЛУЧИТЬ МЕНЮ------------------
+    //--------------------------------------------------------------
+function run(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'menu/menu.html', true);   
+    xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+    document.getElementById("menu").innerHTML = this.responseText;    
+        }
+    }
+    xhr.send();
+}
+/*--------------------------------------------------------------------------
+----------------ТУТ_ПРОИСХОДИТ_ОБНОВЛЕНИЕ_МЕНЮШКИ!--------------------------
+--------------------------------------------------------------------------*/
+                    //setInterval(run, 700);
+                    run();
+</script>
+
+<link rel="stylesheet" href="menu/style-menu.css">
+<script src="menu/script-menu.js"></script>
+
+
+
+
+<!-- Тег дискуса "перед закрывающим боди"  -->
+<script id="dsq-count-scr" src="//nasobe-ru.disqus.com/count.js" async></script>
+</body>
+
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                Тут дискус!
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+<div id="disqus_thread" class="margin"></div>
+<script>
+    function hi(){
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://nasobe-ru.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+    }
+    setTimeout(hi, 2000);
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "LocalBusiness",
+  "name" : "Верстка адаптивного сайта визитки",
+  "url" : "https://nasobe.ru/",
+  "image" : "https://nasobe.ru/images/logo.png",
+  "review" : {
+    "@type" : "Review",
+    "author" : {
+      "@type" : "Person",
+      "name" : "Amir Navrutdinov"
+    }
+  }
+}
+</script>        
+
+
+
+</html>

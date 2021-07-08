@@ -30,9 +30,8 @@ $connect = mysqli_connect($servername, $username, $password,$database);
 $posText=mysqli_query($connect, "SELECT * FROM `article`ORDER BY `id`, `title`,`description`,`text`,`url`  ASC");
 $allPostsText=mysqli_fetch_all($posText);
   for($i=0;$i<count($allPostsText);$i++){
-        $revers=array_reverse($allPostsText);
+    $revers=array_reverse($allPostsText);
   foreach($allPostsText as $posText){
-
   }
 }
 

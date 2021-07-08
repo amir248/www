@@ -13,7 +13,7 @@
         margin:0;
       }
       body{
-        min-width:100vh;
+        max-width:100%;
         font-size:20px;
         background:rgba(0,255,0,0.3)
       }
@@ -22,6 +22,7 @@
         justify-content:center;
         align-items:center;
         max-width:100%;
+        flex-direction:column;
       }
       article{
         display:flex;
@@ -36,8 +37,9 @@
         justify-content:center;
         align-items:center;
         max-width:100%;
+        min-height: 600px;
         width: 900px;
-        height:600px;
+        height:100%;
         /* background:rgba(0,0,255,0.5); */
         flex-wrap:wrap;
       }
@@ -62,7 +64,7 @@
         max-width:100%;
         width:900px;
       /* height:700px; */
-      /* min-height:700px; */
+        min-height:700px;
       }
       button{
         width:255px;
@@ -94,22 +96,32 @@
         .boxRow{
       justify-content:center;
         }
-      }
-      @media(max-width:750px){
         img{
           max-width:100%;
-          width:100%;
+
         }
       }
+@media(min-width:900px){
+  img{
+    width:400px;
+  }
+}
+@media(max-width:350px){
+  button{
+    width:130px;
+  }
+}
       .obo{
         display:flex;
         justify-content:center;
         align-items:center;
         max-width:100%;
         width:1920px;
-        height:300px;
+        min-height:300px;
         background:white;
         flex-direction:column;
+        /* min-height:100%; */
+        overflow: visible;
       }
       .proekt{
         display:flex;
@@ -120,14 +132,18 @@
         min-height:250px;
         background:rgba(0,255,255,0.5);
       }
+      .proekt p{
+        margin:1%;
+      }
       .navuk{
         display:flex;
         justify-content:center;
         align-items:center;
         max-width:100%;
         width:1920px;
-        min-height:750px;
+        min-height:550px;
         flex-wrap:wrap;
+         word-wrap: break-word;
       }
       .boxRow{
         display:flex;
@@ -142,7 +158,7 @@
         justify-content:center;
         align-items:center;
         max-width:100%;
-        width:299px;
+        width:300px;
         /* flex-direction:row; */
         flex-wrap:wrap;
 
@@ -158,14 +174,53 @@
         display:flex;
         justify-content:center;
         align-items:center;
-        /* max-width:calc(100% - 6px); */
-        /* width:calc(1920px - 6px); */
+        max-width:calc(100% - 6px);
+        /* max-width:100%; */
+        width:calc(1920px - 6px);
         max-height:100%;
         background:rgba(0,255,255,0.5);
         border:3px solid red;
+        flex-direction: column;
       }
       img{
         max-width:100%;
+      }
+      .grid{
+        display:grid;
+
+      }
+      .lineWork{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+      }
+      .com{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        max-width: 100%;
+        min-height: 200px;
+      }
+      .feedBack{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        min-height: 400px;
+      }
+      footer{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 100%;
+        width:1920px;
+        min-height: 180px;
+        background: #34547A;
+      }
+      .taby{
+        display:none;
       }
     </style>
   </head>
@@ -185,50 +240,181 @@
 
         <div class="mainBox">
           <picture>
-            <img src='images/alf.jpg' alt="программист верстальщик высокого уровня" width="200px">
+            <img src='images/400-5022.JPG' alt="программист верстальщик высокого уровня" width="200px">
           </picture>
-          <div style="display:flex; justify-content:center; align-items:space-between; width:600px;max-width:100%; flex-direction:column;margin-left:100px;">
+          <div style="display:flex; justify-content:center; align-items:space-between; width:400px;max-width:100%; min-height: 100%;height:100%;overflow:visible;text-align: justify;flex-direction:column;margin-left:100px;">
           <h1 style="margin:3%;">Дизайн и верстка</h1>
-        <p style="margin:3%;">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p> <br> <button>НАПИСАТЬ МНЕ</button></div>
+        <p style="margin:3%;">Хороший вариант верстать простенькую рекламную страницу из фигмы и запускать контекстную рекламу на неё. Но! В смутное время, постапокалипсиса, догадок и предположений... Шикарным вариантом будет: Наверстывать адаптивные веб страницы с сео прибамбасами и турбо приводом в топ один с помощью контекстной рекламы. +интерсекшин обсервер, леизилоад, тайной подгрузкой контента через PHP в формате json. И т.о.: Ленднги из веб мастерской имени барона сайтоверстаузена - лучше чем у всех остальных!
+</p> <br> <button>НАПИСАТЬ МНЕ</button></div>
 
         </div>
         </header>
-          <div class="obo"><h2>OBO mne</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></span>
+          <div class="obo"><h2>Обо мне!</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Меня зовут Амир “ChikChicly SpaceHands ForsMazhorovich”. И я занимаюсь созданием, модификацией и внесением изменений на успешных сайтах и лендингах с основным стеком: html,css,js,php,sql. В частности html,css,js. По макету из фигмы или по другому макету, по картинки, рисунку или по словесно-устной абстрактной ассоциацией переданной через современные средства связи. И если у Вас есть деньги, значит велика вероятность что мы можем договориться! 😉
+</p></span>
           </div>
           <div class='proekt'>
-            <span style="max-width:900px;">Iconki</span>
+            <span style="display:flex;max-width:100%; width:900px; align-items:center;justify-content:center;"><p id='nav' style="background:green; padding:1%; border:3px solid green; border-radius:7px;">Навыки</p><p id='sup'>Sup </p><p id="work">work </p><p>Arbaiten</p> <p>dfdf</p></span>
           </div>
           <div class="navuk">
-            <h2 style="display:flex; justify-content:center; align-items:center;max-width:100%; width:1900px;">Навыки:</h2>
+            <h2 style="display:flex; justify-content:center; align-items:center;max-width:100%; width:1900px;"><p id="title"></p></h2>
+            <div class="taby">
+              <h2 style="display:flex; justify-content: center;text-align: center; width:900px; max-width:100%;"><p id="zag"></p></h2>
+              <p id="text"></p>
+            </div>
               <div class="boxRow">
-                  <ul style="width:300px;max-width:100%;">
-                    <li>html</li>
-                    <li>css</li>
-                    <li>javascript</li>
-                    <li>PHP</li>
-                    <li>SQL</li>
-                    <li>Photoshop</li>
-                    <li>photographer</li>
-                    <li>Обработка изображений по цветовой палитре с использованием схемы сочетания цветов по кругу Итена</li>
-                    <li>Контестаная реклама: директ, ads</li>
-                    <li>Сео оптимизация</li>
-                    <li>Поиск и исправление ошибок, модификация внешнего вида html,css, адаптация под мобильные.</li>
-                    <li>Бекенд с помощью невидимой погрузки. PHP прощупывает базу mysql конвертирует данные в json формат с помощью функция json_encode() и отправляет с помощью аякса во фронтенд. "Тут аналогичный пример.(full stack langing(html,css,js,php,sql))" </li>
+                  <ul style="width:400px;max-width:100%;">
+                    <li>html<br><progress value='90' max='100'>90%</progress></li>
+                    <li>css<br><progress value='70' max='100'>70%</progress></li>
+                    <li>javascript<br><progress value='65' max='100'>65%</progress></li>
+                    <li>PHP<br><progress value='30' max='100'>30%</progress></li>
+                    <li>SQL<br><progress value='10' max='100'>10%</progress></li>
+                    <li>Photoshop<br><progress value='90' max='100'>90%</progress></li>
+                    <li>photographer<br><progress value='99' max='100'>99%</progress></li>
+                    <li>Обработка изображений по цветовой палитре с использованием схемы сочетания цветов по кругу Итена<br><progress value='90' max='100'>90%</progress></li>
+                    <li>Контестаная реклама: директ, ads<br><progress value='80' max='100'>80%</progress></li>
+                    <li>Сео оптимизация<br><progress value='70' max='100'>70%</progress></li>
+                    <li>Поиск и исправление ошибок, модификация внешнего вида html,css, адаптация под мобильные.<br><progress value='85' max='100'>85%</progress></li>
+                    <li>Бекенд с помощью невидимой погрузки. PHP прощупывает базу mysql конвертирует данные в json формат с помощью функция json_encode() и отправляет с помощью аякса во фронтенд. "Тут аналогичный пример.(full stack langing(html,css,js,php,sql))" <br><progress value='95' max='100'>95%</progress></li>
+                    <li>Верстка по макету из фигмы <a href="https://www.figma.com/file/YsfjeAFFHecZ8KV8AMDu7t0J/Templates-%233.-More-on-Figma.info?node-id=1%3A2">Этот макет с модификацией сверстан тут</a><br><progress value='90' max='100'>70%</progress></li>
                   </ul>
+                  <div style="display:flex;flex-direction:column;min-height:350px;height:100%;justify-content:space-between; align-items:center;">
                   <picture>
-                    <img src="images/SpaceHands.jpg" alt="ChikChicly SpaceHands ForsMazhorovich" width="400px;">
+                    <img src="images/502-400px.JPG" alt="ChikChicly SpaceHands ForsMazhorovich">
                   </picture>
+                  <span style="font-size:35px; width:400px; text-align:center; background:rgba(0,255,0,0.3); padding:1%; border:rgba(0,255,0,0.3) solid 3px; border-radius:7px;">Цена аналогичного лендинга: Всего:75 т.р.</span>
+                </div>
               </div>
+
           </div>
           <div class="work">
-
-<!-- <p style="display:flex;max-width:90%;width:1920px;justify-content:center;">Как я работаю</p>
-<div class="boxRow"><p>123</p><p>987</p>
-
-</div> -->
-
+          <p style="display:flex;max-width:90%;width:1920px;justify-content:center;">Как я работаю</p>
+            <div class="boxRow">
+              <p class="box300">123</p>
+              <p class="box300">987</p>
+            </div>
+          </div>
+          <div class="lineWork">
+            123
+          </div>
+          <div class="com">
+123
+          </div>
+          <div class="feedBack">
+321
           </div>
       </article>
+      <footer>
+        <p>777</p>
+      </footer>
     </main>
   </body>
+  <script>
+  document.querySelector('#title').innerHTML=`Навыки:`;
+      document.querySelector('#text').innerHTML=` `;
+  document.querySelector('#sup').addEventListener('click',()=>{
+    console.log('yra!');
+    document.querySelector('#title').innerHTML=`Возможности:`;
+    document.querySelector('#text').innerHTML=`${work}`
+    document.querySelector(".taby").style.cssText=`
+    display:flex;
+    width:900px;
+    flex-direction:column;
+    `;
+    // let number = '3';
+    document.querySelector('.boxRow').style.cssText=`display:none`;
+  document.querySelector('#sup').style.cssText=`
+  border:3px solid red;
+  border-radius:7px;
+  padding:1%;
+  background:violet;`
+    document.querySelector('#nav').style.cssText=`border:none;`
+      document.querySelector('#work').style.cssText=`border:none;`
+  });
+  document.querySelector('#nav').addEventListener('click',()=>{
+    document.querySelector('#title').innerHTML=`Навыки:`;
+    document.querySelector(".taby").style.cssText=`display:none`;
+    console.log('Flex!');
+    window.number="0";
+    document.querySelector('#nav').style.cssText=`border:3px solid red;
+    // margin:1%;
+    border-radius:7px;
+    padding:1%;
+    background:yellow;
+    `;
+    document.querySelector('#sup').style.cssText=`border:none;`
+      document.querySelector('#work').style.cssText=`border:none;`
+    document.querySelector('.boxRow').style.cssText=`
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:100%;
+    width:900px;
+    flex-wrap:wrap;
+    `;
+
+  });
+  document.querySelector('#work').addEventListener('click',()=>{
+    console.log('work!');
+    document.querySelector('#title').innerHTML=`Work:`;
+    document.querySelector(".taby").style.cssText=`
+    display:flex;
+    width:900px;
+    flex-direction:column;
+    `;
+
+    window.number = "3";
+    // document.querySelector('.boxRo').style.cssText=`display:none`;
+    document.querySelector('#work').style.cssText=`
+    border:3px solid red;
+    border-radius:7px;
+    padding:1%;
+    background:cyan;`
+      document.querySelector('#nav').style.cssText=`border:none;`
+      document.querySelector('#sup').style.cssText=`border:none;`
+      document.querySelector('.boxRow').style.cssText=`display:none`;
+  });
+
+
+  function readTextFile(file, callback) {
+    let rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+      }
+    rawFile.send(null);
+    }
+    //usage:
+    let number ="0";
+    window.number;
+    let pos;
+    pos="0";
+    let Title;
+    Title="1";
+    // description
+    let uno;
+    uno="2";
+    let trY;
+    trY='3';
+    readTextFile("landing_json/landingFile.json", function(text){
+    let data = JSON.parse(text);
+    console.log(Object.values(data));
+    // console.log(Object.values(data[`${number}`]));
+    // console.log(Object.values(data[`${pos}`]).join(''));
+    let globalObzect= window.Object.values(data[`${pos}`]).join('');
+    let work=Object.values(data[0][1]).join('');
+     // document.getElementById('sup').innerHTML=Object.values(data[`${number}`][`${uno}`]).join('');
+     let zag;
+    document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+    document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+    // let obZh= Object.values(data[`${number}`][`${Title}`]).join('');
+    // document.getElementById('ok').innerHTML=Object.values(data[`${number}`]).join("");
+
+    // document.getElementById('url').innerHTML=Object.values(data[`${number}`][4]).join('');
+    });
+
+
+  </script>
 </html>
