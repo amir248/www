@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['SERVER_NAME']=="localhost"){
+if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";

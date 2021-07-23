@@ -2,12 +2,13 @@
 <html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>SUPER landing page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Супер лендинг с сео прибамбахами и турбо приводом в топ один.">
     <link rel="canonical" href="super-landing-page.html">
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Shikarno">
+    <link rel="icon" href="images/icon9.svg">
     <style>
       *{
         margin:0;
@@ -15,7 +16,7 @@
       body{
         max-width:100%;
         font-size:20px;
-        background:rgba(0,255,0,0.3)
+        background:linear-gradient(rgba(0,255,0,0.3), rgba(0,255,200,0.3))
       }
       main{
         display:flex;
@@ -66,7 +67,7 @@
       /* height:700px; */
         min-height:700px;
       }
-      button{
+      .buttonS{
         width:255px;
         height:65px;
         background:#34547A;
@@ -91,27 +92,71 @@
         }
         header{
           justify-content:space-around;
-          margin-right:3%;
+          /* margin-right:3%; */
         }
         .boxRow{
+          max-width: 100%;
       justify-content:center;
-        }
-        img{
-          max-width:100%;
+      align-items: center;
 
         }
+        .imge{
+          max-width:100%;
+          width:400px;
+        }
+        .dizain{
+          /* margin-left:5%; */
+        }
+        ul{
+          max-width: 100%;
+        }
+        li{
+          max-width: 100%;
+        }
+      }
+      .dizain{
+        display:flex;
+        justify-content:center;
+        align-items:space-between;
+        width:400px;
+        max-width:100%;
+        min-height: 100%;
+        height:100%;
+        overflow:visible;
+        text-align: justify;
+        flex-direction:column;
+        /* margin-left:100px; */
       }
 @media(min-width:900px){
-  img{
+  .imge{
     width:400px;
   }
 }
 @media(max-width:350px){
-  button{
-    width:130px;
+  .buttonS{
+    width:100%;
+    margin:0;
+  }
+  .dizain{
+    margin-left:0;
+  }
+  .boxRow{
+    max-width: 80%;
+justify-content:center;
+align-items: center;
+
+  }
+  ul{
+    max-width: 100%;
+  }
+  li{
+    max-width: 100%;
+  }
+  .imge{
+    width:100%;
   }
 }
-      .obo{
+      #obo{
         display:flex;
         justify-content:center;
         align-items:center;
@@ -131,6 +176,7 @@
         width:1920px;
         min-height:250px;
         background:rgba(0,255,255,0.5);
+        flex-wrap:wrap;
       }
       .proekt p{
         margin:1%;
@@ -147,9 +193,9 @@
       }
       .boxRow{
         display:flex;
-        justify-content:space-between;
+        justify-content:center;
         align-items:center;
-        max-width:100%;
+        max-width:80%;
         width:900px;
         flex-wrap:wrap;
       }
@@ -182,7 +228,7 @@
         border:3px solid red;
         flex-direction: column;
       }
-      img{
+      .imge{
         max-width:100%;
       }
       .grid{
@@ -193,6 +239,7 @@
         display:flex;
         justify-content:center;
         align-items: center;
+        max-width: 100%;
       }
       .com{
         display:flex;
@@ -207,7 +254,8 @@
         justify-content: center;
         align-items: center;
         max-width: 100%;
-        min-height: 400px;
+        min-height: 100px;
+        flex-direction:column;
       }
       footer{
         display:flex;
@@ -218,9 +266,76 @@
         width:1920px;
         min-height: 180px;
         background: #34547A;
+        flex-direction: column;
       }
       .taby{
         display:none;
+      }
+      progress{
+        max-width: 100%;
+      }
+      @media(max-width:315px){
+        *{
+          max-width: 100%;
+          width:290px;
+          word-wrap: break-word;
+        }
+        progress{
+          display:none;
+        }
+        ul{
+          margin:0;
+          max-width: 70%;
+        }
+        li{
+          magin:0;
+          max-width: 70%;
+        }
+        boxRow{
+          max-width: 70%;
+        }
+      }
+      @media(min-width:315px){
+        p{
+          margin:3%;
+        }
+        h1{
+          margin:3%;
+        }
+      }
+      #sigCommentsBlock{
+        max-width: 100%;
+        width:900px;
+      }
+      section{
+        max-width: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .burg{
+        border:none;
+        background: none;
+      }
+      .openmenu{
+          top:9%;
+          max-height: 91%;
+          max-width: 100%;
+          opacity: 0.9;
+          background-color:rgb(64, 150, 56);
+          border: 1px solid red;
+          font-size: 24px;
+          padding-bottom: 3%;
+          visibility: visible;
+          /* overflow: hidden;
+          display: none;
+          visibility: hidden;  */
+      }
+      #offmenu{
+          position: fixed;
+          overflow:auto;
+          z-index: 0;
       }
     </style>
   </head>
@@ -228,38 +343,45 @@
     <main>
       <article>
         <header>
+          <button class="burg">
         <span style="font-size:55px;">👽</span>
+      </button>
         <div class="mobilMenu"><span style="width:30px; height:3px; background:white;"></span><span style="width:30px; height:3px; background:white;"></span><span style="width:30px; height:3px; background:white;"></span></div>
         <div class="mainMenu">
-          <ul>Главная</ul>
-          <ul>Об авторе</ul>
-          <ul>Работы</ul>
-          <ul>Процесс</ul>
-          <ul>Контакты</ul>
+          <a href="/"><ul>Главная</ul></a>
+          <a href="#obo"><ul>Об авторе</ul></a>
+          <a href="#WORK"><ul>Работы</ul></a>
+          <a href="#PRO"><ul>Процесс</ul></a>
+          <a href="#"> <ul>Контакты</ul></a>
         </div>
 
         <div class="mainBox">
-          <picture>
-            <img src='images/400-5022.JPG' alt="программист верстальщик высокого уровня" width="200px">
-          </picture>
-          <div style="display:flex; justify-content:center; align-items:space-between; width:400px;max-width:100%; min-height: 100%;height:100%;overflow:visible;text-align: justify;flex-direction:column;margin-left:100px;">
-          <h1 style="margin:3%;">Дизайн и верстка</h1>
-        <p style="margin:3%;">Хороший вариант верстать простенькую рекламную страницу из фигмы и запускать контекстную рекламу на неё. Но! В смутное время, постапокалипсиса, догадок и предположений... Шикарным вариантом будет: Наверстывать адаптивные веб страницы с сео прибамбасами и турбо приводом в топ один с помощью контекстной рекламы. +интерсекшин обсервер, леизилоад, тайной подгрузкой контента через PHP в формате json. И т.о.: Ленднги из веб мастерской имени барона сайтоверстаузена - лучше чем у всех остальных!
-</p> <br> <button>НАПИСАТЬ МНЕ</button></div>
+          <a href='https://www.linkedin.com/in/amir-navrutdinov-76374a119/'>
+            <picture>
+              <img src='images/frontend-developer.JPG' alt="программист верстальщик высокого уровня" class="imge">
+            </picture>
+          </a>
+          <div class="dizain">
+          <h1>Дизайн и верстка</h1>
+        <p>Хороший вариант верстать простенькую рекламную страницу из фигмы и запускать контекстную рекламу на неё. Но! В смутное время, постапокалипсиса, догадок и предположений... Шикарным вариантом будет: Наверстывать адаптивные веб страницы с сео прибамбасами и турбо приводом в топ один с помощью контекстной рекламы. +интерсекшин обсервер, леизилоад, тайной подгрузкой контента через PHP в формате json. И т.о.: Ленднги из веб мастерской имени барона сайтоверстаузена - лучше чем у всех остальных!
+</p> <br> <a href="https://nasobe.ru/feedback-form.html"><button class="buttonS">НАПИСАТЬ МНЕ</button></a></div>
 
         </div>
         </header>
-          <div class="obo"><h2>Обо мне!</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Меня зовут Амир “ChikChicly SpaceHands ForsMazhorovich”. И я занимаюсь созданием, модификацией и внесением изменений на успешных сайтах и лендингах с основным стеком: html,css,js,php,sql. В частности html,css,js. По макету из фигмы или по другому макету, по картинки, рисунку или по словесно-устной абстрактной ассоциацией переданной через современные средства связи. И если у Вас есть деньги, значит велика вероятность что мы можем договориться! 😉
+          <div id="obo"><h2>Обо мне!</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Меня зовут Амир “ChikChicly SpaceHands ForsMazhorovich”. И я занимаюсь созданием, модификацией и внесением изменений на успешных сайтах и лендингах с основным стеком: html,css,js. И немного php,sql. По макету из фигмы или по другому макету, по картинки, рисунку или по словесно-устной абстрактной ассоциацией переданной через современные средства связи. И если у Вас есть деньги, значит велика вероятность что мы можем договориться! 😉
 </p></span>
           </div>
           <div class='proekt'>
-            <span style="display:flex;max-width:100%; width:900px; align-items:center;justify-content:center;"><p id='nav' style="background:green; padding:1%; border:3px solid green; border-radius:7px;">Навыки</p><p id='sup'>Sup </p><p id="work">work </p><p>Arbaiten</p> <p>dfdf</p></span>
+            <span style="display:flex;max-width:100%; width:900px; align-items:center;justify-content:center;flex-wrap:wrap;"><p id='nav' style="background:green; padding:1%; border:3px solid green; border-radius:7px;">Навыки</p><p id='sup'>Sup </p><p id="work">work </p> <p id="arbeiten">Arbeiten</p> <p id="advantages">advantages</p><p id="warranty">warranty</p><p id="positiveKey">Positive Key</p></span>
           </div>
           <div class="navuk">
             <h2 style="display:flex; justify-content:center; align-items:center;max-width:100%; width:1900px;"><p id="title"></p></h2>
             <div class="taby">
-              <h2 style="display:flex; justify-content: center;text-align: center; width:900px; max-width:100%;"><p id="zag"></p></h2>
+              <h2 style="display:flex; justify-content: center;text-align: center; width:900px; max-width:100%;">
+              <p id="zag"></p></h2>
+              <p id="txt"></p>
               <p id="text"></p>
+
             </div>
               <div class="boxRow">
                   <ul style="width:400px;max-width:100%;">
@@ -275,50 +397,331 @@
                     <li>Сео оптимизация<br><progress value='70' max='100'>70%</progress></li>
                     <li>Поиск и исправление ошибок, модификация внешнего вида html,css, адаптация под мобильные.<br><progress value='85' max='100'>85%</progress></li>
                     <li>Бекенд с помощью невидимой погрузки. PHP прощупывает базу mysql конвертирует данные в json формат с помощью функция json_encode() и отправляет с помощью аякса во фронтенд. "Тут аналогичный пример.(full stack langing(html,css,js,php,sql))" <br><progress value='95' max='100'>95%</progress></li>
-                    <li>Верстка по макету из фигмы <a href="https://www.figma.com/file/YsfjeAFFHecZ8KV8AMDu7t0J/Templates-%233.-More-on-Figma.info?node-id=1%3A2">Этот макет с модификацией сверстан тут</a><br><progress value='90' max='100'>70%</progress></li>
+                    <li>Верстка по макету из фигмы <a href=https://www.figma.com/file/YsfjeAFFHecZ8KV8AMDu7t0J/Templates-%233.-More-on-Figma.info?node-id=1%3A2>Этот макет с модификацией сверстан тут</a><br><progress value='90' max='100'>70%</progress></li>
                   </ul>
                   <div style="display:flex;flex-direction:column;min-height:350px;height:100%;justify-content:space-between; align-items:center;">
-                  <picture>
-                    <img src="images/502-400px.JPG" alt="ChikChicly SpaceHands ForsMazhorovich">
-                  </picture>
-                  <span style="font-size:35px; width:400px; text-align:center; background:rgba(0,255,0,0.3); padding:1%; border:rgba(0,255,0,0.3) solid 3px; border-radius:7px;">Цена аналогичного лендинга: Всего:75 т.р.</span>
+                  <a href='https://www.linkedin.com/in/amir-navrutdinov-76374a119/'>
+                    <picture>
+                      <img src="images/frontend-developer.JPG" alt="ChikChicly SpaceHands ForsMazhorovich" style="transform: scale(-1, 1);" class="imge">
+                    </picture>
+                  </a>
+                  <span style="font-size:35px; max-width: 100%;width:300px;text-align:center; background:rgba(0,255,0,0.3); padding:1%; border:rgba(0,255,0,0.3) solid 3px; border-radius:7px;">Цена лендинга как <a href="/super-landing-page.html">этот</a>: Всего:75 т.р.</span>
                 </div>
               </div>
 
           </div>
-          <div class="work">
-          <p style="display:flex;max-width:90%;width:1920px;justify-content:center;">Как я работаю</p>
+          <div class="work" id="WORK">
+          <h3 style="display:flex;max-width:90%;width:1920px;justify-content:center;">Как я работаю</h3>
             <div class="boxRow">
-              <p class="box300">123</p>
-              <p class="box300">987</p>
+              <p class="box300">В нынешнее время появилось популярное выражение: “чувак ты рофлишь”. Первые строки поиска сразу же дают напутствие на сомнительные предположения <a href=https://www.google.com/search?q=%D0%A0%D0%BE%D1%84%D0%BB%D0%B8%D1%88%D1%8C&oq=%D0%A0%D0%BE%D1%84%D0%BB%D0%B8%D1%88%D1%8C&aqs=chrome..69i57j0j0i30l8.3114j0j7&sourceid=chrome&ie=UTF-8>ROFL — rolling on the floor laughing</a>
+              На самом деле никаких шуток тут нет. Есть только серьезные люди, занимающиеся работой по созданию “рекламных” или презентационных лендингов. С продвижением в контекстной рекламе с SEO оптимизацией. <strong>Только все это происходит в позитивном ключе!</strong> С максимальной простотой и легкостью.
+              </p>
+              <p class="box300">Все максимально просто, настолько, насколько это возможно. Поэтому когда доходит вопрос о ценнике, то да - это очень дорого. И простая страница сверстанная по макету из фигмы будет стоять ОТ: 580 рублев. (эта сумма взята из законодательной системы оплаты труда и высчитывается по формуле: “прожиточныйМин/времяВчеловекЧасы”=580 рублей в день. 580*25 раб.дн=14,500(даже на пол шишки выше)).</p>
             </div>
           </div>
           <div class="lineWork">
-            123
+            <p style="max-width:100%;width:900px;" id="PRO">И после такого безмятежного начала, следующий аспект описывающий принцип протекания рабочего процесса в такой эпической веб мастерской как “веб мастерская имени барона сайтоверстаузена”, можно расценивать как юмор. <span style="color:red;">Но это не юмор, а ПОЗИТИВНЫй КлючЪ!</span>
+            Ведь протекания работы чаще всего начинается с прощупывания почвы, постоянным поиском, применением новых модификаций, разбор и исправление уже написанных. И не каждый программист согласится писать лендинг с подгрузкой контента из sql с помощью php генерируя посты из базы в json формат и json_encode(‘пост’) посылать аяксом в лендинг.  С учетом скорости загрузки и при необходимости быстрого разбора забугорного новшества. Такой процесс классифицируется как: “пляски шамана с бубном, вокруг кАмпутера”.</p>
           </div>
           <div class="com">
-123
+            <div class="boxFirst">
+                <div class='imagesWindow'>
+                    <div id="news"></div>
+                </div>
+                <div class="buttony">
+                    <div id="leftButton" style="font-size:25px;">👈</div>
+                    <div id="rightButton" style="font-size:25px;">👉</div>
+                </div>
+            </div>
           </div>
           <div class="feedBack">
-321
+            <h3>Совершенно другой вопрос: “насколько любой?”</h3>
+            <p style="max-width:100%;width:900px;">Если человек “инициализируя” себя программистом сможет написать на языке си “hello word”. То всЁ! Лучи света пробьются сквозь темные тучи. Как божественные руки что одевают корону на безумную голову. Заряжая каждую клетку мозга фантастическим чудом. Гипертрофируя атомы и электроны, трансформируя все в нечто волшебное...</p>
+          </div>
+          <div style="max-width:100%; width:900px; text-align:center; background:rgba(10,255,250,0.3)">
+              <script src="https://yastatic.net/share2/share.js"></script>
+              <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
           </div>
       </article>
       <footer>
-        <p>777</p>
+        <section>
+        <div id="sigCommentsBlock"></div>
+        <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
+        <script type="text/javascript">
+            setTimeout(()=>(function(){
+                var host_id = '5451';
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                var ss = document.getElementsByTagName('script')[0];
+                ss.parentNode.insertBefore(script, ss);
+            })(),4000);
+        </script>
+      </section>
+        <div class="boxRow" style="color:coral;">
+          <div class="box300">
+            <p>веб мастерская имени барона сайтоверстаузена</p><a href="/">🏠</a>
+          </div>
+          <div class="box300">
+            <p>© всё прова защищены</p>
+          </div>
+          <div class="box300">
+            <p id="data"></p>
+          </div>
+        </div>
+
       </footer>
+
     </main>
+    <style>
+            .boxFirst{
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items:center;
+                max-width: 100%;
+            }
+            #leftButton{
+                display:flex;
+                border:blueviolet solid 2px;
+                /* border-radius: 50%; */
+                background-color: yellow;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                padding:10px;
+            }
+            #leftButton:hover{
+                background-color: rgb(247, 177, 85);
+            }
+            #leftButton:active{
+                background-color: rgb(212, 67, 0);
+            }
+            #rightButton{
+                display:flex;
+                border:blueviolet solid 2px;
+                /* border-radius: 50%; */
+                background-color: yellow;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                padding:10px;
+            }
+            #rightButton:hover{
+                background-color: rgb(247, 177, 85);
+            }
+            #rightButton:active{
+                background-color: rgb(212, 67, 0);
+            }
+            .buttony{
+                display: flex;
+                justify-content: space-around;
+                /* text-align: center; */
+                width: 100%;
+                background-color: rgb(255, 50, 5);
+            }
+            /* .imagesWindow{
+                display: flex;
+                width: 100%;
+                height: 100%;
+
+                max-width: 100%;
+                max-height: 100%;
+                background-color: rgba(0, 100, 0, 0.144);
+            } */
+        </style>
+
+        <script>
+        document.querySelector("#data").innerHTML= new Date;
+        if(window.innerWidth<=900){
+
+          let rpoZh=900-window.innerWidth;
+            let andE =(900*100)/window.innerWidth;
+            console.log(rpoZh+"____"+andE+'_Prosto andE');
+            let height = (400*100)/(andE);
+            console.log(height+'_proverka height');
+            document.querySelector('.imagesWindow').style.cssText=`
+          display:flex;
+          height: ${height}px;
+          `;
+          console.log(`${andE}`+'Туту написано из оттдуа');
+        }else{
+          document.querySelector('.imagesWindow').style.cssText=`
+          display:flex;
+          height:400px;
+          width:900px;
+          `;
+        }
+             let imgPod = ['images/computer/1.html','images/computer/2.html','images/computer/3.html','images/computer/4.html','images/computer/5.html','images/computer/6.html','images/computer/7.html','images/computer/8.html','images/computer/9.html','images/computer/10.html','images/computer/11.html','images/computer/12.html','images/computer/13.html','images/computer/14.html','images/computer/15.html','images/computer/16.html','images/computer/17.html','images/computer/18.html','images/computer/19.html',];
+            let i=+0;
+
+            if(window.location.hash=="#1"){
+            i=1;
+           nextImages();
+            }else if(window.location.hash=="#2"){
+              i=2;
+           nextImages();
+            }else if(window.location.hash=="#3"){
+              i=3;
+              nextImages();
+            }else if(window.location.hash=="#4"){
+              i=4;
+                nextImages();
+            }else if(window.location.hash=="#5"){
+              i=5;
+                nextImages();
+            }else if(window.location.hash=="#6"){
+              i=6;
+                nextImages();
+            }else if(window.location.hash=="#7"){
+              i=7;
+                nextImages();
+            }else if(window.location.hash=="#8"){
+                i=8;
+                  nextImages();
+            }else if(window.location.hash=="#9"){
+                    i=9;
+                      nextImages();
+            }else if(window.location.hash=="#10"){
+                i=10;
+                nextImages();
+            }else if(window.location.hash=="#11"){
+                i=11;
+                nextImages();
+            }else if(window.location.hash=="#12"){
+                i=12;
+                nextImages();
+            }else if(window.location.hash=="#13"){
+                i=13;
+                nextImages();
+            }else if(window.location.hash=="#14"){
+                i=14;
+                nextImages();
+            }else if(window.location.hash=="#15"){
+                i=15;
+                nextImages();
+            }else if(window.location.hash=="#16"){
+                i=16;
+                nextImages();
+            }else if(window.location.hash=="#17"){
+                i=17;
+                nextImages();
+            }else if(window.location.hash=="#18"){
+                i=18;
+                nextImages();
+            }else{
+                i=0;
+                nextImages();
+            }
+
+                function nextImages(){
+                    let podimgl = new XMLHttpRequest();
+                    podimgl.open('GET', `${imgPod[i]}`);
+                    podimgl.send();
+                    podimgl.onload = function(){
+                        if(podimgl.status ==200){
+                            responseType ="Text";
+                            document.querySelector('#news').innerHTML = this.response;
+                        }
+                    }
+                }
+                   nextImages();
+                   let ow = window.location.href;
+                   console.log(ow);
+                    leftButton.addEventListener('click',function(){
+                        if(i>=1){
+                            i--;
+                            window.location='super-landing-page.html#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else if(i==0){
+                            i=19;
+                            window.location='super-landing-page.html#'+[i];
+                            console.log(imgPod);
+                            console.log(i);
+                        }else{
+                            window.location='super-landing-page.html#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log('ну незнаю!');
+                        }
+                    });
+                    rightButton.addEventListener('click',function(){
+                        if(i<19){
+                            i++;
+                            window.location='super-landing-page.html#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else if(i==19){
+                            i=0;
+                            window.location='super-landing-page.html#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log(imgPod);
+                            console.log(i);
+                        }else{
+                          window.location='super-landing-page.html#'+[i];
+                            setTimeout(nextImages(),10);
+                            console.log('ну незнаю2!');
+                            console.log(imgPod);
+                            console.log(i);
+                        }
+                    });
+
+
+        </script>
   </body>
   <script>
-  document.querySelector('#title').innerHTML=`Навыки:`;
+  // document.querySelector('#title').innerHTML=`Arbeiten:`;
       document.querySelector('#text').innerHTML=` `;
-  document.querySelector('#sup').addEventListener('click',()=>{
+      document.querySelector('#nav').addEventListener('click',()=>{
+          window.location='super-landing-page.html#nav';
+        document.querySelector('#title').innerHTML=`Все ок`;
+        document.querySelector(".taby").style.cssText=`display:none`;
+        console.log('Nav!');
+        window.number="0";
+        // document.querySelector('#nav').style.cssText=`border:3px solid red;
+        // // margin:1%;
+        // border-radius:7px;
+        // padding:1%;
+        // background:yellow;
+        // `;
+          document.querySelector('#nav').style.cssText=`border:3px solid red;
+          // margin:1%;
+          border-radius:7px;
+          padding:1%;
+          background:coral;
+          text-align:center;
+          color:darkgreen;
+          `;
+        document.querySelector('#sup').style.cssText=`border:none`;
+        document.querySelector('#arbeiten').style.cssText=`border:none`;
+          document.querySelector('#work').style.cssText=`border:none`;
+          document.querySelector('#advantages').style.cssText=`border:none`;
+        document.querySelector('#warranty').style.cssText=`border:none`;
+        document.querySelector('#positiveKey').style.cssText=`border:none`;
+        document.querySelector('.boxRow').style.cssText=`
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        max-width:100%;
+        width:900px;
+        flex-wrap:wrap;
+        `;
+
+      });
+      document.querySelector('#sup').addEventListener('click',()=>{
+          window.location='super-landing-page.html#sup';
     console.log('yra!');
-    document.querySelector('#title').innerHTML=`Возможности:`;
-    document.querySelector('#text').innerHTML=`${work}`
+    document.querySelector('#title').innerHTML=`Главное!`;
+    // document.querySelector('#text').innerHTML=`${work} | json`;
     document.querySelector(".taby").style.cssText=`
     display:flex;
     width:900px;
     flex-direction:column;
+    max-width:100%;
+    margin:1%;
     `;
     // let number = '3';
     document.querySelector('.boxRow').style.cssText=`display:none`;
@@ -326,95 +729,332 @@
   border:3px solid red;
   border-radius:7px;
   padding:1%;
-  background:violet;`
+  background:violet;
+  text-align:center;
+  color:green;
+  `
     document.querySelector('#nav').style.cssText=`border:none;`
-      document.querySelector('#work').style.cssText=`border:none;`
+    document.querySelector('#work').style.cssText=`border:none;`
+    document.querySelector('#arbeiten').style.cssText=`border:none;`
+    document.querySelector('#advantages').style.cssText=`border:none`;
+    document.querySelector('#warranty').style.cssText=`border:none`;
+    document.querySelector('#positiveKey').style.cssText=`border:none`;
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      //usage:
+      readTextFile("landing_json/landingFile.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      // console.log(Object.values(data[`${number}`]));
+      // console.log(Object.values(data[`${pos}`]).join(''));
+      let number = 0;
+      let Title = 1;
+      let txte =2;
+      let trY = 3;
+      document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+      document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+      document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+      // let obZh= Object.values(data[`${number}`][`${Title}`]).join('');
+      // document.getElementById('ok').innerHTML=Object.values(data[`${number}`]).join("");
+      // document.getElementById('url').innerHTML=Object.values(data[`${number}`][4]).join('');
+      });
   });
-  document.querySelector('#nav').addEventListener('click',()=>{
-    document.querySelector('#title').innerHTML=`Навыки:`;
-    document.querySelector(".taby").style.cssText=`display:none`;
-    console.log('Flex!');
-    window.number="0";
-    document.querySelector('#nav').style.cssText=`border:3px solid red;
-    // margin:1%;
-    border-radius:7px;
-    padding:1%;
-    background:yellow;
-    `;
-    document.querySelector('#sup').style.cssText=`border:none;`
-      document.querySelector('#work').style.cssText=`border:none;`
-    document.querySelector('.boxRow').style.cssText=`
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    max-width:100%;
-    width:900px;
-    flex-wrap:wrap;
-    `;
 
+  document.querySelector('#arbeiten').addEventListener('click',()=>{
+      window.location='super-landing-page.html#arbeiten';
+    document.querySelector('#title').innerHTML=`Arbeiten`;
+    document.querySelector(".taby").style.cssText=`
+    margin:1%;
+    display:flex;
+    flex-direction:column;
+    width:900px;
+    max-width:100%;
+    text-align:center;
+    `;
+    console.log('arbeiten!');
+      document.querySelector('#arbeiten').style.cssText=`border:3px solid red;
+      margin:1%;
+      border-radius:7px;
+      padding:1%;
+      background:yellow;
+      text-align:center;
+      `;
+    document.querySelector('#sup').style.cssText=`border:none;`
+    document.querySelector('#nav').style.cssText=`border:none;`
+    document.querySelector('#work').style.cssText=`border:none;`
+    document.querySelector('.boxRow').style.cssText=`display:none`;
+    document.querySelector('#advantages').style.cssText=`border:none`;
+    document.querySelector('#positiveKey').style.cssText=`border:none`;
+    document.querySelector('#warranty').style.cssText=`border:none`;
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      //usage:
+      readTextFile("landing_json/landingFile.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      // console.log(Object.values(data[`${number}`]));
+      // console.log(Object.values(data[`${pos}`]).join(''));
+      let number = 6;
+      let Title = 1;
+      let txte =2;
+      let trY = 3;
+      document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+      document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+      document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+      });
   });
   document.querySelector('#work').addEventListener('click',()=>{
+      window.location='super-landing-page.html#work';
     console.log('work!');
     document.querySelector('#title').innerHTML=`Work:`;
     document.querySelector(".taby").style.cssText=`
     display:flex;
     width:900px;
     flex-direction:column;
+    max-width:100%;
+    margin:1%;
+    text-align:center;
     `;
-
-    window.number = "3";
-    // document.querySelector('.boxRo').style.cssText=`display:none`;
     document.querySelector('#work').style.cssText=`
     border:3px solid red;
     border-radius:7px;
     padding:1%;
-    background:cyan;`
-      document.querySelector('#nav').style.cssText=`border:none;`
-      document.querySelector('#sup').style.cssText=`border:none;`
+    background:cyan;
+    text-align:center;
+    color:maroon;
+    `
+      document.querySelector('#nav').style.cssText=`border:none`;
+      document.querySelector('#sup').style.cssText=`border:none`;
+      document.querySelector('#arbeiten').style.cssText=`border:none`;
       document.querySelector('.boxRow').style.cssText=`display:none`;
+        document.querySelector('#advantages').style.cssText=`border:none`;
+        document.querySelector('#warranty').style.cssText=`border:none`;
+        document.querySelector('#positiveKey').style.cssText=`border:none`;
+      function readTextFile(file, callback) {
+        let rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+          }
+        rawFile.send(null);
+        }
+        //usage:
+        readTextFile("landing_json/landingFile.json", function(text){
+        let data = JSON.parse(text);
+        console.log(Object.values(data));
+        let number = 1;
+        let Title = 1;
+        let txte = 2
+        let trY = 3;
+        document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+        document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+        document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+        });
   });
 
-
-  function readTextFile(file, callback) {
-    let rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
+// advantages
+document.querySelector('#advantages').addEventListener('click',()=>{
+    window.location='super-landing-page.html#advantages';
+  console.log('advantages!');
+  document.querySelector('#title').innerHTML=`Advantages:`;
+  document.querySelector(".taby").style.cssText=`
+  display:flex;
+  width:900px;
+  flex-direction:column;
+  max-width:100%;
+  margin:1%;
+  text-align:center;
+  `;
+  document.querySelector('#advantages').style.cssText=`
+  border:3px solid red;
+  border-radius:7px;
+  padding:1%;
+  background:lime;
+  text-align:center;
+  color:red;
+  `
+    document.querySelector('#nav').style.cssText=`border:none`;
+    document.querySelector('#sup').style.cssText=`border:none`;
+    document.querySelector('#arbeiten').style.cssText=`border:none`;
+    document.querySelector('.boxRow').style.cssText=`display:none`;
+    document.querySelector('#work').style.cssText=`border:none`;
+    document.querySelector('#warranty').style.cssText=`border:none`;
+    document.querySelector('#positiveKey').style.cssText=`border:none`;
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
         }
+      rawFile.send(null);
       }
-    rawFile.send(null);
-    }
-    //usage:
-    let number ="0";
-    window.number;
-    let pos;
-    pos="0";
-    let Title;
-    Title="1";
-    // description
-    let uno;
-    uno="2";
-    let trY;
-    trY='3';
-    readTextFile("landing_json/landingFile.json", function(text){
-    let data = JSON.parse(text);
-    console.log(Object.values(data));
-    // console.log(Object.values(data[`${number}`]));
-    // console.log(Object.values(data[`${pos}`]).join(''));
-    let globalObzect= window.Object.values(data[`${pos}`]).join('');
-    let work=Object.values(data[0][1]).join('');
-     // document.getElementById('sup').innerHTML=Object.values(data[`${number}`][`${uno}`]).join('');
-     let zag;
-    document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
-    document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
-    // let obZh= Object.values(data[`${number}`][`${Title}`]).join('');
-    // document.getElementById('ok').innerHTML=Object.values(data[`${number}`]).join("");
-
-    // document.getElementById('url').innerHTML=Object.values(data[`${number}`][4]).join('');
-    });
-
-
+      // usage:
+      readTextFile("landing_json/landingFile.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      let number = 2;
+      let Title = 1;
+      let txte = 2
+      let trY = 3;
+      document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+      document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+      document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+      });
+});
+// warranty
+document.querySelector('#warranty').addEventListener('click',()=>{
+    window.location='super-landing-page.html#warranty';
+  console.log('warranty!');
+  document.querySelector('#title').innerHTML=`warranty:`;
+  document.querySelector(".taby").style.cssText=`
+  display:flex;
+  width:900px;
+  flex-direction:column;
+  max-width:100%;
+  margin:1%;
+  text-align:center;
+  `;
+  document.querySelector('#warranty').style.cssText=`
+  border:3px solid red;
+  border-radius:7px;
+  padding:1%;
+  background:azure;
+  text-align:center;
+  `
+    document.querySelector('#nav').style.cssText=`border:none`;
+    document.querySelector('#sup').style.cssText=`border:none`;
+    document.querySelector('#arbeiten').style.cssText=`border:none`;
+    document.querySelector('.boxRow').style.cssText=`display:none`;
+    document.querySelector('#work').style.cssText=`border:none`;
+    document.querySelector('#advantages').style.cssText=`border:none`;
+    document.querySelector('#positiveKey').style.cssText=`border:none`;
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      // usage:
+      readTextFile("landing_json/landingFile.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      let number = 3;
+      let Title = 1;
+      let txte = 2
+      let trY = 3;
+      document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+      document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+      document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+      });
+});
+// positiveKey
+document.querySelector('#positiveKey').addEventListener('click',()=>{
+    window.location='super-landing-page.html#positiveKey';
+  console.log('Positive Key!');
+  document.querySelector('#title').innerHTML=`Positive Key!`;
+  document.querySelector(".taby").style.cssText=`
+  display:flex;
+  width:900px;
+  flex-direction:column;
+  max-width:100%;
+  margin:1%;
+  text-align:center;
+  `;
+  document.querySelector('#positiveKey').style.cssText=`
+  border:3px solid red;
+  border-radius:7px;
+  padding:1%;
+  background:orange;
+  text-align:center;
+  color:blue;
+  `
+    document.querySelector('#nav').style.cssText=`border:none`;
+    document.querySelector('#sup').style.cssText=`border:none`;
+    document.querySelector('#arbeiten').style.cssText=`border:none`;
+    document.querySelector('.boxRow').style.cssText=`display:none`;
+    document.querySelector('#work').style.cssText=`border:none`;
+    document.querySelector('#advantages').style.cssText=`border:none`;
+    document.querySelector('#warranty').style.cssText=`border:none`;
+    function readTextFile(file, callback) {
+      let rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+        }
+      rawFile.send(null);
+      }
+      // usage:
+      readTextFile("landing_json/landingFile.json", function(text){
+      let data = JSON.parse(text);
+      console.log(Object.values(data));
+      let number = 5;
+      let Title = 1;
+      let txte = 2
+      let trY = 3;
+      document.getElementById('zag').innerHTML=Object.values(data[`${number}`][`${Title}`]).join('');
+      document.getElementById('txt').innerHTML=Object.values(data[`${number}`][`${txte}`]).join('');
+      document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
+      });
+});
   </script>
+  <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
+              Начало меню!
+ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ-->
+<div id="menu"></div>
+<script>
+
+//--------------------------------------------------------------
+//--------ОТПРАВИТЬ ЗАПРОС ЧТОБЫ ПОЛУЧИТЬ МЕНЮ------------------
+//--------------------------------------------------------------
+function run(){
+var xhr = new XMLHttpRequest();
+xhr.open("GET", 'menu/menu.html', true);
+xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+document.getElementById("menu").innerHTML = this.responseText;
+  }
+}
+xhr.send();
+}
+/*--------------------------------------------------------------------------
+----------------ТУТ_ПРОИСХОДИТ_ОБНОВЛЕНИЕ_МЕНЮШКИ!--------------------------
+--------------------------------------------------------------------------*/
+              //setInterval(run, 700);
+              run();
+</script>
+
+<!-- <link rel="stylesheet" href="menu/style-menu.css"> -->
+<script src="menu/script-menu.js"></script>
 </html>

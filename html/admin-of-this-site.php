@@ -142,6 +142,7 @@ mysqli_close($connect);
 
           <div class="block">
           <!-- <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5152&email=" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe> -->
+          <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5451&email=" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe>
 
           </div>
           <?php

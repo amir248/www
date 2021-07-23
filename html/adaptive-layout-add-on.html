@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Пример адаптивной верстки</title>
+        <link rel="canonical" href="https://nasobe.ru/adaptive-layout-add-on.html">
+        <meta name="description" content="Наглядный пример интернет страницы сверстанной старым способом с помощью html/css, шаблон адаптивной верстки, на флексах.">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="icon" href="images/icon9.svg">
+
+        <!--<meta http-equiv="Refresh" content="1">-->
+        <!-- <script data-ad-client="ca-pub-6824659625881284" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+      <style>
+          *{
+              margin:0;
+          }
+          body{
+                background: linear-gradient(rgb(206, 255, 196), rgb(200,150,170));
+                /* background: linear-gradient(#e66465, #9198e5); */
+                color:rgb(78, 163, 68);
+                font-size:22px;
+                text-shadow:1px 1px 1px black;
+          }
+          main{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                max-width:100%;
+          }
+          .first{
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                justify-content:center;
+                max-width:100%;
+                width:900px;
+                /* background-color:red; */
+                word-wrap:break-word;
+                flex-wrap:wrap;
+
+          }
+          article{
+                display:flex;
+                flex-direction: column;
+                background-color: rgb(233, 233, 148);
+                justify-content:center;
+                align-items:center;
+                max-width:100%;
+                width:900px;
+          }
+          header{
+                display:flex;
+                flex-direction:column;
+                background-color:rgb(255, 208, 121);  /** */
+                justify-content:center;
+                align-items:center;
+                width:900px;
+                max-width:100%;
+                word-wrap:break-word;
+                flex-wrap:wrap;
+
+          }
+          .orange{
+              background-color: coral;
+              width: 900px;
+              max-width: 100%;
+              max-height: 100%;
+              text-align: center;
+          }
+          footer{
+                display:flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                background-color:rgb(201, 152, 152);
+            /* padding:1%; */
+          }
+          section{
+            display:flex;
+            align-items:center;
+            justify-content: center;
+            max-width: 100%;
+            flex-direction:column;
+            width:900px;
+          }
+          .margin{
+              margin:1%;
+          }
+          .bak{
+                display:flex;
+                background-color:black;
+                color:white;
+                align-items:center;
+                justify-content:center;
+                flex-direction:column;
+                width:900px;
+                max-width: 100%;
+          }
+
+          .border-dashed{
+            border: 4px dashed red;
+          }
+          .box-cen{
+              display:flex;
+              flex-direction: column;
+              align-items:center;
+              justify-content:center;
+              text-align: center;
+              width: 346px;
+              max-width:96%;
+              background-color:rgba(218, 255, 218, 0.3);
+          }
+
+          .padding_disqus{
+              /* display:flex;
+              justify-content:center;
+                align-items:center;
+              width:900px;
+              max-width: 100%; */
+              padding:5%;
+          }
+          .in{
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                max-width:100%;
+          }
+          #sigCommentsBlock{
+            width:900px;
+            max-width: 100%;
+          }
+        </style>
+    </head>
+    <body>
+            <script type="application/ld+json">
+                {
+                "@context": "https://schema.org",
+                "@type": "person",
+                "url": "https://nasobe.ru",
+                "name": "Amir Shikarno.",
+                "alternateName": ["Amir Navrutdinov", "Амир Наврутдинов"],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+7-952-888-5656",
+                    "contactType": "Веб дизайн и верстка",
+                    "url": "https://nasobe.ru/resume/resume.html"
+                    }
+                }
+            </script>
+            <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "name" : "Адаптивная верстка",
+      "headline": "Адаптивная верстка интернет страницы",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Амир Наврутдинов"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nasobe.ru/adaptive-layout-add-on.html"
+     },
+      "datePublished" : "2020-10-06",
+      "dateModified" : "2021-07-16",
+      "image" : "https://nasobe.ru/images/html5/uno.png",
+      "articleSection" : "Описание как сделать адаптивную верстку интернет страницы.",
+      "articleBody" : "Правильная настройка адаптивной верстки дает ряд преимуществ: скорость загрузки с мобильных устройств, динамическое масштабирование и подстройки под разные устройства.",
+      "url" : "",
+      "publisher" : {
+        "@type" : "Organization",
+        "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nasobe.ru/images/html5/uno.webp"
+          }
+      }
+    }
+    </script>
+            <main>
+                <header>
+                    <h1>Адаптивная верстка
+                    </h1>
+
+                </header>
+
+                <article>
+                <p class="margin">Описание как сделать адаптивную верстку интернет страницы. С примером и сео дополнением, с наглядными тегами.
+                </p>
+                <p class="margin"><strong><span style="font-size:75px; float:left;">📱</span>Правильная настройка адаптивной верстки дает ряд преимуществ: скорость загрузки с мобильных устройств, динамическое масштабирование и подстройки под разные разрешения.</strong></p>
+                <p class="margin">Для адаптивной верстки достаточно <a href="https://www.youtube.com/watch?v=8Gu40PFzOHI&ab_channel=%D0%A4%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D0%B7%D0%BD%D0%B8-IT%D0%B8%D1%84%D1%80%D0%B8%D0%BB%D0%B0%D0%BD%D1%81">успешного понимания верстки на css flex</a>
+                    И с помощью флексов можно верстать и наверстывать невероятные чудеса. Доходит до того что у верстальщиков понявших секрет адаптивной верстки на флексах, спрашивают: “ты что волшебник?”. И тут нет никаких секретов и ни капли волшебства!</p>
+                    <p style="margin:1%;"><span style="font-size:75px; float:right;">🐼</span>Секретный индегриент успешной, адаптивной верстки достаточно сложен в понимании и звучит как: "никакого секрета на самом деле нет!"
+                    </p>
+                    <picture>
+                        <source srcset='images/html5/uno.webp' type='image/webp'>
+                        <img src="images/html5/uno.png" width="100%" alt="адаптивная верстка с наглядыми примерами">
+                    </picture>
+                    <p>Чтобы научится верстать, нужно взяться и начать верстать.И все!</p>
+                <p class="margin">Способы верстки иногда меняются(способы быстро сверстать целый сайт) и появляются новые крутые фишки, поэтому для успешной адаптивной верстки(которая везде откроется и будет работать) нужно быть открытым для новой входящей информации. И в настоящее время профессия верстальщик так и остается востребованной, потому как не многие могут воспринимать и реализовывать что либо новое. Еще важно уметь хорошо пользоваться поиском. И конечно же первая и самая актуальная информация, да и вообще вся информация о веб разработке на английском. Но хорошо что есть переводчик (если не уметь пользоваться переводчиком, то это конец (точнее в области веба, тогда делать нечего. (прям вообще.(Game Over))))</p>
+                <p class="margin">Наглядный пример. Способ адаптировать одну страницу который вряд ли когда нибудь изменится.
+                </p>
+                <p class="margin border-dashed box-cen">Важно не забывать применять теги <a href="https://nasobe.ru/SEO-web-site-layout.html#viewport">вьюпорт</a> и добавлять стиль max-width:100%; - чтобы адаптация подстраивалась под страницу!</p>
+                </article>
+
+                     <!-- пример самой верстки -->
+                    <h2 class="orange first">Быстрый и простой пример (приоткрывающий занавесу адаптивной верстки):</h2>
+                        <div class="bak">
+                            <span class="margin">
+                                <div>
+                                    <div><span>&lt;!</span><span>DOCTYPE</span><span> </span><span>html</span><span>&gt;</span></div>
+                                    <div><span> </span><span>&lt;</span><span>html</span><span> </span><span>land</span><span>=</span><span>"uz"</span><span>&gt;</span></div>
+                                    <div><span>&lt;</span><span>head</span><span>&gt;</span></div>
+                                    <div><span>/* мета теги это очень важная составляющая веб странице, поэтому её стоит искать &gt;<a href="">тут!</a></span><span>&lt;</span><span>*/</span></div>
+                                    <div><span>&lt;</span><span>meta</span><span> </span><span>charset</span><span>=</span><span>"utf-8"</span><span>&gt;</span></div>
+                                    <div><span>&lt;/</span><span>head</span><span>&gt;</span></div>
+                                    <div><span>&lt;</span><span>style</span><span>&gt;</span></div>
+                                    <div><span>*</span><span>{</span></div>
+                                    <div><span> </span><span>margin</span><span>:</span><span>0</span><span>; </span><span>/* убрать зазор по всей странице */</span></div>
+                                    <div><span>}</span></div>
+                                    <div><span> </span><span>.first</span><span>{</span></div>
+                                    <div><span> </span><span>display</span><span>: </span><span>flex</span><span>;</span></div>
+                                    <div><span> </span><span>flex-direction</span><span>: </span><span>column</span><span>;</span></div>
+                                    <div><span> </span><span>width</span><span>:</span><span>300px</span><span>;</span></div>
+                                    <div><span> </span><span>max-width</span><span>: </span><span>100%</span><span>;</span></div>
+                                    <div><span>/* первый стиль нужен, когда нет больше вариантов как выровнять блоки по вертикали (флекс выравнивает по уполномочию с лева на право) */</span></div>
+                                    <div><span>}</span></div>
+                                    <div><span> </span><span>body</span><span>{</span></div>
+                                    <div><span> </span><span>display</span><span>:</span><span>flex</span><span>;</span></div>
+                                    <div><span> </span><span>flex-direction</span><span>:</span><span>column</span><span>;</span></div>
+                                    <div><span> </span><span>background-color</span><span>:</span><span>blanchedalmond</span><span>;</span></div>
+                                    <div><span>/* чтобы задать фоновый цвет ко всему блоку body */</span></div>
+                                    <div><span>/* justify-content:center; */</span></div>
+                                    <div><span> </span><span>align-items</span><span>:</span><span>center</span><span>;</span></div>
+                                    <div><span>}</span></div>
+                                    <div><span> </span><span>main</span><span>{</span></div>
+                                    <div><span> </span><span>display</span><span>:</span><span>flex</span><span>;</span></div>
+                                    <div><span> </span><span>flex-direction</span><span>:</span><span>column</span><span>;</span></div>
+                                    <div><span> </span></div>
+                                    <div><span> </span><span>max-width</span><span>:</span><span>100%</span><span>;</span></div>
+                                    <div><span> </span><span>width</span><span>:</span><span>500px</span><span>;</span></div>
+                                    <div><span>/* тут блок майн будет основным блоком в котором расположатся все блоки входящие в эту страницу. Потому что в этой странице не бутут входить лишние элементы блоки меню nav , а только сразу все необходимое. */</span></div>
+                                    <div><span>}</span></div>
+                                    <div><span> </span><span>header</span><span>{</span></div>
+                                    <div><span>/* Тег открывающий хедер*/</span></div>
+                                    <div><span> </span><span>background-color</span><span>:</span><span>green</span><span>; </span></div>
+                                    <div><span> </span><span>align-items</span><span>:</span><span>center</span><span>; </span><span>/* */</span><span> </span></div>
+                                    <div><span> </span><span>width</span><span>:</span><span>800px</span><span>; }</span></div>
+                                    <div><span>&lt;/</span><span>style</span><span>&gt;</span></div>
+                                    <br>
+                                    <div><span>&lt;!-- А сейчас будет опасный номер дорогие друзья "АХТУНГ данный трюк выполнен профессиональными трюкачами, прозьба не повторять подобные действия, (от греха подальше)" И как предупреждает доктор в белом халате: "спокойствие сохранит Ваше психическое состояние". &lt;- где то там "!" это. */--&gt;</span></div>
+                                    <div><span>&lt;!--теперь пойдет место реализации адаптивной верстки в самом теле документа. И вот что самое удивительное тело документа по версии капитана очевидность называется body.--&gt;</span></div>
+                                    <div><span>&lt;</span><span>body</span><span>&gt;</span></div>
+                                    <div><span>&lt;</span><span>main</span><span>&gt;</span></div>
+                                    <div><span>&lt;!--вото оно что теги из хтмл пять можно писать прям в тело документа без лишних дивов. --&gt;</span></div>
+                                    <div><span>&lt;</span><span>h1</span><span>&gt;</span><span>Тег майн это основной тег и в него нужно помещать самую важную и основную информацию, в тег майн не мопещают nav - навигация и например aside - боковой элемент сайта </span><span>&lt;</span><span> header&gt;</span></div>
+                                    <div><span>тут написано очень много, такое как принято называть шапка сайта</span></div>
+                                    <div><span>&lt;/</span><span>main</span><span>&gt;</span></div>
+                                    <div><span>&lt;</span><span>script</span><span>&gt;</span></div>
+                                    <div><span> </span><span>let</span><span> </span><span>nun</span><span>= </span><span>1</span><span>/</span><span>0</span><span>;</span></div>
+                                    <br>
+                                    <div><span> </span><span>console</span><span>.</span><span>log</span><span>(</span><span>nun</span><span>);</span></div>
+                                    <div><span>&lt;/</span><span>script</span><span>&gt;</span></div>
+                                    <div><span>&lt;</span><span>div</span><span> </span><span>class</span><span>=</span><span>"first"</span><span>&gt;</span><span>туту то и будет что то твориться. ииииииииииии долго продолжаться тут</span><span>&lt;/</span><span>div</span><span>&gt;</span></div>
+                                    <div><span>&lt;/</span><span>body</span><span>&gt;</span></div>
+                                    <div><span>&lt;/</span><span>html</span><span>&gt;</span></div>
+                                    </div>
+                                    <p></p>
+                </span>
+            </div>
+            <article>
+                <h1 class="orange">В дополнение СЕО</h1>
+                <p class="margin">И что же всетаки такое это сео? Перевод звучит как Search Engine Optimization - Поисковая оптимизация. (как сказал гугл транслит: “серч енжин опимазейшен” (но Вы можете называть как нибудь по русски))</p>
+
+                <p class="margin">После этого SEO идет ровна на два разных лагеря. Волоча за собой тележечки с тайными секретами. Но у поисковой оптимизации один главный принцип: Когда человек хочет найти с помощью интернета что-нибудь, то желательно с большей вероятностью сконструировать описание и название. Такое каким оно может характеризовать и “попасть в яблочко”, точно классифицировать самое точнейшие представление. Другой вопрос, сколько это стоит и на какие ценники можно опираться?
+                </p>
+                <p class="margin">И к сожалению трудно дать точную оценку работы сео оптимизации. Хоть еще и есть очень много великих "предвадителей" которые могут с уверенностью знать сразу все и найти ответы на все вопросы.
+
+                    Тут необходимо сразу провести черту, которая звучит так: Если отправить говнище в далекое путешествие, то со временем, обогнув весь земной шар, говнище попадает на начальную точку (потому что земля круглая). Теперь когда это тоже самое, но только уже намного дороже. Даже если быть точным невероятно дороже. Вот что в больших компаниях и крутых “забугорных” фирмах. Стоит и посмотреть, а кто там внутри собственно и трудится? Может быть там в чулане сидит какой нибудь Васька и вкалывает в надежде что в словах: “денег нет, но ты Васька держись”, есть какой -то тайный смысл и деньги непременно когда нибудь будут. Но нет, эта модель работает не совсем так. И поэтому если заказывать например мультилендинг с сегментацией трафика,  поисковой оптимизацией, турбо прибамбасами и сео приводом в топ 1.  То неужели не лучше связаться с тем кто его делает? Сразу напрямую. Потому что если заказать в дорогой фирме, непременно кто нибудь улетит отдыхать на море, а работать скорее всего будет все тот же “Васька из чулана”. Так что думайте сами!
+                </p>
+                <h2 class="orange">Используемые способы сео оптимизации</h2>
+                <ul>
+                   <li>подобрать тайтл и дескрипшн</li>
+                    <li>структурированная разметка данных</li>
+                <li>хтмл пять потому что теги из него заменяют в некоторых случаях опен граф и другие подобные приспособления.</li>
+                <p>P.S. В этой странице реализованы описанные приёмы оптимизации! (это значит что будет видно как реализуется описанная техника)</p>
+                    <p>и еще БЭМ </p>
+                </article>
+
+
+
+            </main>
+            <script>
+let nun= 1/0;
+
+console.log(nun);
+</script>
+            <footer>
+              <section>
+              <div>
+                <a href="/">💻На главную </a> &nbsp|&nbsp  <a href="#">в верх ⏫</a>
+              </div>
+                <div style="max-width:100%; width:900px; text-align:center; background:rgba(10,255,250,0.3)">
+                    <script src="https://yastatic.net/share2/share.js"></script>
+                    <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
+                </div>
+                      <div id="sigCommentsBlock"></div>
+                      <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
+                      <script type="text/javascript">
+                          setTimeout(()=>(function(){
+                              var host_id = '5451';
+                              var script = document.createElement('script');
+                              script.type = 'text/javascript';
+                              script.async = true;
+                              script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                              var ss = document.getElementsByTagName('script')[0];
+                              ss.parentNode.insertBefore(script, ss);
+                          })(),4000);
+                      </script>
+                    </section>
+            </footer>
+            <div class="in"></div>
+            <!-- Счетчики -->
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-171292045-1');
+            </script>
+            <!-- Yandex.Metrika counter -->
+            <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym(57628999, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+            });
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+            <!-- /Yandex.Metrika counter -->
+
+
+        <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
+                    Начало меню!
+    ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ-->
+    <div id="menu"></div>
+
+<button class="burg">
+<span style="font-size:45px;">👽</span>
+</button>
+
+
+<script>
+
+    //--------------------------------------------------------------
+    //--------ОТПРАВИТЬ ЗАПРОС ЧТОБЫ ПОЛУЧИТЬ МЕНЮ------------------
+    //--------------------------------------------------------------
+function run(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'menu/menu.html', true);
+    xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+    document.getElementById("menu").innerHTML = this.responseText;
+        }
+    }
+    xhr.send();
+}
+/*--------------------------------------------------------------------------
+----------------ТУТ_ПРОИСХОДИТ_ОБНОВЛЕНИЕ_МЕНЮШКИ!--------------------------
+--------------------------------------------------------------------------*/
+                    //setInterval(run, 700);
+                    run();
+</script>
+
+<link rel="stylesheet" href="menu/style-menu.css">
+<script src="menu/script-menu.js"></script>
+
+
+</html>

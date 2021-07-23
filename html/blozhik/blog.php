@@ -1,6 +1,6 @@
 <?php
 // подключение к базе данных
-if($_SERVER['SERVER_NAME']=="localhost"){
+if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
@@ -123,10 +123,12 @@ $allPostsText=mysqli_fetch_all($posText);
             echo $srrokys;
             break;
           }else if(isset($_GET[$revers[$i][4]])){
+            echo $revers[$i][6];
                   $uno ='<h1 style="color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;">'.$title=$revers[$i][1].'</h1><br>';
                   $do= $revers[$i][3];
                   $preso= '<p style="display:flex;align-items:center; justify-content:center; max-width:100%; width:100%; background:yellow; border-radius:7px; font-size:25px;"><a href="/blozhik/blog.php" style="width:100%; text-align: center;"><strong>На главную страницу BloZhik{a}!</strong></a></p>';
                   // echo $revers[$i][4]; // указывает в начале статьи урл
+
                   echo $uno. $do. $preso;
                   break;
           }else{
@@ -145,6 +147,11 @@ $allPostsText=mysqli_fetch_all($posText);
          <!-- <p><?= $uno. $do. $preso ?>
          <p><?= $srrokys ?> -->
       </p>
+<script>
+let titleText;
+titleText=`<title><?= $revers[$i][3] ?>description</title>`;
+document.getElementsByTagName('title')[0].innerHTML=`<?= $revers[$i][3] ?>`;
+</script>
 
           <strong>Сайт работает на быстром хостинге со встроенным кэшем.</strong>
           <p><a href="https://fozzy.com/aff.php?aff=16418" target="_blank"><img src="../images/fozzy-hosting-is-faster-234x30-white-ru-2x.png" style="max-width:100%;"></a></p>
