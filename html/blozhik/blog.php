@@ -1,6 +1,6 @@
 <?php
 // подключение к базе данных
-if($_SERVER['SERVER_NAME']=="localhost9"){
+if($_SERVER['SERVER_NAME']=="localhost"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
