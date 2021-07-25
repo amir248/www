@@ -328,9 +328,6 @@ align-items: center;
           font-size: 24px;
           padding-bottom: 3%;
           visibility: visible;
-          /* overflow: hidden;
-          display: none;
-          visibility: hidden;  */
       }
       #offmenu{
           position: fixed;
@@ -1107,28 +1104,7 @@ function positiveKey(){
       document.getElementById('text').innerHTML=Object.values(data[`${number}`][`${trY}`]).join("");
       });
 };
-if(window.location.hash=='#sup'){
-  sup();
-  // window.location='super-landing-page.html#sup';
-  console.log('sup');
-}else if(window.location.hash=='#arbeiten'){
-  console.log('arbeiten');
-  arbeiten();
-}else if(window.location.hash=='#work'){
-  console.log('work');
-  work();
-}else if(window.location.hash=='#nav'){
-  nav();
-}else if(window.location.hash=='#advantages'){
-  advantages();
-}else if(window.location.hash=='#warranty'){
-  warranty();
-}else if(window.location.hash=='#positiveKey'){
-  positiveKey();
-}else{
-  // window.location='/';
-  console.log('Nul');
-}
+
   </script>
   <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
               Начало меню!
@@ -1176,6 +1152,19 @@ xhr.send();
     <h3><a href="#sigCommentsBlock"><ul>Коментарии 📝</ul></a></h3>
     <h3><a href="https://wa.me/+79528885656"><ul>Написать в ватсап✅</ul></a></h3></nav>`;
   //----------------------------------------------------------------------
+  document.querySelector('.burg').addEventListener('click',clickMenu);
+  let clickOnMenu=+0;
+  function clickMenu(){
+    clickOnMenu++;
+    if(clickOnMenu==1){
+      document.querySelector('#menU').style.cssText=`display:none;`;
+      console.log(clickOnMenu);
+    }else if(clickOnMenu==2){
+      document.querySelector('#menU').style.cssText=`display:flex;`;
+        console.log(clickOnMenu);
+        clickOnMenu=0;
+    }
+  }
   let PressButton=+1;
   document.querySelector('#menU').addEventListener("click", ()=>{
       PressButton+=1;
@@ -1220,7 +1209,7 @@ xhr.send();
               console.log('but');
               PressButton=1;
               document.getElementsByTagName('body')[0].style.cssText=`
-              overflow:auto;
+              overflow:scroll;
               `;
               });
       }
@@ -1250,7 +1239,6 @@ xhr.send();
           console.log('другой якорь!');
         }
       }
-  console.log(window.location.hash);
 </script>
 <!-- Счетчики -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
