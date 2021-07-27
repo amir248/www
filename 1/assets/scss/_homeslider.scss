@@ -1,0 +1,45 @@
+.homeslider-wrapper {
+  background-color: $yellow;
+  padding-top: 25px;;
+  padding-bottom: 150px;
+}
+
+.homeslider .slide-title {
+  //font-family: 'Futura Md BT';
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.homeslider .slide-highlight {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1;
+  color: $purple;
+  margin-bottom: 40px;
+}
+
+.homeslider .slide-description {
+  font-size: 1.2em;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+.homeslider .slide-image-wrapper  {
+  border-radius: 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+.homeslider .slide-image-title{
+  background: $purple-gradient;
+  font-weight: 500;
+  display: block;
+  position: absolute;
+  font-size: 1.4em;
+  color: white;
+  padding-left: 1em;
+  padding: 0.4em 1em;
+  width: 100%;
+}

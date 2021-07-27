@@ -1158,9 +1158,15 @@ xhr.send();
     clickOnMenu++;
     if(clickOnMenu==1){
       document.querySelector('#menU').style.cssText=`display:none;`;
+      document.getElementsByTagName('button')[0].style.cssText=`position:fixed;
+      top:0;
+      z-index:1;`;
       console.log(clickOnMenu);
     }else if(clickOnMenu==2){
       document.querySelector('#menU').style.cssText=`display:flex;`;
+      document.getElementsByTagName('button')[0].style.cssText=`position:static;
+      
+      `;
         console.log(clickOnMenu);
         clickOnMenu=0;
     }

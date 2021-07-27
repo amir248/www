@@ -1,0 +1,36 @@
+
+
+.btn-primary {
+  background: $primary;
+  border-color: $indigo;
+  border-radius: 30px;
+  color: $white;
+  font-weight: 500;
+  padding: 18px 40px;
+  //font: bold 14px "Futura Md BT", Arial, Helvetica;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,{
+  border-color: $indigo;
+  box-shadow: none;
+}
+
+.btn-main {
+  background: $primary;
+  border-color: $indigo;
+  border-radius: 25px;
+  color: $white;
+  font-weight: 500;
+  padding: 12px 40px;
+  box-shadow: $button-shadow;
+  //font: bold 14px "Futura Md BT", Arial, Helvetica;
+}
+
+.btn-main:hover,
+.btn-main:focus,
+.btn-main:active,{
+  border-color: $indigo;
+  box-shadow: $button-shadow;
+}

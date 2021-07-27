@@ -1,0 +1,130 @@
+<style>
+*{
+  margin:0;
+}
+@font-face {
+  font-family:Futura Md BT;
+  src: url(../assets/fonts/futura_md_bt_bold.ttf);
+}
+body{
+  background:#E0E0E0;
+  font-family:Futura Md BT;
+  margin:0;
+}
+main{
+  display:flex;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+}
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width:1440px;
+  /* background: rgba(0,0,255,0.1); */
+  font-weight:bold;
+  height: 144px;
+  font-style: normal;
+}
+nav{
+  display: flex;
+  max-width: 100%;
+}
+nav li{
+  display:inline-block;
+  margin:1%;
+  max-width: 100%;
+}
+header ul{
+  width:900px;
+  max-width: 100%;
+}
+header li{
+  display:inline-block;
+  margin:1%;
+  max-width:100%;
+}
+header a{
+  font-size: 16px;
+  color:black;
+  font-style: bold;
+  text-decoration:none;
+}
+header button{
+  background: linear-gradient(to right, #6D15A1,#340A4D);
+  padding:20px;
+  border-radius: 30px;
+  color:white;
+  font-size:16px;
+  width:226px;
+  height:69px;
+  margin-right: 1%;
+}
+.logo{
+  height: 84px;
+  width: 80px;
+  left: 70px;
+  top: 30px;
+  margin-left: 1%;
+}
+h1{
+  color:black;
+  font-size: 46px;
+}
+h2{
+  color:purple;
+  font-size: 46px;
+}
+.kats{
+  max-width: 100%;
+  width:486px;
+  float:right;
+}
+.boxRow{
+  width:1300px;
+  max-width: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.column{
+  display:flex;
+  flex-direction:column;
+  max-width: 100%;
+  width:450px;
+}
+article button{
+  background: linear-gradient(to right, #6D15A1,#340A4D);
+  width:238px;
+  height:59px;
+  border-radius: 30px;
+  color:white;
+  font-size: 20px;
+}
+.boxCoral{
+  background: #FCC024;
+  max-width: 100%;
+  width:1440px;
+  min-height: 708px;
+  display:flex;
+  align-items:center;
+  flex-direction: column;
+}
+.rectangle{
+  /* box-shadow: -4px -4px 16px 0px #FFFFFF73 inset;
+  box-shadow: 4px 4px 22px 0px #1C032C inset;
+  width:1100px;
+  height:236px;
+  background: linear-gradient(91.78deg, #6D15A2 0.94%, #340A4D 100%);
+  box-shadow: inset 4px 4px 22px #1C032C, inset -4px -4px 16px rgba(255, 255, 255, 0.45);
+  border-radius: 30px; */
+  margin-top:150px;
+  z-index: 9;
+}
+
+</style>

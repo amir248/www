@@ -1,0 +1,17 @@
+nav .menu ul {
+  @include horizontal-list;
+}
+
+nav .menu ul li a,
+footer .menu ul li a{
+  @include reset-link;
+  @include bold-futura;
+}
+
+footer .menu ul {
+  @include reset-list;
+}
+
+footer .contacts-container span {
+  @include bold-futura;
+}

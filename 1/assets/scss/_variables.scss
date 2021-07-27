@@ -1,0 +1,43 @@
+//Bootstrap variables override
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+        xxxl: 1920px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1320px,
+        xxxl: 1440px
+);
+
+$purple-gradient: linear-gradient(91.78deg, #6D15A2 0.94%, #340A4D 100%);
+$purple: #610b94;
+$yellow: #FCC024;
+
+$colors: (
+        "blue":       $blue,
+        "indigo":     $indigo,
+        "purple":     $purple,
+        "pink":       $pink,
+        "red":        $red,
+        "orange":     $orange,
+        "yellow":     $yellow,
+        "green":      $green,
+        "teal":       $teal,
+        "cyan":       $cyan,
+        "white":      $white,
+        "gray":       $gray-600,
+        "gray-dark":  $gray-800,
+);
+
+$primary:  $purple-gradient;
+
+$button-shadow: 7px 7px 22px rgba(130, 98, 17, 0.8), -7px -7px 21px rgba(255, 255, 255, 0.3);
