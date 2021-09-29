@@ -1,0 +1,31 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <p id="json"></p>
+        <script>
+        function readTextFile(file, callback) {
+            let rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+              }
+            rawFile.send(null);
+            }
+            //usage:
+            readTextFile("site/team.json", function(text){
+            let data = JSON.parse(text);
+            console.log(Object.values(data));
+            document.getElementById('json').innerHTML=Object.values(data[0]).join(' ');
+            });
+        </script>
+    </body>
+    </html>

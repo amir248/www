@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin:0;
+        font-family:Roboto Mono;
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+      }
+      form{
+        margin-top:40px;
+        display:flex;
+        background: #409472;
+        width:1160px;
+        max-width:100%;
+        min-height:390px;
+        flex-wrap:wrap;
+        flex-derection:row;
+        border-radius:10px;
+        justify-content:center;
+        align-items:center;
+      }
+      .box{
+        display:flex;
+        margin-top:30px;
+        margin-left:40px;
+        max-width:100%;
+        margin-bottom:55px;
+        flex-direction:column;
+      }
+      @media(max-width:700px){
+        .box{
+          margin-left:0;
+          margin-bottom:20px;
+        }
+      }
+      .line{
+        display:flex;
+        /* flex-direction:column; */
+        width:467px;
+        max-width:100%;
+        min-hight:190px;
+        flex-wrap:wrap;
+        color:white;
+        font-family: Roboto Mono;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        letter-spacing: 0em;
+        text-align: left;
+      }
+      .lineTwo{
+        display:flex;
+        flex-direction:column;
+      max-width:100%;
+      width:490px;
+          min-hight:467px;
+        /* flex-wrap:wrap; */
+        color:white;
+
+        font-family: Roboto Mono;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0em;
+        text-align: left;
+
+      }
+
+      .brackBox{
+        display:flex;
+        max-width:100%;
+        flex-wrap:wrap;
+      }
+      input[type="checkbox"]{
+        color:#409472;
+        height: 15px;
+         width: 15px;
+         background: white;
+         border:2px solid white;
+      }
+      @font-face{
+        font-family:"Roboto Mono";
+        src: url("/Roboto_Mono/RobotoMono-VariableFont_wght.ttf")
+      }
+      /* rectangle */
+      .okDiv{
+        position:absolute;
+
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-start;
+        height: 100%;
+        width:100%;
+      }
+      .elipse{
+        position:absolute;
+        display:flex;
+        /* justify-content:flex-end;
+        align-items:flex-start; */
+        height: 40px;
+        width: 40px;
+
+        border-radius: 50%;
+        background:#FEC700;
+      }
+      .owNO{
+        /* display:list-item flow; */
+        position:fixed;
+        max-width:100%;
+        top:0;
+        left:var(--sizeWindow);
+        width:550px;
+        right:10px;
+      }
+      @media(min-width:1340px){
+        .owNO{
+          /* position:fixed; */
+          margin-right:3%;
+        }
+        :root{
+          --sizeWindow:750px;
+        }
+      }
+        @media(min-width:1390px){
+          :root{
+            --sizeWindow:790px;
+          }
+        }
+        @media(min-width:1400px){
+          :root{
+            --sizeWindow:800px;
+          }
+        }
+        @media(min-width:1600px){
+          .owNO{
+            /* position:fixed; */
+            margin-right:9%;
+          }
+          :root{
+            --sizeWindow:990px;
+          }
+        }
+      </style>
+  </head>
+  <body>
+
+    <main>
+
+      <form>
+        <div style="max-witdth:100%;">
+          <img src="YYY.png" class="owNO">
+        </div>
+        <div class="box">
+          <div class='line'>
+            <p class="brackBox" ">Вспомните тот момент, когда вы приняли решение в пользу помогающей профессии и ответьте на вопрос:
+            <br><sup style="margin-top:15%;"></sup>
+            я выбираю профессию психотерапевта/психолога/медика/коуча ради:</p>
+          </div>
+        </div>
+        <div class="box">
+            <div class="lineTwo">
+              <div style="flex-direction:row;max-width:500px;">
+                <p><input type="checkbox" style="margin-right:15px;">решения личностных запросов</p>
+              </div>
+              <div style="flex-direction:row;max-width:500px;">
+                <p><input type="checkbox" style="margin-right:15px;">
+                власти через знания и преимущества над представителями других профессий</p>
+            </div>
+
+              <p><input type="checkbox" style="margin-right:25px;">
+              реализация имеющихся талантов</p>
+              <br>
+              <p style="margin-left:60px;">
+              <p><input type="checkbox" style="margin-right:25px;">
+              леча других, исцеляю себя</p>
+
+              <p style="margin-left:60px;">
+              <p><input type="checkbox" style="margin-right:25px;">
+              психотерапия - близкое и безопасное пространство</p>
+            </div>
+            <div style="display:flex;justify-content:flex-end;align-items:flex-end;margin:3%; color:green;width:100%;">
+            <span style="display:flex; align-items:flex-end;color:white; font-size:18px;">Дальше<span style="margin-right:17%;"> </span><img src="/st.png" style="width:30px;"></span>
+            </div>
+          </div>
+
+      </form>
+    </main>
+  </body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="javsacript">
+    <link href="site/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon9.svg">
+    <meta name="theme-color" content="#a0ffed">
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    <div id="json"></div>
+  </head>
+  <body>
+    <!-- <p id="json"></p> -->
+    <div class="first">
+      <main>
+        <h1><span id="h1" style="max-width:100%;"></span></h1>
+        <p id="description" style="max-width:100%;"></p>
+        <p id="json"></p>
+        <span id="txt" style="max-width:100%;"></span>
+        <p id="autor" style="text-align: right; width:97%; max-width:100%;"></p>
+        <p id="ancor" style='font-size: 9px;'></p>
+        <footer>
+          <section>
+            <script src="https://yastatic.net/share2/share.js"></script>
+              <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit"></div>
+          </section>
+          <div id="sigCommentsBlock"></div>
+          <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+          <script type="text/javascript">
+          	setTimeout(()=>(function(){
+          		var host_id = '5451';
+          		var script = document.createElement('script');
+          		script.type = 'text/javascript';
+          		script.async = true;
+          		script.src = '//sigcomments.com/chat/?host_id='+host_id;
+          		var ss = document.getElementsByTagName('script')[0];
+          		ss.parentNode.insertBefore(script, ss);
+          	})(),3000);
+          </script>
+        </footer>
+      </main>
+      <aside>
+        <p>Реклама</p>
+        <!-- Yandex.RTB R-A-1294151-2 -->
+        <div id="yandex_rtb_R-A-1294151-2"></div>
+        <script>window.yaContextCb.push(()=>{
+          Ya.Context.AdvManager.render({
+            renderTo: 'yandex_rtb_R-A-1294151-2',
+            blockId: 'R-A-1294151-2'
+          })
+        })</script>
+      </aside>
+      <script>
+     function readTextFile(file, callback) {
+            let rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function() {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+              }
+            rawFile.send(null);
+            }
+            //usage:
+            readTextFile("site/team.json", function(text){
+            let data = JSON.parse(text);
+            console.log(Object.values(data));
+
+            let twoNumber=1;
+            let number;
+            if(window.location.search=='?no_one_but_us'){
+              twoNumber=1;
+              number=1;
+            }else if(window.location.search=='?hero_JS'){
+              number=2;
+            }else{
+              console.log("non");
+              h1.innerHTML=`Веб мастерская имени Барона Сайтоверстаузена`;
+              description.innerHTML =`opis`;
+              json.innerHTML="json";
+              txt.innerHTML="Это официально сообщество, самых отпетых веб разработчиков, тут делают сайты на простых и понятных технологиях из раздела html coder";
+              autor.innerHTML="Amir";
+              ancor.innerHTML='NASOBERU';
+            }
+            // document.getElementById('json').innerHTML=Object.values(data[0][2]).join(' ');
+            document.getElementById('h1').innerHTML=Object.values(data[`${number}`][`${twoNumber}`]).join("");
+            document.getElementById('autor').innerHTML=Object.values(data[`${number}`][4]).join('');
+            document.getElementById('txt').innerHTML=Object.values(data[`${number}`][6]).join('');
+            // document.getElementById('description').innerHTML=Object.values(data[`${number}`][2]).join('');
+            document.getElementById('ancor').innerHTML=Object.values(data[`${number}`][3]).join('');
+                document.title= Object.values(data[`${number}`][`${twoNumber}`]).join("");
+                document.description=Object.values(data[`${number}`][2]).join("");
+                // шикарный способ генирировать дескрипшин прям из бызы данных
+            document.querySelector('meta[name="description"]').setAttribute("content", Object.values(data[`${number}`][2]).join(''));
+            document.querySelector('#json').innerHTML=Object.values(data[`${number}`][5]).join("");
+console.log(Object.values(data[`${number}`][5]).join(""));
+            });
+            
+      </script>
+    </div>
+          <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-171292045-1');
+      </script>
+
+          <!-- Yandex.Metrika counter -->
+      <script type="text/javascript" >
+         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+         m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+         (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+         ym(57628999, "init", {
+              clickmap:true,
+              trackLinks:true,
+              accurateTrackBounce:true,
+              webvisor:true,
+              ecommerce:"dataLayer"
+         });
+      </script>
+      <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+      <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

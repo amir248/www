@@ -29,7 +29,7 @@ $obj = new ArrayObject($ArrayTextPost);
     file_put_contents($file_json_bd,json_encode($obj));
 
   }else{
-  file_get_contents($file_json_bd);
+    file_get_contents($file_json_bd);
     file_put_contents($file_json_bd,json_encode($obj));
 
   }

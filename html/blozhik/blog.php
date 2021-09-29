@@ -46,7 +46,7 @@ $allPostsText=mysqli_fetch_all($posText);
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Navrutdinov">
     <meta name='description' cotnent="<?= $description ?>">
-      <link rel="canonical" href="https://nasobe.ru/blozhik/">
+    <link rel="canonical" href="https://nasobe.ru/blozhik/">
     <style>
     *{
       margin:0;

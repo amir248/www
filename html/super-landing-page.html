@@ -9,6 +9,9 @@
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Shikarno">
     <link rel="icon" href="images/icon9.svg">
+    <!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
     <style>
       *{
         margin:0;
@@ -16,7 +19,7 @@
       body{
         max-width:100%;
         font-size:20px;
-        background:linear-gradient(rgba(0,255,0,0.3), rgba(0,255,200,0.3))
+        background:linear-gradient(rgba(0,255,0,0.3), rgba(0,255,200,0.3));
       }
       main{
         display:flex;
@@ -437,6 +440,14 @@ align-items: center;
           <div id="obo"><h2>Обо мне!</h2><span style="width:700px; max-width:100%;"><p style="margin:3%;">Меня зовут Амир “ChikChicly SpaceHands ForsMazhorovich”. И я занимаюсь созданием, модификацией и внесением изменений на успешных сайтах и лендингах с основным стеком: html,css,js. И немного php,sql. По макету из фигмы или по другому макету, по картинки, рисунку или по словесно-устной абстрактной ассоциацией переданной через современные средства связи. И если у Вас есть деньги, значит велика вероятность что мы можем договориться! 😉
 </p></span>
           </div>
+          <!-- Yandex.RTB R-A-1294151-1 -->
+<div id="yandex_rtb_R-A-1294151-1"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1294151-1',
+    blockId: 'R-A-1294151-1'
+  })
+})</script>
           <div class='proekt'>
             <span style="display:flex;max-width:100%; width:900px; align-items:center;justify-content:center;flex-wrap:wrap;"><p id='nav' style="background:green; padding:1%; border:3px solid green; border-radius:7px;">Навыки</p><p id='sup'>Sup </p><p id="work">work </p> <p id="arbeiten">Arbeiten</p> <p id="advantages">advantages</p><p id="warranty">warranty</p><p id="positiveKey">Positive Key</p></span>
           </div>
@@ -619,7 +630,7 @@ align-items: center;
           width:900px;
           `;
         }
-             let imgPod = ['images/computer/1.html','images/computer/2.html','images/computer/3.html','images/computer/4.html','images/computer/5.html','images/computer/6.html','images/computer/7.html','images/computer/8.html','images/computer/9.html','images/computer/10.html','images/computer/11.html','images/computer/12.html','images/computer/13.html','images/computer/14.html','images/computer/15.html','images/computer/16.html','images/computer/17.html','images/computer/18.html','images/computer/19.html',];
+          let imgPod = ['images/computer/1.html','images/computer/2.html','images/computer/3.html','images/computer/4.html','images/computer/5.html','images/computer/6.html','images/computer/7.html','images/computer/8.html','images/computer/9.html','images/computer/10.html','images/computer/11.html','images/computer/12.html','images/computer/13.html','images/computer/14.html','images/computer/15.html','images/computer/16.html','images/computer/17.html','images/computer/18.html','images/computer/19.html',];
             let i=+0;
 
             if(window.location.hash=="#1"){
@@ -647,8 +658,8 @@ align-items: center;
                 i=8;
                   nextImages();
             }else if(window.location.hash=="#9"){
-                    i=9;
-                      nextImages();
+                i=9;
+                  nextImages();
             }else if(window.location.hash=="#10"){
                 i=10;
                 nextImages();
@@ -680,7 +691,6 @@ align-items: center;
                 i=0;
                 nextImages();
             }
-
                 function nextImages(){
                     let podimgl = new XMLHttpRequest();
                     podimgl.open('GET', `${imgPod[i]}`);
@@ -732,8 +742,6 @@ align-items: center;
                             console.log(i);
                         }
                     });
-
-
         </script>
   </body>
   <script>
@@ -778,8 +786,6 @@ align-items: center;
         `;
 
       };
-
-
       document.querySelector('#sup').addEventListener('click', sup);
 
       function sup(){
@@ -839,7 +845,6 @@ align-items: center;
       // document.getElementById('url').innerHTML=Object.values(data[`${number}`][4]).join('');
     });
   };
-
     document.querySelector('#arbeiten').addEventListener('click', arbeiten);
      function arbeiten(){
       window.location='super-landing-page.html#arbeiten';
@@ -1165,7 +1170,7 @@ xhr.send();
     }else if(clickOnMenu==2){
       document.querySelector('#menU').style.cssText=`display:flex;`;
       document.getElementsByTagName('button')[0].style.cssText=`position:static;
-      
+
       `;
         console.log(clickOnMenu);
         clickOnMenu=0;
@@ -1220,12 +1225,11 @@ xhr.send();
               });
       }
       PressButtonToggle();
-
   });
       window.onhashchange=()=>{
         if(window.location.hash=='#sup'){
           console.log('Location_sup');
-          window.location.hash='sup';
+          window.location.hash='#sup';
           sup();
           // window.location='super-landing-page.html#sup';
         }else if(window.location.hash=='#arbeiten'){
@@ -1244,6 +1248,24 @@ xhr.send();
           // window.location='/';
           console.log('другой якорь!');
         }
+      }
+      if(window.location.hash=='#sup'){
+        console.log('ok SUP');
+        sup();
+      }else if(window.location.hash=='#arbeiten'){
+        arbeiten();
+      }else if(window.location.hash=='#work'){
+        work();
+      }else if(window.location.hash=='#nav'){
+        nav();
+      }else if(window.location.hash=='#advantages'){
+        advantages();
+      }else if(window.location.hash=='#warranty'){
+        warranty();
+      }else if(window.location.hash=='#positiveKey'){
+        positiveKey();
+      }else{
+        console.log('none');
       }
 </script>
 <!-- Счетчики -->
