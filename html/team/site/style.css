@@ -80,3 +80,9 @@ h1,h2{
   text-shadow: 1px 1px 1px black;
   color:white;
 }
+my-element{
+  background: orange;
+}
+element-gallery{
+  font-size: 70px;
+}

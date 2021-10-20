@@ -5,8 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="icon" href="site/HTML-CSS-JS.svg" type="image/x-icon">
     </head>
     <body>
+        <my-element>fdfd</my-element>
+        <template id="tmpl">
+            <script>
+              alert("Привет");
+            </script>
+            <div class="message">Привет, Мир!</div>
+        </template>
+          
+      <main-name>Name</main-name>
+        <user-info>Amir</user-info>
+
+        <time-formatted datetime="2019-12-01"
+        year="numeric" month="long" day="numeric"
+        hour="numeric" minute="numeric" second="numeric"
+        time-zone-name="short"
+      ></time-formatted>
+        <element-gallery>Amir</element-gallery>
+        <p id="id"></p>
+        <hr>
         <p id="json"></p>
         <script>
         function readTextFile(file, callback) {
@@ -24,8 +44,13 @@
             readTextFile("site/team.json", function(text){
             let data = JSON.parse(text);
             console.log(Object.values(data));
-            document.getElementById('json').innerHTML=Object.values(data[0]).join(' ');
+            document.getElementById('json').innerHTML=Object.values(data[3]).join('');
             });
+
         </script>
+
+<script src="site/new.js"></script>
+      <!-- тут будут всякие скрипты -->
+      <!-- <script src="site/main.js"></script> -->
     </body>
     </html>

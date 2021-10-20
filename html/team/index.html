@@ -6,14 +6,16 @@
     <meta name="description" content="javsacript">
     <link href="site/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/icon9.svg">
+    <link rel="icon" href="site/JS.svg">
     <meta name="theme-color" content="#a0ffed">
     <!-- Yandex.RTB -->
     <script>window.yaContextCb=window.yaContextCb||[]</script>
     <script src="https://yandex.ru/ads/system/context.js" async></script>
     <div id="json"></div>
+  </script>
   </head>
   <body>
+
     <!-- <p id="json"></p> -->
     <div class="first">
       <main>
@@ -25,9 +27,15 @@
         <p id="ancor" style='font-size: 9px;'></p>
         <footer>
           <section>
+            <picture>
+              <img src="site/fozzy.png" alt="хостинг фоззи">
+            </picture>
+          </section>
+          <section>
             <script src="https://yastatic.net/share2/share.js"></script>
               <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit"></div>
           </section>
+       
           <div id="sigCommentsBlock"></div>
           <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
           <script type="text/javascript">
@@ -39,7 +47,7 @@
           		script.src = '//sigcomments.com/chat/?host_id='+host_id;
           		var ss = document.getElementsByTagName('script')[0];
           		ss.parentNode.insertBefore(script, ss);
-          	})(),3000);
+          	})(),100);
           </script>
         </footer>
       </main>
@@ -54,7 +62,9 @@
           })
         })</script>
       </aside>
+
       <script>
+        // console.log('ok');
      function readTextFile(file, callback) {
             let rawFile = new XMLHttpRequest();
             rawFile.overrideMimeType("application/json");
@@ -70,9 +80,11 @@
             readTextFile("site/team.json", function(text){
             let data = JSON.parse(text);
             console.log(Object.values(data));
-
+            
             let twoNumber=1;
             let number;
+
+            let openObject = true;
             if(window.location.search=='?no_one_but_us'){
               twoNumber=1;
               number=1;
@@ -86,19 +98,27 @@
               txt.innerHTML="Это официально сообщество, самых отпетых веб разработчиков, тут делают сайты на простых и понятных технологиях из раздела html coder";
               autor.innerHTML="Amir";
               ancor.innerHTML='NASOBERU';
+              openObject = false;
+
             }
             // document.getElementById('json').innerHTML=Object.values(data[0][2]).join(' ');
+            if(openObject==true){
             document.getElementById('h1').innerHTML=Object.values(data[`${number}`][`${twoNumber}`]).join("");
             document.getElementById('autor').innerHTML=Object.values(data[`${number}`][4]).join('');
             document.getElementById('txt').innerHTML=Object.values(data[`${number}`][6]).join('');
             // document.getElementById('description').innerHTML=Object.values(data[`${number}`][2]).join('');
             document.getElementById('ancor').innerHTML=Object.values(data[`${number}`][3]).join('');
-                document.title= Object.values(data[`${number}`][`${twoNumber}`]).join("");
+
+            document.title= Object.values(data[`${number}`][`${twoNumber}`]).join("");
                 document.description=Object.values(data[`${number}`][2]).join("");
                 // шикарный способ генирировать дескрипшин прям из бызы данных
             document.querySelector('meta[name="description"]').setAttribute("content", Object.values(data[`${number}`][2]).join(''));
             document.querySelector('#json').innerHTML=Object.values(data[`${number}`][5]).join("");
 console.log(Object.values(data[`${number}`][5]).join(""));
+            }else{
+              console.log("openObject==FALSE");
+            }
+                
             });
             
       </script>

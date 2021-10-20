@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-spoiler</title>
+    <link rel="icon" href="site/HTML-CSS-JS.svg" type="image/x-icon">
+</head>
+<body>
+<x-spoiler>
+    Содержимое тега.
+  </x-spoiler>
+  
+  <br><br>
+  
+  <x-spoiler text-when-close="Узреть" text-when-open="Скрыть">
+    Ещё один x-spoiler с настроенным текстом
+  </x-spoiler>
+  
+  <br><br>
+  
+  <x-spoiler opened>
+    Изначально открытый элемент
+  </x-spoiler>
+</body>
+  <script>
+      class XSpoiler extends HTMLElement {
+  constructor() {
+    super();
+
+    this.text = {
+      "when-close": "Развернуть",
+      "when-open": "Свернуть"
+    };
+
+    this.innerHTML = `
+      <button type="button">${this.text["when-close"]}</button>
+      <section style="display: none;">${this.innerHTML}</section>
+    `;
+
+    this.querySelector("button").addEventListener("click", () => {
+      this.opened = !this.opened;
+    });
+  }
+
+  get opened() {
+    return this.getAttribute("opened") !== null;
+  }
+
+  set opened(state) {
+    if (!!state) {
+      this.setAttribute("opened", "");
+    } else {
+      this.removeAttribute("opened");
+    }
+  }
+
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    switch (attrName) {
+      case "opened":
+        const opened = newVal !== null;
+        const button = this.querySelector("button");
+        const content = this.querySelector("section");
+        const display = opened ? "block" : "none";
+        const text = this.text[opened ? "when-open" : "when-close"];
+        content.style.display = display;
+        button.textContent = text;
+        break;
+
+      case "text-when-open":
+        this.text["when-open"] = newVal;
+        if (this.opened) {
+          this.querySelector("button").textContent = newVal;
+        }
+        break;
+
+      case "text-when-close":
+        this.text["when-close"] = newVal;
+        if (!this.opened) {
+          this.querySelector("button").textContent = newVal;
+        }
+        break;
+    }
+  }
+
+  static get observedAttributes() {
+    return [
+      "opened",
+      "text-when-open",
+      "text-when-close",
+    ];
+  }
+}
+
+customElements.define("x-spoiler", XSpoiler);
+  </script>
+  </html>
