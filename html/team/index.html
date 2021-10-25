@@ -25,6 +25,106 @@
         <span id="txt" style="max-width:100%;"></span>
         <p id="autor" style="text-align: right; width:97%; max-width:100%;"></p>
         <p id="ancor" style='font-size: 9px;'></p>
+
+
+        <!-- Эти способы компонентов скопипастины с хабра. -->
+        <!-- <apocalyptic-warning>
+
+          <span slot="whats-coming"></span>
+        </apocalyptic-warning>
+
+        <template id="warningtemplate">
+          <style>
+            p {
+              background-color: pink;
+              padding: 0.5em;
+              border: 1px solid red;
+            }
+          </style>
+
+            <p>The <slot name="whats-coming">Zombies</slot> are coming!</p>
+        </template>
+        <script>
+        // Определяем собственный веб-компонент с подходящим именем
+        customElements.define("apocalyptic-warning", class extends HTMLElement {
+          	  // Наследование обеспечивает, что мы имеет свойства и методы по умолчанию встроенного HTML элемента
+          	// Вызывается всякий раз, когда создается новый элемент
+            constructor() {
+              // Вызываем родительский конструктор, т.е конструктор для HTMLElement. Таким образом устанавливаются свойства базового HTML элемента.
+              super();
+              // Берет <template> и хранит его в переменной `warinng`
+              let warning = document.getElementById("warningtemplate");
+              // Хранит контент шаблона в переменной `mywarning`
+              let mywarning = warning.content;
+              const shadowRoot = this.attachShadow({mode: "open"}).appendChild(mywarning.cloneNode(true));
+            }
+        });
+
+        </script> -->
+
+<!-- Начало костылеЙ -->
+
+        <kostyleya-component>
+<!-- <p>123</p> -->
+        </kostyleya-component>
+
+
+        <template id="kostyleyatemplate">
+          <style>
+          kostyleya-component{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100%;
+            width:900px;
+            /* background: red; */
+          }
+          picture{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            max-width: 100%;
+            max-height: 100%;
+            flex-direction: column;
+          }
+          #rightBox{
+            display:flex;
+            align-self: flex-end;
+            /* justify-content: center; */
+            width:40px;
+            height: 30vh;
+            position:absolute;
+            z-index: 0;
+          }
+          #rightBox:hover{
+            background:rgba(100,150,0,0.9);
+          }
+          #leftBox{
+            display:flex;
+            align-self: flex-start;
+            /* justify-content: center; */
+            width:40px;
+            height: 30vh;
+            position:absolute;
+            z-index: 0;
+          }
+          #leftBox:hover{
+            background:rgba(100,150,0,0.9);
+          }
+          #images{
+            max-width: 100%;
+          }
+          </style>
+          <picture>
+            <div id="rightBox"></div>
+            <div id="leftBox"></div>
+            <img src="site/images/1.jpg" id="images">
+          </picture>
+        </template>
+
+        <div style="display:flex; justify-content: center; align-items: center; color:white; text-shadow:1px 1px 1px black; width:350px; max-width:100%; height:70px; background:green;border:3px solid:red;border-radius:5px;" class="open"><span id="nameButton"></span></div>
+        <script src="site/kostyleya.js"></script>
+
         <footer>
           <section>
             <picture>
@@ -35,7 +135,7 @@
             <script src="https://yastatic.net/share2/share.js"></script>
               <div class="ya-share2" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,reddit"></div>
           </section>
-       
+
           <div id="sigCommentsBlock"></div>
           <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
           <script type="text/javascript">
@@ -80,7 +180,7 @@
             readTextFile("site/team.json", function(text){
             let data = JSON.parse(text);
             console.log(Object.values(data));
-            
+
             let twoNumber=1;
             let number;
 
@@ -95,7 +195,7 @@
               h1.innerHTML=`Веб мастерская имени Барона Сайтоверстаузена`;
               description.innerHTML =`opis`;
               json.innerHTML="json";
-              txt.innerHTML="Это официально сообщество, самых отпетых веб разработчиков, тут делают сайты на простых и понятных технологиях из раздела html coder";
+              txt.innerHTML="Это официально сообщество, самых отпетых веб разработчиков, тут делают сайты на простых и понятных технологиях из раздела html coder! 😆";
               autor.innerHTML="Amir";
               ancor.innerHTML='NASOBERU';
               openObject = false;
@@ -118,9 +218,9 @@ console.log(Object.values(data[`${number}`][5]).join(""));
             }else{
               console.log("openObject==FALSE");
             }
-                
+
             });
-            
+
       </script>
     </div>
           <!-- Global site tag (gtag.js) - Google Analytics -->

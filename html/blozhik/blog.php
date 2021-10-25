@@ -16,14 +16,14 @@ if($_SERVER['SERVER_NAME']=="localhost"){
 echo $revers[$i][4];
 //---------------------------------------------
 if($_GET){
-$title =' ';
-$text=' ';
-$description = $revers[$i][2];
+// $title =' ';
+// $text=' ';
+// $description = $revers[$i][2];
 // return;
 // break; // этот брык сломает всю страницу :-D
 }else{
   $description = 'Бложик, веб мастерской имени барона сайтоверстаузена.';
-$title= "BloZhik - веб мастерской имени Барона Сайтоверстаузена.";
+$title= "<p id='tit'>BloZhik - <a href='https://nasobe.ru'>веб мастерской имени Барона Сайтоверстаузена</a></p>.";
 $text = "ctandartnyj text";
 }
 $connect = mysqli_connect($servername, $username, $password,$database);
@@ -45,12 +45,20 @@ $allPostsText=mysqli_fetch_all($posText);
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Navrutdinov">
-    <meta name='description' cotnent="<?= $description ?>">
+    <meta name='description' content="<?= $description ?>">
     <link rel="canonical" href="https://nasobe.ru/blozhik/">
+
     <style>
     *{
       margin:0;
     }
+    #tit a{
+      color:white;
+      text-decoration:none;
+    }
+      #tit a:hover{
+        color:rgb(233,233,129);
+      }
     body{
       background: linear-gradient(rgb(255,255,170), rgb(170,255,255));
       min-height: 100vh;
@@ -95,6 +103,7 @@ $allPostsText=mysqli_fetch_all($posText);
       text-align: center;
     }
     </style>
+
   </head>
   <body>
     <main>
@@ -124,6 +133,8 @@ $allPostsText=mysqli_fetch_all($posText);
             break;
           }else if(isset($_GET[$revers[$i][4]])){
             echo $revers[$i][6];
+            // тут важная фишка сидескрипшином
+                $description = $revers[$i][2];
                   $uno ='<h1 style="color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;">'.$title=$revers[$i][1].'</h1><br>';
                   $do= $revers[$i][3];
                   $preso= '<p style="display:flex;align-items:center; justify-content:center; max-width:100%; width:100%; background:yellow; border-radius:7px; font-size:25px;"><a href="/blozhik/blog.php" style="width:100%; text-align: center;"><strong>На главную страницу BloZhik{a}!</strong></a></p>';
@@ -147,11 +158,14 @@ $allPostsText=mysqli_fetch_all($posText);
          <!-- <p><?= $uno. $do. $preso ?>
          <p><?= $srrokys ?> -->
       </p>
-<script>
-let titleText;
-titleText=`<title><?= $revers[$i][3] ?>description</title>`;
-document.getElementsByTagName('title')[0].innerHTML=`<?= $revers[$i][3] ?>`;
-</script>
+
+
+      <script>
+      document.querySelector("link[rel=canonical]").setAttribute("href", window.location);
+      document.querySelector('meta[name="description"]').setAttribute("content", '<?= $description ?>');
+      document.title="<?= $title ?>";
+      </script>
+
 
           <strong>Сайт работает на быстром хостинге со встроенным кэшем.</strong>
           <p><a href="https://fozzy.com/aff.php?aff=16418" target="_blank"><img src="../images/fozzy-hosting-is-faster-234x30-white-ru-2x.png" style="max-width:100%;"></a></p>

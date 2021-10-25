@@ -9,7 +9,7 @@ body{
 main{
   display:flex;
   justify-content: center;
-  align-items: baseline; /*vertical-align: */
+  align-items: center; /*vertical-align: */
   margin:0;
   max-width: 100%;
   width:900px;
