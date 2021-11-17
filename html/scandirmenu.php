@@ -36,8 +36,6 @@ for($i=0;$i<=$countFile;$i++){
                             $menu_open = fopen('menu/menu.html', 'a+');
                             fwrite($menu_open, "<a href=".$ur.'><li class="font">'.$new_array[$i][0]."</li></a>\r\n");
                         }
-
-
                 }else{
                     $menu_open = fopen('menu/menu.html', 'r');
                     fread($menu_open, filesize('menu/menu.html'));

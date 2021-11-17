@@ -24,10 +24,10 @@
     }
     .openmenu{
         top:0;
-        max-height: 90%;
+        max-height: 100%;
         max-width: 80%;
         opacity: 0.9;
-        background-color:rgb(64, 150, 56);
+        background-color:rgba(64, 150, 56,0.9);
         border: 1px solid red;
         font-size: 24px;
         padding-bottom: 3%;

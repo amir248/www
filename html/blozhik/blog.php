@@ -23,10 +23,12 @@ if($_GET){
 // break; // этот брык сломает всю страницу :-D
 }else{
   $description = 'Бложик, веб мастерской имени барона сайтоверстаузена.';
-$title= "<p id='tit'>BloZhik - <a href='https://nasobe.ru'>веб мастерской имени Барона Сайтоверстаузена</a></p>.";
-$text = "ctandartnyj text";
+$title= "BloZhik - веб мастерской имени Барона Сайтоверстаузена.";
+
 }
+// mysql_query('SET names "utf8"');
 $connect = mysqli_connect($servername, $username, $password,$database);
+mysqli_query($connect, "SET NAMES utf8");
 $posText=mysqli_query($connect, "SELECT * FROM `article`ORDER BY `id`, `title`,`description`,`text`,`url`  ASC");
 $allPostsText=mysqli_fetch_all($posText);
   for($i=0;$i<count($allPostsText);$i++){
@@ -46,19 +48,17 @@ $allPostsText=mysqli_fetch_all($posText);
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Navrutdinov">
     <meta name='description' content="<?= $description ?>">
+    <meta name='keywords' content="ключивики">
     <link rel="canonical" href="https://nasobe.ru/blozhik/">
-
+    <meta name="theme-color" content="#FFD700">
+    <!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
     <style>
     *{
       margin:0;
+      font-family: sans-serif;
     }
-    #tit a{
-      color:white;
-      text-decoration:none;
-    }
-      #tit a:hover{
-        color:rgb(233,233,129);
-      }
     body{
       background: linear-gradient(rgb(255,255,170), rgb(170,255,255));
       min-height: 100vh;
@@ -84,6 +84,9 @@ $allPostsText=mysqli_fetch_all($posText);
     p{
       margin:3%;
     }
+    #ok p{
+      margin-top:0;
+    }
     section{
       display:flex;
       flex-direction: column;
@@ -106,9 +109,10 @@ $allPostsText=mysqli_fetch_all($posText);
 
   </head>
   <body>
+
     <main>
       <article>
-        <h1 style="color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;"><?= $title ?></h1>
+        <h1 style="margin-bottom: 3%;color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;"><?= $title ?></h1>
           <?php
           // $urlBlozhka=$_GET['url'];
           //  Второй переобход видимо для генерации потиков
@@ -128,21 +132,23 @@ $allPostsText=mysqli_fetch_all($posText);
             break;
           }else if(!$_GET){
             // echo $_SERVER['SERVER_NAME'];
-            $srrokys = '<h3 style="color:green; text-shadow:1px 1px 2px black;">'.$revers[$i][1].'</h3><p style="background:green; color:white; max-width:100%; width:100%;">'.$revers[$i][2].'<a href="/blozhik/blog.php?'.$revers[$i][4].'"><strong>...читать далее =></strong></a></p>';
+            $srrokys = '<section id="ok"><h3 style="border-top:1px solid green;border-left: 1px solid green;border-right:1px solid green; max-width: calc(100% - 2px); width: calc(900px - 2px); border-top-left-radius:7px; border-top-right-radius:7px; color:green; text-shadow:1px 1px 2px black;">'.$revers[$i][1].'</h3><p style=" border-bottom-left-radius:7px; border-bottom-right-radius:7px; text-align:center; background:green; color:white; max-width:100%; width:100%;"><img src="img/icon.svg" alt="компьютерщик" style="border-bottom-left-radius:7px; width:75px; float:left;">'.$revers[$i][2].'<a href="/blozhik/blog.php?'.$revers[$i][4].'"><strong>...читать далее =></strong></a></p></section>';
             echo $srrokys;
             break;
           }else if(isset($_GET[$revers[$i][4]])){
             echo $revers[$i][6];
             // тут важная фишка сидескрипшином
                 $description = $revers[$i][2];
-                  $uno ='<h1 style="color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;">'.$title=$revers[$i][1].'</h1><br>';
+                $keywords = $revers[$i][7];
+                  $uno ="<h1 style='color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;'>".$title=$revers[$i][1]."</h1>";
                   $do= $revers[$i][3];
                   $preso= '<p style="display:flex;align-items:center; justify-content:center; max-width:100%; width:100%; background:yellow; border-radius:7px; font-size:25px;"><a href="/blozhik/blog.php" style="width:100%; text-align: center;"><strong>На главную страницу BloZhik{a}!</strong></a></p>';
                   // echo $revers[$i][4]; // указывает в начале статьи урл
-
+                  $title3=$revers[$i][1];
                   echo $uno. $do. $preso;
                   break;
           }else{
+
             break;
           }
             }
@@ -155,20 +161,30 @@ $allPostsText=mysqli_fetch_all($posText);
 
         mysqli_close($connect);
          ?>
-         <!-- <p><?= $uno. $do. $preso ?>
-         <p><?= $srrokys ?> -->
-      </p>
-
+      <!-- </p> -->
 
       <script>
-      document.querySelector("link[rel=canonical]").setAttribute("href", window.location);
+      if(window.location=='https://nasobe.ru/blozhik/blog.php'){ // https://nasobe.ru/blozhik/blog.php
+        console.log('blog.php'+"__"+window.location);
+        document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/');
+      }else if(window.location==window.location){
+        console.log('else if');
+      document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/'+window.location.search);
       document.querySelector('meta[name="description"]').setAttribute("content", '<?= $description ?>');
-      document.title="<?= $title ?>";
+      document.querySelector('meta[name="keywords"]').setAttribute("content", '<?= $keywords ?>');
+      document.title='<?= $title3 ?>';
+      }else{
+        console.log('Canonical '+window.location.href);
+      document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/');
+      document.querySelector('meta[name="description"]').setAttribute("content", '<?= $description ?>');
+      document.querySelector('meta[name="keywords"]').setAttribute("content", '<?= $keywords ?>');
+      document.title='<?= $title3 ?>';
+      }
       </script>
 
 
           <strong>Сайт работает на быстром хостинге со встроенным кэшем.</strong>
-          <p><a href="https://fozzy.com/aff.php?aff=16418" target="_blank"><img src="../images/fozzy-hosting-is-faster-234x30-white-ru-2x.png" style="max-width:100%;"></a></p>
+          <p><a href='https://fozzy.com/aff.php?aff=16418' target='_blank'><img src='https://nasobe.ru/images/fozzy-hosting-is-faster-234x30-white-ru-2x.png' style="max-width:100%;" alt="the best hosting"></a></p>
 
       </article>
       <footer>

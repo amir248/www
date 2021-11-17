@@ -1,0 +1,3 @@
+User-agent: *
+site: https://slingshots.nasobe.ru
+Sitemap: https://slingshots.nasobe.ru/site/sitemap-slingshots.xml
