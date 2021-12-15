@@ -1,0 +1,316 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <link rel="canonical" href="https://nasobe.ru/test-na-verstalshika.html">
+        <meta name="description" content="Тест на верстальщика, проф пригодность для верстки html css">
+        <title>Тест на верстальщика html</title>
+        <!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
+      <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+    </head>
+    <style>
+        .box{
+            display: flex;
+            word-wrap: break-word;
+            justify-content: center;
+            padding: 2%;
+
+            min-height: 100%;
+        }
+        .line{
+            display: flex;
+            flex-direction: column;
+            width: 600px;
+            max-width: 100%;
+        }
+        .otvet{
+            display: flex;
+            justify-content: center;
+            font-size: 18px;
+            color: red;
+        }
+        @media(max-width: 600px){
+            h1{
+                font-size: 22px;
+            }
+        }
+        body{
+            background-color: rgb(205, 235, 205);
+        }
+        .bor{
+            background-color: rgb(250, 235, 235);
+            border: 2px solid rgb(11, 37, 10);
+            padding: 12px;
+        }
+    </style>
+    <body>
+        <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "Article",
+      "headline" : "Тест на предрасположенность верстальщиству html/css",
+      "name" : "Тест на предрасположенность к верстальщиству html/css",
+      "author" : {
+        "@type" : "Person",
+        "name" : "Амир Наврутдинов",
+        "alternateName": ["Amir Shikarno", "Amir Navrutdinov"],
+        "url" : "https://nasobe.ru/resume/resume.html"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://nasobe.ru/test-na-verstalshika.html"
+     },
+      "datePublished" : "2020-03-27",
+      "dateModified": "2021-11-21",
+      "image" : "https://nasobe.ru/test-na-verstalshika.html",
+      "articleSection" : "наверстываеть упущенное за себя и за Сашку",
+      "articleBody" : "Пройти бесплатный онлайн тест на профпригодность для такой почетаемой профессии как верстальщик веб сайтов",
+      "url" : "https://help.disqus.com/customer/portal/articles/466259-privacy-policy",
+      "publisher" : {
+        "@type" : "Organization",
+        "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nasobe.ru/images/logo.png"
+          }
+      }
+    }
+    </script>
+        <article class="box">
+            <div class='line'>
+                <h1>Тест на предрасположенность к верстальщиству html/css</h1>
+                <sub>Пройти бесплатный онлайн тест на профпригодность для такой почетаемой профессии как верстальщик веб сайтов.</sub>
+                <div>
+                    <table align="center">
+                        <div id="table1">
+                        <tr>
+                            <th>Легко ли, понять новую информацию?
+                            </th>
+                            <div id="od">
+                                <tr>
+                                    <td>
+                                        <input type="radio" name="one" value="1" onchange="result()">Да</td>
+                                    </tr>
+                            </div>
+                            <div id="od2">
+                                <td>
+                                    <input type="radio" name="one" value="2" onchange="result()">Нет
+                                </td>
+                                </div>
+                        </tr>
+                        </div>
+                        <tr>
+                            <th>Есть способность потом применить все на практике?
+                            </th>
+                            <tr><td><input type="radio" name="two" value="1" onchange="result()">Да</td></tr>
+                            <td><input type="radio" name="two" value="2" onchange="result()">Нет</td>
+                        </tr>
+                        <tr>
+                            <th>Имеется возможность, забыть все новое и преминить другое новое?
+                            </th>
+                            <tr><td><input type="radio" name="three" value="1" onchange="result()">Да</td></tr>
+                            <td><input type="radio" name="three" value="2" onchange="result()">Нет</td>
+                        </tr>
+                        <tr>
+                            <th>Легко использовать логические приёми, такие как: "если бы, да кабы, или, или или"?
+                            </th>
+                            <tr><td><input type="radio" name="four" value="1" onchange="result()">Да</td></tr>
+                            <td><input type="radio" name="four" value="2" onchange="result()">Нет</td>
+                        </tr>
+                        <tr>
+                            <th>По вечерам вместо того чтобы валятся на диване перед телевизором, тебе более важно наверстываеть упущенное за других?
+                            </th>
+                            <tr><td><input type="radio" name="five" value="1" onchange="result()">Да</td></tr>
+                            <td><input type="radio" name="five" value="2" onchange="result()">Нет</td>
+                        </tr>
+                        <tr align="right">
+                            <td><button id='otvet' class='bor'>Получить ответ!</button></td>
+
+                        </tr>
+
+                    </table>
+                    <sub class="otvet"></sub>
+                    <script>
+                    document.getElementsByName("one").onclick = function(){
+                    table1.style.background= '#ffe2e2';
+                    }
+                    document.getElementsByName("one").onclick = function(){
+                    table1.style.background= '#ffe2e2';
+                    }
+
+                        let one =+0;
+                        let two =+0;
+                        let three =+0;
+                        let four =+0;
+                        let five =+0;
+                        function result(){
+                            if(document.getElementsByName("one")[0].checked){
+                            one=100;
+                            }else if(document.getElementsByName("one")[1].checked){
+                            one=0;
+                            }else{
+                                return;
+                            }
+                            if(document.getElementsByName("two")[0].checked){
+                            two=100;
+                            }else if(document.getElementsByName("two")[1].checked){
+                            two=0;
+                            }else{
+                                return;
+                            }
+                            if(document.getElementsByName("three")[0].checked){
+                            three=100;
+                            }else if(document.getElementsByName("three")[1].checked){
+                            three=0;
+                            }else{
+                                return;
+                            }
+                            if(document.getElementsByName("four")[0].checked){
+                            four=100;
+                            }else if(document.getElementsByName("four")[1].checked){
+                            four=0;
+                            }else{
+                                return;
+                            }
+                            if(document.getElementsByName("five")[0].checked){
+                            five=100;
+                            }else if(document.getElementsByName("five")[1].checked){
+                            five=0;
+                            }else{
+                                return;
+                            }
+                            let summar = one + two + three + four + five;
+                            console.log(summar);
+
+                        otvet.onclick = function(){
+                            if(summar==500){
+                                document.querySelector('.otvet').innerHTML =" Да Вы уважаемый Барон Сайтоверстаузен!";
+                            }else if(summar==400){
+                                document.querySelector('.otvet').innerHTML ="Не Барон Сайтоверстаузен, но упущенное наверстаете. При большом желании.";
+                            }else if(summar==300){
+                                document.querySelector('.otvet').innerHTML ="Верстальщик среднего звена.";
+                            }else if(summar==200){
+                                document.querySelector('.otvet').innerHTML ="Ну если очень постораться, то вполне возможно стать верстальщиком.";
+                            }else if(summar==100){
+                                document.querySelector('.otvet').innerHTML ="А надо ли оно вообще верстать сайты?.";
+                            }else{
+                                document.querySelector('.otvet').innerHTML ="Даже не думай! Наверстывать упущенное.";
+                            }
+                        }
+                        }
+                    </script>
+                </div>
+                <!-- Yandex.RTB R-A-1294151-1 -->
+<div id="yandex_rtb_R-A-1294151-1"></div>
+<script>window.yaContextCb.push(()=>{
+  Ya.Context.AdvManager.render({
+    renderTo: 'yandex_rtb_R-A-1294151-1',
+    blockId: 'R-A-1294151-1'
+  })
+})</script>
+            </div>
+        </article>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-171292045-1');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(57628999, "init", {
+         clickmap:true,
+         trackLinks:true,
+         accurateTrackBounce:true
+    });
+ </script>
+ <noscript><div><img src="https://mc.yandex.ru/watch/57628999" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <!-- /Yandex.Metrika counter -->
+ <div style="display:flex;justify-content:center;align-items:center;">
+ <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+                 Тут sigCommentsBlock!
+ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+ <div id="sigCommentsBlock" style="max-width:100%; width:700px;"></div>
+ <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
+ <script type="text/javascript">
+     setTimeout(()=>(function(){
+         var host_id = '5451';
+         var script = document.createElement('script');
+         script.type = 'text/javascript';
+         script.async = true;
+         script.src = '//sigcomments.com/chat/?host_id='+host_id;
+         var ss = document.getElementsByTagName('script')[0];
+         ss.parentNode.insertBefore(script, ss);
+     })(),4000);
+ </script>
+</div>
+    </body>
+
+
+   <!-- ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ
+                    Начало меню!
+    ХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХХ-->
+<div id="menu"></div>
+
+<noscript>
+<a href="https://nasobe.ru">
+</noscript>
+<button class="burg"><span style="font-size:45px;">🍔</span>
+</button>
+<noscript>
+</a>
+</noscript>
+
+<script>
+
+    //--------------------------------------------------------------
+    //--------ОТПРАВИТЬ ЗАПРОС ЧТОБЫ ПОЛУЧИТЬ МЕНЮ------------------
+    //--------------------------------------------------------------
+function run(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", 'menu/menu.html', true);
+    xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+    document.getElementById("menu").innerHTML = this.responseText;
+        }
+    }
+    xhr.send();
+}
+/*--------------------------------------------------------------------------
+----------------ТУТ_ПРОИСХОДИТ_ОБНОВЛЕНИЕ_МЕНЮШКИ!--------------------------
+--------------------------------------------------------------------------*/
+                    //setInterval(run, 700);
+                    run();
+</script>
+
+    <!-- <script>
+    function run2(){
+        var open = new XMLHttpRequest();
+        open.open("GET", '/menu/disqus.html' , true);
+        open.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+            if(open.readyState == XMLHttpRequest.DONE && open.status == 200) {
+            document.querySelector("#disqusus").innerHTML = this.responseText;
+            }
+        }
+        open.send();
+    }
+
+        run2();
+
+    </script>
+    <?php $_SERVER['SERVER_NAME']."/menu.html" ?> -->
+<link rel="stylesheet" href="menu/style-menu.css">
+<script src="menu/script-menu.js"></script>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/icon9.svg" type="images/x-icon">
+    <title></title>
+    <style>
+      *{
+      margin:0;
+      font-size:20px;
+      }
+      body{
+        background:linear-gradient(rgba(250,250,0,0.3),rgba(0,0,250,0.3));
+        min-height:100vh;
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+      }
+      article{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+        flex-direction:column;
+      }
+      </style>
+
+<!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Галерея JS",
+  "headline": "Адаптивная галерея js для изображений через json",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Амир Наврутдинов",
+    "alternateName": ["Amir Shikarno", "Amir Navrutdinov"],
+    "url" : "https://nasobe.ru/resume/resume.html"
+  },
+  "datePublished" : "2021-12-05",
+  "image" : "https://nasobe.ru/blozhik/img/beg/P11111-132550.jpg",
+  "articleSection" : "Галерея на яваскрипт",
+  "articleBody" : "Фото галерея на javascript для сайта.  По версии “веб мастерской имени барона сайтоверстаузена” - лучшее решение из всех галерей изображений. И когда надо быстро поставить галерею которая легко работает, то ссылка тут, адаптивная галерея с подгрузкой легких изображений, еще кнопки на галерею. Гитхаб с галереей версии три.",
+  "url" : "https://nasobe.ru/blozhik/?JS-Gallery",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://nasobe.ru/images/logo.png"
+      }
+    }
+}
+</script>
+</head>
+<body>
+  <script src="https://nasobe.ru/images/json/fotoos.json"></script>
+  <main>
+    <article>
+      <h1>Zagollow</h1>
+    <div class="radio" id='but'>
+      <fieldset id="uno">
+          <legend>button</legend>
+          <label>
+            <input type='radio' name='ok' value="Go">
+            <span>Multilanding</span>
+          </label>
+
+      </fieldset>
+      <fieldset id="uno">
+        <legend>button</legend>
+        <label>
+          <input type='radio' name='ok' value="ok">
+          <span>Content</span>
+        </label>
+      </fieldset>
+      <fieldset id="fry">
+        <legend>button</legend>
+        <label>
+        <input type='radio' name='ok' value="777">
+        <span>Gallery</span>
+        </label>
+      </fieldset>
+
+    </div>
+
+      <!-- <button id='namber'><span id='Up'>7</span></button> -->
+      <template>
+        <div id='new'></div>
+      </template>
+<p id='yY'></p><span id='iO'></span>
+<!-- <p>!!! в скрипте галереи IMG < - это объект из json в котором расфасованы все изображения. </p>
+<h3 style='display:flex; justify-content: center; align-items: center; color:white; background:coral;width:calc(900px - 3%);border:3px solid coral;max-width:calc(100% - 3%);text-align:center;text-shadow:black 1px 1px 2px;border-radius:10px 10px 0 0;text-align:center;' id='scriptGallery'><span>Script Gallery</span> <a href='https://github.com/amir248/gallery_from_crutches' style='margin-left:10%;'><img src='blozhik/img/github_icon.svg' style='width:37px; max-width:100%;text-align:center;'></a></h3>
+<div style='background:rgb(67 73 67); color:white; text-shadow:black 1px 1px 1px; border:3px solid coral; width:calc(900px - 3%);max-width:calc(100% - 3%);hyphens:auto;border-radius:0 0 10px 10px;'><p style="margin:3%;">
+  <p style="margin:3%;-ms-word-break: break-all;word-break: break-all;word-break: break-word;">document.addEventListener("DOMContentLoaded",GoClick);<br />window.addEventListener("hashchange",GoClick);<br />document.querySelector('img').addEventListener('click',Plus);<br />let CountClick=+0;<br />function Plus(){<br />CountClick++;<br />if(CountClick&gt;=IMG.length){<br />CountClick=0;<br />}<br />for(let newi=0;newi&lt;IMG.length;newi++){<br />if(IMG[newi].count==CountClick){<br />document.querySelector('img').src=IMG[newi].src;<br />document.querySelector('img').setAttribute('alt',IMG[newi].alt);<br />document.querySelector('img').setAttribute('title',IMG[newi].title);<br />window.location.hash='#'+IMG[newi].hash;<br />}<br />}<br />}</p>
+  <p style='margin:3%;-ms-word-break: break-all;word-break: break-all;word-break: break-word;'>function GoClick(){<br />for(let aj=0;aj&lt;IMG.length;aj++){<br />if(window.location.hash=='#'+IMG[aj].hash){<br />document.querySelector('img').src=IMG[aj].src;<br />document.querySelector('img').setAttribute('alt',IMG[aj].alt);<br />document.querySelector('img').setAttribute('title',IMG[aj].title);<br />if(IMG[aj].srcset=={}){<br />}else{<br />document.querySelector('img').srcset=IMG[aj].srcset;<br />}<br />}<br />}<br />}</p>
+</p></div> -->
+    </article>
+  </main>
+<script>
+let min='1';
+let max='255';
+function getR(min, max) {
+  return Math.random() * (max - min) + min;
+}
+console.log(getR());
+// function ImageLog(){
+//   document.querySelector('img').addEventListener('click',()=>{
+//     console.log('Yra!!!');
+//   });
+// }
+let ShadowIMG;
+let buttoN;
+  const ObJectX = {};
+  ObJectX.one = 'not-a-menu/ajax/one.html';
+  ObJectX.two='not-a-menu/ajax/two.html';
+  ObJectX.fry='not-a-menu/ajax/fry.html';
+document.querySelector('#yY').innerHTML=`<span style="font-size:37px;">O_o</span> иногда так бывает... люди подсаживаются на джейэс, пиашпи или просто становятся профессионалами в HtmL coder{OW} !!!<span style='font-size:37px;'>😱</span>`;
+
+// window.addEventListener('DOMContentLoaded', hAshchange);
+// Прослушка якоря на ссылку для отображения во внешнем мире
+// window.addEventListener('hashchange', hAshchange);
+
+function hAshchange(){
+  document.querySelector('input[type="radio"][value="777"]').checked = true;
+  console.log("ooo");
+  fryAxes();
+  for(let oY=0;oY<IMG.lenght;oY++){
+    if(window.location.hash=='#'+IMG[oY].hash){
+      // window.addEventListener('DOMContentLoaded', fryAxes);
+      document.querySelector('img').src=IMG[oY].src;
+      document.querySelector('img').setAttribute('alt',IMG[oY].alt);
+      document.querySelector('img').setAttribute('title',IMG[oY].title);
+    }
+  }
+}
+
+  document.querySelector('input[type="radio"][value="Go"]').addEventListener('focus',()=>{
+    let tmpl= document.querySelector('template');
+    let elem = document.createElement('div');
+ // Клонируем содержимое шаблона для того, чтобы переиспользовать его несколько раз
+     elem.append(tmpl.content.cloneNode(true));
+     document.querySelector('#iO').append(elem);
+    console.log(document.querySelector('input[type=radio][value="Go"]').value);
+    buttoN= ObJectX.one;
+    OkiDoki();
+    document.querySelector('#yY').innerHTML=``;
+    // window.location.search=='?ok';
+    console.log(window.location.pathname);
+    console.log(window.location.href);
+    if(document.querySelector('picture')==undefined){
+      console.log("Undefined");
+    }else{
+      document.querySelector('picture').remove();
+      console.log('pictureRemove');
+    }
+  });
+  document.querySelector('input[type="radio"][value="ok"]').addEventListener('focus',()=>{
+    console.log(document.querySelector('input[type=radio][value="ok"]').value);
+    let tmpl= document.querySelector('template');
+    let elem = document.createElement('div');
+    // Клонируем содержимое шаблона для того, чтобы переиспользовать его несколько раз
+     elem.append(tmpl.content.cloneNode(true));
+     document.querySelector('#iO').append(elem);
+
+    buttoN= ObJectX.two;
+    OkiDoki();
+    document.querySelector('#yY').innerHTML=``;
+    if(document.querySelector('picture')==undefined){
+      console.log("Undefined");
+    }else{
+      document.querySelector('picture').remove();
+      console.log('pictureRemove');
+    }
+
+  });
+
+
+
+  let countclick=+0;
+  document.querySelector('input[type="radio"][value="777"]').addEventListener('click', fryAxes);
+  function fryAxes(){
+    countclick++;
+    if(countclick>1){
+      console.log(countclick);
+      if(document.querySelector('picture')==undefined){
+        console.log("Undefined");
+      }else{
+        document.querySelector('picture').remove();
+        console.log('pictureRemove');
+      }
+    }else{
+      console.log("(O_o)");
+      // break;
+    }
+    console.log(document.querySelector('input[type=radio][value="777"]').value);
+
+    let tmpl= document.querySelector('template');
+    let elem = document.createElement('div');
+    // Клонируем содержимое шаблона для того, чтобы переиспользовать его несколько раз
+     elem.append(tmpl.content.cloneNode(true));
+     document.querySelector('#iO').append(elem);
+    buttoN= ObJectX.fry;
+
+    OkiDoki();
+
+    // вставка имайджев!
+    let oj=+0;
+
+      let img3=document.createElement('img');
+      let picture = document.createElement('picture');
+
+    img3.src=IMG[oj].src;
+
+    document.body.append(picture);
+    let main = document.querySelector('main');
+    let article = document.querySelector('article');
+    main.append(picture);
+    article.append(picture);
+    // console.log(picture.childNodes);
+    picture.append(img3);
+
+    document.querySelector('#yY').innerHTML=``;
+
+    // document.querySelector('#iO').addEventListener('click',()=>{
+    //   console.log('worms2');
+    // });
+    document.querySelector('img').addEventListener('click',()=>{
+      oj++;
+      // console.log(IMG[oj].src+"_"+oj);
+      ShadowIMG=true;
+      img3.setAttribute('src',IMG[oj].src);
+      window.location.hash=IMG[oj].hash;
+      if(oj==(IMG.length-1)){
+        oj=-1;
+        console.log(IMG.length+"OOOOt"+oj);
+      }else{
+        console.log(IMG.length+"_");
+      }
+    });
+
+
+    // document.querySelector('#worms').addEventListener('click',()=>{
+    //   console.log('worms');
+    // });
+  }
+
+  // OkiDoki();
+
+function OkiDoki(){
+    let pod = new XMLHttpRequest();
+    pod.open('GET', `${buttoN}`);
+    pod.send();
+    pod.onload = function(){
+        if(pod.status ==200){
+            responseType ="Text";
+            document.querySelector('#new').innerHTML = this.response;
+        }
+    }
+}
+</script>
+
+        <!-- <script>
+        const person ={
+          name: {
+            first: 'Bob',
+            last:'Smith'
+          },
+          age: 32,
+          gender:'male',
+          interests:['music','skiing'],
+          bio: function(){
+             alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
+          },
+          greeting: function(){
+            alert('Hi I\`m ' +this.name[0]+'.')
+          }
+        };
+        let myDataName = 'height';
+        let myDataValue = '1.75m';
+        person[myDataName] = myDataValue;
+
+        function Person(first, last, age, gender, interests) {
+            this.name = {
+              first,
+              last
+            };
+            this.age = age;
+            this.gender = gender;
+            this.interests = interests;
+          };
+          Person.prototype.greeting = function(){
+            alert('Hi! I\`m '+ this.name.first+'.');
+          };
+var person1 = new Person('Bob', 'Smith', 32, 'male', ['music', 'skiing']);
+var uno ={};
+let dont = "yyyyyyyyyyy";
+
+Person.prototype.farewell = function() {
+  alert(this.name.first + ' has left the building. Bye for now!');
+};
+var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
+
+
+function Teacher(first,last,age,gender,interest,subject){
+  Person.call(this,first,last,age,gender,interest);
+
+  this.subject=subject;
+}
+
+Object.defineProperty(Teacher.prototype, 'constructor', {
+    value: Teacher,
+    enumerable: false, // false, чтобы данное свойство не появлялось в цикле for in
+    writable: true });
+
+    Teacher.prototype.greeting = function() {
+      var prefix;
+
+      if (this.gender === 'male' || this.gender === 'Male' || this.gender === 'm' || this.gender === 'M') {
+        prefix = 'Mr.';
+      } else if (this.gender === 'female' || this.gender === 'Female' || this.gender === 'f' || this.gender === 'F') {
+        prefix = 'Mrs.';
+      } else {
+        prefix = 'Mx.';
+      }
+
+      alert('Hello. My name is ' + prefix + ' ' + this.name.last + ', and I teach ' + this.subject + '.');
+    };
+
+var teacher1 = new Teacher('Dave', 'Griffiths', 31, 'male', ['football', 'cookery'], 'mathematics');
+var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+request.responseType = 'json';
+request.send();
+request.onload = function() {
+  var superHeroes = request.response;
+  populateHeader(superHeroes);
+  showHeroes(superHeroes);
+}
+function populateHeader(jsonObj) {
+  var myH1 = document.createElement('h1');
+  myH1.textContent = jsonObj['squadName'];
+  header.appendChild(myH1);
+
+  var myPara = document.createElement('p');
+  myPara.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+  header.appendChild(myPara);
+}
+        </script>
+
+      </article>
+  </main>
+  <style>
+  img{
+    max-width: 100%;
+  }
+  </style> -->
+
+
+  </body>
+</html>

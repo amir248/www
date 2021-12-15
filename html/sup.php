@@ -37,7 +37,7 @@ else {
 $login = htmlspecialchars($_POST['login']);
 // $password = stripslashes($password);
 $password = htmlspecialchars($_POST['password']);
-$email = htmlspecialchars($_POST['email'])
+$email = htmlspecialchars($_POST['email']);
 //удаляем лишние пробелы
 // $login = trim($login);
 // $password = trim($password);

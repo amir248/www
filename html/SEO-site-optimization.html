@@ -64,6 +64,10 @@
                     background-color: cornflowerblue;
 
                 }
+              #sigCommentsBlock{
+                width:700px;
+                max-width: 100%;
+              }
             </style>
     </head>
 <body>
@@ -122,37 +126,33 @@
                 </footer>
         </article>
     </main>
-<!-- Тег дискуса "перед закрывающим боди"  -->
-<script id="dsq-count-scr" src="//nasobe-ru.disqus.com/count.js" async></script>
 
 </body>
 
 <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-                Тут дискус!
+                Тут sigCommentsBlock!
 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
-<div class="first"><div id="disqus_thread" class="box"></div>
-</div>
-<script>
-    function hi(){
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://nasobe-ru.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-    }
-    setTimeout(hi, 2000);
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<div class="first">
+  <div class="box">
+
+    <div id="sigCommentsBlock" style="width:700px; max-width:100%;">
+    <a href="http://sigcomments.com" style="font-size: 0.6em;"></a>
+
+    </div>
+    <script type="text/javascript">
+        setTimeout(()=>(function(){
+            var host_id = '5451';
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = '//sigcomments.com/chat/?host_id='+host_id;
+            var ss = document.getElementsByTagName('script')[0];
+            ss.parentNode.insertBefore(script, ss);
+        })(),4000);
+    </script>
+    </div>
+
+  </div>
  <!-- Счетчики -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>
@@ -163,10 +163,6 @@ s.setAttribute('data-timestamp', +new Date());
 
   gtag('config', 'UA-171292045-1');
 </script>
-
-
-
-
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript" >
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    img{
+      max-width: 100%;
+    }
+    body{
+      background:linear-gradient(rgba(250,250,0,0.3),rgba(0,0,250,0.3));
+      min-height:100vh;
+    }
+    main{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+    }
+    article{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+      width:900px;
+      flex-direction: column;
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>Адаптивная фото галерея</h1>
+      <picture>
+        <img src='beg/cheb.jpg' alt='чебурашка еврей' id='Cheb'>
+      </picture>
+        <div style="background:yellow; max-width:100%;width:900px;border-radius:10px;">
+          <div style="border:3px solid blue;outline: 3px solid cyan; border-radius:10px;font-size:30px;">
+        <ul><a href=https://nasobe.ru/kostylea.html>галерея начало(Костылея)</a></ul>
+        <ul><a href=https://nasobe.ru/blozhik/blog.php?photo-gallery-on-javascript>простая "клик" галерея</a></ul>
+        </div>
+      </div>
+    <div style="background: green;max-width:100%;width: 900px; text-shadow:black 1px 1px 3px; color:white;border-radius:10px;">
+      <p style="max-width:100%;margin:3%;">Вариант галереи от 19 ноября 2021 Модифицированная галерея с отображением в интернете по якорю с альтом</p>
+    </div>
+
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+      </article>
+      </main>
+  <script>
+
+  var IMG = [{
+    name : "gallery",
+    count : "0",
+    alt : "Джек Воробей, Капитан Джек Воробей!",
+    src : "beg/Dzhek_Vorobej.jpg",
+    hash : "kapitanDzhekVorobej"
+  },
+  {
+    name : "gallery",
+    count : "1",
+    alt : "чувак убегает",
+    src : "beg/beg.jpg",
+    hash : "chelBegi"
+  },
+  {
+    name : "gallery",
+    count : "2",
+    alt : "Бизнес леди",
+    src : "beg/Biznes-insajt-sila-voli.jpg",
+    hash : "BussinesLadi"
+  },
+  {
+    name : "Tru",
+    count : "3",
+    alt : "Полная женщина летит",
+    src : "beg/bezhat-letet.jpg",
+    hash : "BigGirl"
+  },
+  {
+    name : "fouv",
+    count : "4",
+    alt : "Чебурашка Еврей!",
+    src : "beg/cheb.jpg",
+    hash : "Chiburashka"
+  },
+  {
+    name : "A",
+    count : "5",
+    alt : "Amir",
+    src : "beg/IMG_20211116_130236_938.jpg",
+    hash : "Amir"
+  },
+  {
+    name : "fouv6",
+    count : "6",
+    alt : "document.querySelector для быстрой галереи",
+    src : "beg/P11105-073214.jpg",
+    hash : "document.querySelector"
+  },
+  {
+    name : "fouv",
+    count : "7",
+    alt : "код быстрой галереи",
+    src : "beg/P11105-073330.jpg",
+    hash : "KodGallery"
+  },
+  {
+    name : "fo8",
+    count : "8",
+    alt : "Фотогалерея на яваскрипт",
+    src : "beg/P11111-132550.jpg",
+    hash : "kofe"
+  },
+  {
+    name : "f",
+    count : "9",
+    alt : "Скрипт фотогалереи на костылях(Костылеи)",
+    src : "beg/P11119-125537.jpg",
+    hash : "100GRandGO"
+  },
+  {
+    name : "fv",
+    count : "10",
+    alt : "Скрипт на JS фотогалереи",
+    src : "beg/P11119-163322.jpg",
+    hash : "KOD"
+  },
+  {
+    name : "fouv",
+    count : "11",
+    alt : "Amir Shikaren",
+    src : "beg/P11119-172352.jpg",
+    hash : "Shikarno"
+  }];
+  document.addEventListener("DOMContentLoaded", funcRef);
+  window.addEventListener("hashchange", funcRef, false);
+  function funcRef(){
+    if(window.location.hash=='#kapitanDzhekVorobej'){
+      console.log("okYra!!!");
+      document.querySelector('#Cheb').src=IMG[0].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[0].alt);
+      console.log(`${IMG[0].src}`);
+      window.location.hash='#kapitanDzhekVorobej';
+      ClickImg=1;
+    }else if(window.location.hash=='#chelBegi'){
+      document.querySelector('#Cheb').src=IMG[1].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[1].alt);
+      // O_o hands style
+      window.location.hash='#chelBegi'
+      ClickImg=2;
+    }else if(window.location.hash=='#BussinesLadi'){
+      document.querySelector('#Cheb').src=IMG[2].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[2].alt);
+      // O_o hands style
+      window.location.hash='#BussinesLadi';
+      ClickImg=3;
+    }else if(window.location.hash=='#BigGirl'){
+      document.querySelector('#Cheb').src=IMG[3].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[3].alt);
+      // O_o hands style
+      window.location.hash='#BigGirl';
+      ClickImg=4;
+    }else if(window.location.hash=='#Chiburashka'){
+      document.querySelector('#Cheb').src=IMG[4].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[4].alt);
+      // Proslushka click
+          window.location.hash='#Chiburashka';
+        ClickImg=5;
+    }else if(window.location.hash=='#Amir'){
+      document.querySelector('#Cheb').src=IMG[5].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[5].alt);
+      // Proslushka click
+          window.location.hash='#Amir';
+        ClickImg=6;
+    }else if(window.location.hash=='#document.querySelector'){
+      document.querySelector('#Cheb').src=IMG[6].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[6].alt);
+      // Proslushka click
+          window.location.hash='#document.querySelector';
+        ClickImg=7;
+    }else if(window.location.hash=='#KodGallery'){
+      document.querySelector('#Cheb').src=IMG[7].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[7].alt);
+      // Proslushka click
+          window.location.hash='#KodGallery';
+        ClickImg=8;
+    }else if(window.location.hash=='#kofe'){
+      document.querySelector('#Cheb').src=IMG[8].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[8].alt);
+      // Proslushka click
+          window.location.hash='#kofe';
+        ClickImg=9;
+    }else if(window.location.hash=='#100GRandGO'){
+      document.querySelector('#Cheb').src=IMG[9].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[9].alt);
+      // Proslushka click
+          window.location.hash='#100GRandGO';
+        ClickImg=10;
+    }else if(window.location.hash=='#KOD'){
+      document.querySelector('#Cheb').src=IMG[10].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[10].alt);
+      // Proslushka click
+          window.location.hash='#KOD';
+        ClickImg=11;
+    }else if(window.location.hash=='#Shikarno'){
+      document.querySelector('#Cheb').src=IMG[11].src;
+      document.querySelector('#Cheb').setAttribute('alt', IMG[11].alt);
+      // Proslushka click
+          window.location.hash='#Shikarno';
+        ClickImg=12;
+    }else{
+      ClickImg=0;
+      console.log('Ok');
+    }
+
+  };
+      let ClickImg=+0;
+      document.querySelector('#Cheb').addEventListener('click', gangIMG);
+      function gangIMG(){
+        ClickImg++;
+        if(ClickImg==1){
+          document.querySelector('#Cheb').src=IMG[0].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[0].alt);
+          // console.log(`${IMG[0].src}`);
+          window.location.hash=IMG[0].hash;
+        }else if(ClickImg==2){
+          document.querySelector('#Cheb').src=IMG[1].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[1].alt);
+          // O_o hands style
+          window.location.hash=IMG[1].hash;
+          // ClickImg=2;
+        }else if(ClickImg==3){
+          document.querySelector('#Cheb').src=IMG[2].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[2].alt);
+          // O_o hands style
+          window.location.hash=IMG[2].hash;
+          // ClickImg=3;
+        }else if(ClickImg==4){
+          document.querySelector('#Cheb').src=IMG[3].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[3].alt);
+          // O_o hands style
+          window.location.hash=IMG[3].hash;
+          ClickImg=4;
+        }else if(ClickImg==5){
+          document.querySelector('#Cheb').src=IMG[4].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[4].alt);
+          // Proslushka click
+              window.location.hash=IMG[4].hash;
+            // ClickImg=5;
+        }else if(ClickImg==6){
+          document.querySelector('#Cheb').src=IMG[5].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[5].alt);
+          // Proslushka click
+          window.location.hash=IMG[5].hash;
+            // ClickImg=5;
+        }else if(ClickImg==7){
+          document.querySelector('#Cheb').src=IMG[6].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[6].alt);
+          // Proslushka click
+          window.location.hash=IMG[6].hash;
+            // ClickImg=6;
+        }else if(ClickImg==8){
+          document.querySelector('#Cheb').src=IMG[7].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[7].alt);
+          // Proslushka click
+                window.location.hash=IMG[7].hash;
+            // ClickImg=7;
+        }else if(ClickImg==9){
+          document.querySelector('#Cheb').src=IMG[8].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[8].alt);
+          // Proslushka click
+          window.location.hash=IMG[8].hash;
+            // ClickImg=8;
+        }else if(ClickImg==10){
+          document.querySelector('#Cheb').src=IMG[9].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[9].alt);
+          // Proslushka click
+          window.location.hash=IMG[9].hash;
+            // ClickImg=9;
+        }else if(ClickImg==11){
+          document.querySelector('#Cheb').src=IMG[10].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[10].alt);
+          // Proslushka click
+                window.location.hash=IMG[10].hash;
+            // ClickImg=10;
+        }else if(ClickImg==12){
+          document.querySelector('#Cheb').src=IMG[11].src;
+          document.querySelector('#Cheb').setAttribute('alt', IMG[11].alt);
+          // Proslushka click
+                window.location.hash=IMG[11].hash;
+            ClickImg=0;
+        }else{
+          ClickImg=0;
+          console.log('Ok');
+        }
+      };
+  </script>
+  </body>
+</html>

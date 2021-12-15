@@ -1,6 +1,6 @@
 <?php
 // подключение к базе данных
-if($_SERVER['SERVER_NAME']=="localhost"){
+if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
@@ -57,7 +57,10 @@ $allPostsText=mysqli_fetch_all($posText);
     <style>
     *{
       margin:0;
-      font-family: sans-serif;
+    }
+    @font-face{
+      font-family: 'OpenSans';
+      src: local(/blozhik/font/OpenSans-VariableFont_wdth,wght.ttf);
     }
     body{
       background: linear-gradient(rgb(255,255,170), rgb(170,255,255));
@@ -80,6 +83,8 @@ $allPostsText=mysqli_fetch_all($posText);
       max-width: 100%;
       width:900px;
       flex-direction: column;
+      font-family: 'OpenSans';
+      font-size: 20px;
     }
     p{
       margin:3%;
@@ -105,17 +110,26 @@ $allPostsText=mysqli_fetch_all($posText);
     footer{
       text-align: center;
     }
+    #search{
+      display:none;
+    }
     </style>
 
   </head>
   <body>
-
+    <div style="display:flex;justify-content:center;max-width:100%;">
     <main>
       <article>
         <h1 style="margin-bottom: 3%;color:white; text-shadow: black 2px 2px 3px;display:flex;align-items:center; justify-content:center; max-width:100%; width:100%;"><?= $title ?></h1>
+
+  <span id="search">
+      <div style="display:flex;flex-direction:row;"><a href=https://nasobe.ru><span style="font-size:30px;" title="на главную сайта: nasobe.ru">🏠</span></a>
+            <div class="ya-site-form ya-site-form_inited_no" data-bem="{&quot;action&quot;:&quot;https://yandex.ru/search/site/&quot;,&quot;arrow&quot;:true,&quot;bg&quot;:&quot;#ffcc00&quot;,&quot;fontsize&quot;:16,&quot;fg&quot;:&quot;#000000&quot;,&quot;language&quot;:&quot;ru&quot;,&quot;logo&quot;:&quot;rb&quot;,&quot;publicname&quot;:&quot;search to yandex&quot;,&quot;suggest&quot;:true,&quot;target&quot;:&quot;_self&quot;,&quot;tld&quot;:&quot;ru&quot;,&quot;type&quot;:3,&quot;usebigdictionary&quot;:true,&quot;searchid&quot;:2517621,&quot;input_fg&quot;:&quot;#000000&quot;,&quot;input_bg&quot;:&quot;#ffffff&quot;,&quot;input_fontStyle&quot;:&quot;normal&quot;,&quot;input_fontWeight&quot;:&quot;bold&quot;,&quot;input_placeholder&quot;:null,&quot;input_placeholderColor&quot;:&quot;#000000&quot;,&quot;input_borderColor&quot;:&quot;#7f9db9&quot;}"><form action="https://yandex.ru/search/site/" method="get" target="_self" accept-charset="utf-8"><input type="hidden" name="searchid" value="2517621"/><input type="hidden" name="l10n" value="ru"/><input type="hidden" name="reqenc" value="utf-8"/><input type="search" name="text" value=""/><input type="submit" value="Найти"/></form></div><style type="text/css">.ya-page_js_yes .ya-site-form_inited_no { display: none; }</style><script type="text/javascript">(function(w,d,c){var s=d.createElement('script'),h=d.getElementsByTagName('script')[0],e=d.documentElement;if((' '+e.className+' ').indexOf(' ya-page_js_yes ')===-1){e.className+=' ya-page_js_yes';}s.type='text/javascript';s.async=true;s.charset='utf-8';s.src=(d.location.protocol==='https:'?'https:':'http:')+'//site.yandex.net/v2.0/js/all.js';h.parentNode.insertBefore(s,h);(w[c]||(w[c]=[])).push(function(){Ya.Site.Form.init()})})(window,document,'yandex_site_callbacks');</script>
+          </div>
+</span>
           <?php
           // $urlBlozhka=$_GET['url'];
-          //  Второй переобход видимо для генерации потиков
+          //  Второй переобход видимо для генерации котиков
 // $urlBlozhka=$revers[$i][4];
          for($i=0;$i<count($allPostsText);$i++){
           $revers=array_reverse($allPostsText);
@@ -162,7 +176,19 @@ $allPostsText=mysqli_fetch_all($posText);
         mysqli_close($connect);
          ?>
       <!-- </p> -->
-
+      <!-- span id search -->
+      <script>
+        if(window.location.href==`https://nasobe.ru/blozhik/blog.php`){
+          // document.querySelector('#search').style.background=`green`;
+          document.querySelector('#search').style.display=`block`;
+          console.log(window.location);
+        }else if(window.location.href==`https://nasobe.ru/blozhik/`){
+          document.querySelector('#search').style.display=`block`;
+          console.log(window.location);
+        }else{
+          console.log('else !==');
+        }
+      </script>
       <script>
       if(window.location=='https://nasobe.ru/blozhik/blog.php'){ // https://nasobe.ru/blozhik/blog.php
         console.log('blog.php'+"__"+window.location);
@@ -206,7 +232,35 @@ $allPostsText=mysqli_fetch_all($posText);
         	})(),3000);
         </script>
         </section>
+
     </main>
+    <aside>
+      <!-- Yandex.RTB R-A-1294151-2 -->
+      <div id="yandex_rtb_R-A-1294151-2"></div>
+      <script>window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+          renderTo: 'yandex_rtb_R-A-1294151-2',
+          blockId: 'R-A-1294151-2'
+        })
+      })</script>
+    </aside>
+    <script>
+    if(window.innerWidth>=1200){
+      console.log('width:1200px');
+      document.querySelector('aside').style.cssText=`
+      height:100%;
+      width:300px;
+
+      position:sticky;
+      top:0;
+      `;
+      // document.querySelector('aside').innerHTML=``;
+    }else{
+          document.querySelector('aside').style.cssText=`display:none`;
+      console.log('width:none;');
+    }
+    </script>
+</div>
     <!-- Счетчики -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <picture>
+
+      <img src="https://nasobe.ru/blozhik/img/beg/P11111-132550.jpg" id="imge">
+
+    </picture>
+
+    <script>
+
+      let ok=+0;
+
+      document.querySelector('#imge').addEventListener('click',()=>{ // поставим прослушку события на клик
+
+      ok++; // плюсуем с каждым кликом к переменно одын!
+
+      if(ok==1){ // если переменная равна одному, то меняем ссылку изображения на новую ссылку с картинкой.
+
+      document.querySelector('#imge').src="https://nasobe.ru/blozhik/img/the-outside-world/P11120-065651.jpg"; // очень важно указать правильный путь файла, который ведет к изображению! О_о
+
+      }else if(ok==2){
+
+      document.querySelector('#imge').src="https://nasobe.ru/blozhik/img/beg/P11119-125537.jpg"; // в тот момент когда переменная будет равна двум, ссылка возвращается на начальную картинку
+
+      ok=0;
+
+      }else{
+
+      console.log('O_o');
+
+      }
+
+      });
+
+    </script>
+  </body>
+</html>

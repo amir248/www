@@ -23,13 +23,13 @@ $sql = "SELECT * FROM `team`";
 $textPost=mysqli_query($connect,"SELECT * FROM `team` ORDER BY `id`, `title`,`description`,`text`  ASC");
 $ArrayTextPost=mysqli_fetch_all($textPost);
 $obj = new ArrayObject($ArrayTextPost);
-file_get_contents($ArrayTextPost);
+file_get_contents('team.json',json_encode($ArrayTextPost));
 file_put_contents('team.json',json_encode($ArrayTextPost));
 
 
 
 echo '<pre>';
-var_dump($obj);
+// var_dump($obj);
 // var_dump($textPost);
 echo '</pre>';
 header('location: /team/get-post-php.html');

@@ -287,32 +287,25 @@
                     <div class="ya-share2 margin" data-curtain data-size="l" data-shape="round" data-services="messenger,vkontakte,facebook,odnoklassniki,telegram,twitter,viber,whatsapp,moimir,pinterest,skype,tumblr,evernote,linkedin,lj,blogger,delicious,digg,reddit,surfingbird"></div>
                 </footer>
                 <div class="disKus">
-                    <div id="disqus_thread" class="margin"></div>
+                  <div id="sigCommentsBlock"></div>
+                  <a href="http://sigcomments.com" style="font-size: 0.6em;">Система комментирования SigComments</a>
+                  <script type="text/javascript">
+                      setTimeout(()=>(function(){
+                          var host_id = '5451';
+                          var script = document.createElement('script');
+                          script.type = 'text/javascript';
+                          script.async = true;
+                          script.src = '//sigcomments.com/chat/?host_id='+host_id;
+                          var ss = document.getElementsByTagName('script')[0];
+                          ss.parentNode.insertBefore(script, ss);
+                      })(),2500);
+                  </script>
+              </section>
                 </div>
-                   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
             </div>
         </div>
-<script id="dsq-count-scr" src="//nasobe-ru.disqus.com/count.js" async></script>
-<script>
-    function stop(){
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    /*
-    var disqus_config = function () {
-    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    */
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://nasobe-ru.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-    }
-    setTimeout(stop, 4000);
-</script>
+
 <!-- Счетчики -->
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171292045-1"></script>

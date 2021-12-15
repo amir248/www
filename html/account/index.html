@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    *{
+      margin:0;
+    }
+    body{
+      background:linear-gradient(rgba(255,255,0,0.3),rgba(10,255,0,0.5));
+      min-height:100vh;
+    }
+    main{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+    }
+    article{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+      width:900px;
+      flex-direction:column;
+    }
+    </style>
+
+  <body>
+    <main>
+      <article>
+        <h1>Рейдистрайшин</h1>
+        <p style="display:flex;justify-content:center;align-items:center;"><span style="float:left; font-size:37px;">😎</span>ИН зис акеyнт</p>
+        <p style="display:flex;justify-content:center;align-items:center;">Required fields<span style="float:right; font-size:57px;color:red;">*</span></p>
+        <form method="post" action="login.php">
+          <fieldset title="Логин">
+            <legend>login</legend>
+              <input name="login" placeholder="login"><span style="color:red;">*</span><br><button type="button" name='loginProw'>Check_Login</button><span style="color:red;float:right;" id="logiN">Login</span>
+          </fieldset>
+        </form>
+        <form action="go.php" method="post">
+          <fieldset title="пароль">
+            <legend>password</legend>
+              <input name="password" placeholder="password"><span style="color:red;">*</span>
+          </fieldset>
+          <fieldset title="Почта">
+            <legend>email</legend>
+              <input name="email" placeholder="email"><span style="color:red;">*</span>
+          </fieldset>
+          <fieldset title="Имя">
+            <legend>Name</legend>
+              <input name="Name" placeholder="Name">
+          </fieldset>
+          <fieldset title="Фамилия">
+            <legend>Lastname</legend>
+              <input name="Lastname" placeholder="Lastname">
+          </fieldset>
+        <fieldset title="Лет">
+            <legend>age</legend>
+              <input name="age" placeholder="age">
+          </fieldset>
+          <fieldset title="Пол">
+            <legend>gender</legend>
+              <input name="gender" placeholder="gender">
+          </fieldset>
+          <fieldset title="Группа крови">
+            <legend>blood_type</legend>
+              <input name="blod_type" placeholder="blod_type">
+          </fieldset>
+          <fieldset title="профессия">
+          <legend>profession</legend>
+              <input name="profession" placeholder="profession">
+          </fieldset>
+         <fieldset title="Дети: да\нет">
+            <legend>having_children</legend>
+              <input name="having_children" placeholder="have_children">
+          </fieldset>
+          <fieldset title="типо семейное положение">
+            <legend>marital_status</legend>
+              <input name="marital_status" placeholder="marital_status">
+          </fieldset>
+          <fieldset title="О_о хобби! Неушто!">
+            <legend>hobby</legend>
+              <input name="hobby" placeholder="hobby">
+          </fieldset>
+          <fieldset title="Образование ОДНАКО!">
+            <legend>education</legend>
+              <input name="education" placeholder="education">
+          </fieldset>
+          <!-- <fieldset>
+            <legend>if</legend>
+              <input name="if" placeholder="if">
+          </fieldset> -->
+          <fieldset title="телефон">
+            <legend>PhoneNumber</legend>
+              <input name="PhoneNumber" placeholder="PhoneNumber">
+          </fieldset>
+          <button type="submit" name="registration">GO</button><a href=/account/autorization.html><span style='color:grey;margin-left:3%;float:right;'>autorization</span></a>
+        </form>
+        <p></p>
+      </article>
+
+      </main>
+  </body>
+  <script>
+let Button;
+
+    let objeR = document.querySelector('input[name=login]').value;
+    function funTic(){
+      document.querySelector('#logiN').innerHTML=document.querySelector('input[name=login]').value;
+      // аякс запрос на джейсон файл который уже валяется
+      function readTextFile(file, callback) {
+        let rawFile = new XMLHttpRequest();
+        rawFile.overrideMimeType("application/json");
+        rawFile.open("GET", file, true);
+        rawFile.onreadystatechange = function() {
+            if (rawFile.readyState === 4 && rawFile.status == "200") {
+                callback(rawFile.responseText);
+            }
+          }
+        rawFile.send(null);
+        }
+        //usage:
+        readTextFile("login.json", function(text){
+        let data = JSON.parse(text);
+        console.log(Object.values(data).value);
+        let i=+0;
+          for(i=0;i<9; i++){
+          // console.log(Object.values(data).join("")+"oK");
+          // console.log(i);
+
+        }
+        if(Object.values(data).join("")=="no"){
+          console.log("OOOOOOOOOOOOOOOOOOO");
+          console.log(Object.values(data).join(""));
+        }else if(Object.values(data).join("")=="sucesfully"){
+          console.log("-");
+          console.log(Object.values(data).join(""));
+        }else{
+          console.log('&');
+          console.log(Object.values(data).join(""));
+        }
+      // document.querySelector('input[name=login]').addEventListener('click',()=>{
+        document.querySelector('input[name=login]').style.cssText=`background:green;`;
+        // console.log("yyy");
+        // document.querySelector('#logiN').innerHTML=`${objeR}`;
+        // создать объект для формы
+       var formData = document.querySelector('input[name=login]');
+
+       // добавить к пересылке ещё пару ключ - значение
+       // formData.append("patronym", "Робертович");
+
+       // отослать
+       var xhr = new XMLHttpRequest();
+       xhr.open("POST", "login.php");
+       xhr.send(document.querySelector('input[name=login]').value);
+       console.log(document.querySelector('input[name=login]').value);
+      // })
+  });
+    }
+    document.querySelector('button[name=loginProw]').addEventListener('click', funTic,funTic);
+    document.querySelector('button[name=loginProw]').addEventListener('click', funTic);
+
+  </script>
+</html>

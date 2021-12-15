@@ -12,7 +12,7 @@ $dateModified = date("F j, Y");
 $url=$_POST['url'];
 $autor=$_POST['autor'];
 
-if($_SERVER['SERVER_NAME']=="localhost"){
+if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // Сейчас работает это!
   $database = "amirnavru4";
   $username = "root";
@@ -40,7 +40,7 @@ mysqli_close($connect);
 $connect = mysqli_connect($servername, $username, $password,$database);
 $blog=mysqli_query($connect,"SELECT `id`, `title`, `description`, `text` FROM `article` ");
 
-echo '<pre>';
+// echo '<pre>';
 $rever=array_reverse($blog);
 $blogs= mysqli_fetch_all($blog);
 $postY=mysqli_fetch_assoc($blog);
@@ -52,12 +52,12 @@ foreach ($blogs as $blog){
   // echo $blog[1].$blog[0].$blog[2].'<br>';
   $revers=array_reverse($blog);
     for($i=0;$i<2;$i++){
-      echo '<br>';
+      // echo '<br>';
       // echo "<hr>".$revers[1].$revers[0].$revers[2]."_-_";
       // echo '<br>'.$revers[$i].'___'.$blog[$i][$i];
     }
 }
-echo '</pre>';
+// echo '</pre>';
 mysqli_close($connect);
 // echo $title, $description, $text, $date, $dateModified;
 ?>
@@ -141,8 +141,8 @@ mysqli_close($connect);
             <br>
 
           <div class="block">
-          <!-- <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5152&email=" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe> -->
-          <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5451&email=" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe>
+
+            <!-- <iframe frameborder="0" src="http://ru.sigcomments.com/admin?host_id=5451&email=" marginheight="0" marginwidth="0" id="sigCommentsAdmin" name="sigCommentsAdmin" style="display: block; margin: 0px; padding: 0px; height: 1000px; width: 1100px;"></iframe> -->
 
           </div>
           <?php
@@ -172,9 +172,10 @@ mysqli_close($connect);
             </main>
             <article>
             <div class='block'>
-              <p><?php
+              <p>
+                <?php
               if(isset($_GET['post1'])){
-            // echo $posText[3];
+            echo $posText[3];
             $posText[1]="Это продолжение текста!";
             $posText[2]=' ';
               }

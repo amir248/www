@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gallery-Batton</title>
+  </head>
+  <style>
+    *{
+      margin:0;
+    }
+    body{
+      background:linear-gradient(yellow,green,cyan,orange);
+      min-height:100vh;
+    }
+    main{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+    }
+    article{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      max-width:100%;
+      width:900px;
+      flex-direction:column;
+    }
+    img{
+      max-width:100%;
+      width:900px;
+    }
+    .litleBox{
+      display:flex;
+      position:absolute;
+      justify-content:center;
+      align-items:center;
+      width:900px;
+      max-width: 100%;
+    }
+    #leftButton{
+      display:flex;
+      justify-content:flex-start;
+      align-items:center;
+      position:relative;
+      width:50%;
+      max-width:100%;
+      min-height:55vh;
+      float:left;
+      opacity:0.1;
+      z-index: 9;
+    }
+    #leftButton:hover{
+      opacity:0.9;
+    }
+    .leftButton{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      background:red;
+      position:absolute;
+      border:3px solid coral;
+      opacity:0.9;
+      z-index:0;
+    }
+
+    .leftButtonPinp{
+      border: 20px solid transparent;
+      border-right: 20px solid green;
+      margin-right:25px;
+    }
+    #rightButton{
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      position:relative;
+      width:50%;
+      max-width:100%;
+      min-height:55vh;
+      float:right;
+      opacity:0.1;
+      z-index: 1;
+    }
+    #rightButton:hover{
+      opacity:0.9;
+    }
+    .rightButton{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      width:70px;
+      height:70px;
+      border-radius:50%;
+      background:red;
+      border:3px solid coral;
+    }
+    .rightButtonPinp{
+      border: 20px solid transparent;
+      border-left: 20px solid green;
+      margin-left:25px;
+    }
+    picture{
+      z-index: 9; // это была просто проверка, но она не сработала, а стили оказалось лучше прописать на вложенный блок.
+    }
+    @media(max-width:200px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+      #rightButton{
+        min-height: 25vh;
+      }
+      #leftButton{
+        min-height: 25vh;
+      }
+    }
+    @media(max-width:300px){
+      #rightButton{
+        min-height: 35vh;
+      }
+      #leftButton{
+        min-height: 35vh;
+      }
+    }
+    </style>
+
+<!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Кнопки для фото галереи, gallery Button.",
+  "headline": "Button перелистывать галерею",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Амир Наврутдинов",
+    "alternateName": ["Amir Shikarno", "Amir Navrutdinov"],
+    "url" : "https://nasobe.ru/resume/resume.html"
+  },
+  "datePublished" : "2021-11-28",
+  "image" : "https://nasobe.ru/blozhik/img/beg/IMG_20211116_130236_938.jpg",
+  "articleSection" : "перелистывание изображений для галереи",
+  "articleBody" : "Кнопку проще сделать с помощью стиля позишн релатив. Хотя “самое простое” решение найти с помощью позишн абсолют, но у абсолютного позиционирования есть минус. Он расположен относительно его ближайшего относительно позиционированного предка, если таковой имеется. Но! Сразу определить как блок будет себя вести при той или иной ситуации задача форсмажорная. И ничего больше не остаётся как открыть консоль разработчика и проверить. Аналогичный пример как используется позишн абсолют в позишн релатив</A>.\n    Скачать скрипт style.css галерея батон, можно по ссылки. этой ссылки скачивания style.css Gallery Button. <SPAN style=\"color:yellow;background:black;\">Внимание!</SPAN> Скрипт имеет поддержку 99% земных устройств (земного происхождения(определенных во временном пространстве как: СЕЙЧАС)).",
+  "url" : "https://nasobe.ru/blozhik/?gallery-button",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://nasobe.ru/images/logo.png"
+      }
+    }
+}
+</script>
+  <body>
+    <main>
+
+      <article>
+        Кнопки для фото галереи, gallery Button.
+                <style>
+        img{
+              max-width:100%;
+              width:900px;
+            }
+            .litleBox{
+              display:flex;
+              position:absolute;
+              justify-content:center;
+              align-items:center;
+              width:900px;
+              max-width: 100%;
+            }
+            #leftButton{
+              display:flex;
+              justify-content:flex-start;
+              align-items:center;
+              position:relative;
+              width:50%;
+              max-width:100%;
+              min-height:45vh;
+              float:left;
+              opacity:0.1;
+              z-index: 9;
+            }
+            #leftButton:hover{
+              opacity:0.9;
+            }
+            .leftButton{
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              width:70px;
+              height:70px;
+              border-radius:50%;
+              background:red;
+              position:absolute;
+              border:3px solid coral;
+              opacity:0.9;
+              z-index:0;
+            }
+
+            .leftButtonPinp{
+              border: 20px solid transparent;
+              border-right: 20px solid green;
+              margin-right:25px;
+            }
+            #rightButton{
+              display:flex;
+              justify-content:flex-end;
+              align-items:center;
+              position:relative;
+              width:50%;
+              max-width:100%;
+              min-height:45vh;
+              float:right;
+              opacity:0.1;
+              z-index: 1;
+            }
+            #rightButton:hover{
+              opacity:0.9;
+            }
+            .rightButton{
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              width:70px;
+              height:70px;
+              border-radius:50%;
+              background:red;
+              border:3px solid coral;
+            }
+            .rightButtonPinp{
+              border: 20px solid transparent;
+              border-left: 20px solid green;
+              margin-left:25px;
+            }
+            picture{
+              z-index: 9; // это была просто проверка, но она не сработала, а стили оказалось лучше прописать на вложенный блок.
+            }
+            @media(max-width:10px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 15vh;
+              }
+              #leftButton{
+                min-height: 15vh;
+              }
+            }
+            @media(max-width:300px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 20vh;
+              }
+              #leftButton{
+                min-height: 20vh;
+              }
+            }
+            @media(min-width:300px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 25vh;
+              }
+              #leftButton{
+                min-height: 25vh;
+              }
+            }
+            @media(min-width:400px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 35vh;
+              }
+              #leftButton{
+                min-height: 35vh;
+              }
+            }
+            @media(min-width:500px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 40vh;
+              }
+              #leftButton{
+                min-height: 40vh;
+              }
+            }
+            @media(min-width:700px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 45vh;
+              }
+              #leftButton{
+                min-height: 45vh;
+              }
+            }
+            @media(min-width:800px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 55vh;
+              }
+              #leftButton{
+                min-height: 55vh;
+              }
+            }
+            @media(min-width:900px){  /*медиа запросы, т.к. гелерея выпрыгивает по общей высоте и в процентном соотношении кнопки не подходят */
+              #rightButton{
+                min-height: 65vh;
+              }
+              #leftButton{
+                min-height: 65vh;
+              }
+            }
+            </style>
+
+
+<picture>
+
+  <img src="https://nasobe.ru/blozhik/img/beg/P11111-132550.jpg" id="imge">
+
+</picture>
+
+<script>
+
+  let ok=+0;
+
+  document.querySelector('#imge').addEventListener('click',()=>{ // поставим прослушку события на клик
+
+  ok++; // плюсуем с каждым кликом к переменно одын!
+
+  if(ok==1){ // если переменная равна одному, то меняем ссылку изображения на новую ссылку с картинкой.
+
+  document.querySelector('#imge').src="https://nasobe.ru/blozhik/img/the-outside-world/P11120-065651.jpg"; // очень важно указать правильный путь файла, который ведет к изображению! О_о
+
+  }else if(ok==2){
+
+  document.querySelector('#imge').src="https://nasobe.ru/blozhik/img/beg/P11119-125537.jpg"; // в тот момент когда переменная будет равна двум, ссылка возвращается на начальную картинку
+
+  ok=0;
+
+  }else{
+
+  console.log('O_o');
+
+  }
+
+  });
+
+</script>
+
+            <p style="display:flex;justify-content: center;align-items: center;background:green; max-width:100%;width:900px;border-radius:10px;font-size:20px;"><sup style="padding:1%;"><a href=https://disk.yandex.ru/d/Z987j3tt-BWWKw>Скачать простую фото галерею.</a></sup></p>
+            <picture>
+                  <div class="litleBox">
+                  <div id="leftButton"><span class="leftButton"><p class="leftButtonPinp"></p></span></div>
+                  <div id="rightButton"><span class="rightButton"><p class="rightButtonPinp"></p></span></div>
+                  </div>
+                  <img src='img/beg/P11111-132550.jpg' alt='#' id='Cheb'>
+                </picture>
+            <p><a href=https://nasobe.ru/blozhik/blog.php?photo-gallery-on-javascript>Фото галерею скачать бесплатно простую можно прямо тут</a>, история с чего {ой, все}  начиналась <a href=https://nasobe.ru/kostylea.html>фотогалерея начало (Костылея)</a>.</p> <p>Усовершенствованная галерея для изображений <a href=https://nasobe.ru/blozhik/blog.php?photo-gallery>Фото галерея версия три</a></p>
+            <h2>Дальше… перелистывание изображений для галереи.</h2>
+            <p>Никогда такого не было и вот опять!
+            Гудит тревожная сирена. Где то на просторах ёнтернета, снова произошло, непредвиденное происшествие! Это форсмажорная авиакатастрофа с участием инопланетян! И как всегда, можно ожидать что на одного верстальщика на этой “грешной” планете {О_о}становится больше.</p>
+
+            <h2>Как сделать кнопку поверх изображений.</h2>
+            <span style="border:3px solid red; background:grey;"><p style=" margin:1%;color:white; text-shadow: 1px 1px 3px black;max-width:100%;">&lt;div style="display:flex; justify-content:space-between; align-items:center;width:900px;max-width: 100%;height:200px; background:#096;<br />position:relative;"&gt;<br />&lt;div style="width:50px; height:100px; background:#CC0;"&gt;<br />&lt;span style="color:blue;text-shadow:1px 1px 3px black;;"&gt;1&lt;br&gt;Baton&lt;/span&gt;<br />&lt;/div&gt;<br />&lt;p style="color:coral;text-shadow:black 1px 1px 3px;"&gt;Кнопки поверх изображения!&lt;/p&gt;<br />&lt;div style="width:50px; height:100px; background:#2C0;"&gt;<br />&lt;span style="color:blue;text-shadow:1px 1px 3px black;;"&gt;2&lt;br&gt;Baton&lt;/span&gt;<br />&lt;/div&gt;<br />&lt;/div&gt;</p>
+            </span>
+
+            <div style="display:flex; justify-content:space-between; align-items:center;width:900px;max-width: 100%;height:200px; background:#096;
+            position:relative;">
+              <div style="width:50px; height:100px; background:#CC0;">
+                <span style="color:blue;text-shadow:1px 1px 3px black;;">1<br>Baton</span>
+              </div>
+              <p style="color:coral;text-shadow:black 1px 1px 3px;">Кнопки поверх изображения!</p>
+              <div style="width:50px; height:100px; background:#2C0;">
+                <span style="color:blue;text-shadow:1px 1px 3px black;;">2<br>Baton</span>
+              </div>
+            </div>
+            <p>Кнопку проще сделать с помощью стиля позишн релатив. Хотя “самое простое” решение найти с помощью позишн абсолют, но у абсолютного позиционирования есть минус. Он расположен относительно его ближайшего относительно позиционированного предка, если таковой имеется. Но! Сразу определить как блок будет себя вести при той или иной ситуации задача форсмажорная. И ничего больше не остаётся как открыть консоль разработчика и проверить.
+            <a href=https://webkyrs.info/post/vyravnivanie-bloka-div-so-svoistvom-position-absolute-ili-fixed-po-tsentru>Аналогичный пример как используется позишн абсолют в позишн релатив</a>.
+            Скачать скрипт style.css галерея батон, можно по <a href=https://disk.yandex.ru/d/R1VC8g2qiHa-mA>этой ссылки скачивания style.css Gallery Button</a>. <span style='color:yellow;background:black;'>Внимание!</span> Скрипт имеет поддержку 99% земных устройств (земного происхождения(определенных во временном пространстве как: СЕЙЧАС)).</p>
+            <p>Так-же Вы можете посмотреть скрипт из консоли веб разработчика (нажав клавишу F12</p>
+          <script>
+
+          var IMG = [{
+            name : "gallery",
+            count : "0",
+            alt : "Джек Воробей, Капитан Джек Воробей!",
+            src : "https://nasobe.ru/blozhik/img/beg/Dzhek_Vorobej.jpg",
+            hash : "kapitanDzhekVorobej"
+          },
+          {
+            name : "gallery",
+            count : "1",
+            alt : "чувак убегает",
+            src : "https://nasobe.ru/blozhik/img/beg/beg.jpg",
+            hash : "chelBegi"
+          },
+          {
+            name : "gallery",
+            count : "2",
+            alt : "Бизнес леди",
+            src : "https://nasobe.ru/blozhik/img/beg/Biznes-insajt-sila-voli.jpg",
+            hash : "BussinesLadi"
+          },
+          {
+            name : "Tru",
+            count : "3",
+            alt : "Полная женщина летит",
+            src : "https://nasobe.ru/blozhik/img/beg/bezhat-letet.jpg",
+            hash : "BigGirl"
+          },
+          {
+            name : "fouv",
+            count : "4",
+            alt : "Чебурашка Еврей!",
+            src : "https://nasobe.ru/blozhik/img/beg/cheb.jpg",
+            hash : "Chiburashka"
+          },
+          {
+            name : "A",
+            count : "5",
+            alt : "Amir",
+            src : "https://nasobe.ru/blozhik/img/beg/IMG_20211116_130236_938.jpg",
+            hash : "Amir"
+          },
+          {
+            name : "fouv6",
+            count : "6",
+            alt : "document.querySelector для быстрой галереи",
+            src : "https://nasobe.ru/blozhik/img/beg/P11105-073214.jpg",
+            hash : "document.querySelector"
+          },
+          {
+            name : "fouv",
+            count : "7",
+            alt : "код быстрой галереи",
+            src : "https://nasobe.ru/blozhik/img/beg/P11105-073330.jpg",
+            hash : "KodGallery"
+          },
+          {
+            name : "fo8",
+            count : "8",
+            alt : "Фотогалерея на яваскрипт",
+            src : "https://nasobe.ru/blozhik/img/beg/P11111-132550.jpg",
+            hash : "kofe"
+          },
+          {
+            name : "f",
+            count : "9",
+            alt : "Скрипт фотогалереи на костылях(Костылеи)",
+            src : "https://nasobe.ru/blozhik/img/beg/P11119-125537.jpg",
+            hash : "100GRandGO"
+          },
+          {
+            name : "fv",
+            count : "10",
+            alt : "Скрипт на JS фотогалереи",
+            src : "https://nasobe.ru/blozhik/img/beg/P11119-163322.jpg",
+            hash : "KOD"
+          },
+          {
+            name : "fouv",
+            count : "11",
+            alt : "Amir Shikaren",
+            src : "https://nasobe.ru/blozhik/img/beg/P11119-172352.jpg",
+            hash : "Shikarno"
+          },
+          {
+            name : "",
+            count : "12",
+            alt : "Трафик на лендинги всегда мобильный",
+            src : "https://nasobe.ru/blozhik/img/the-outside-world/P11120-064220.jpg",
+            hash : "mobile-trafik"
+          },
+          {
+            name : "",
+            count : "13",
+            alt : "Отображение изображений в серпе",
+            src : "https://nasobe.ru/blozhik/img/the-outside-world/P11120-065651.jpg",
+            hash : "the-outside-world"
+          }];
+          document.addEventListener("DOMContentLoaded", funcRef);
+          window.addEventListener("hashchange", funcRef, false);
+
+          function funcRef(){
+            if(window.location.hash=='#kapitanDzhekVorobej'){
+              console.log("okYra!!!");
+              document.querySelector('#Cheb').src=IMG[0].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[0].alt);
+              console.log(`${IMG[0].src}`);
+              window.location.hash='#kapitanDzhekVorobej';
+              ClickImg=1;
+            }else if(window.location.hash=='#chelBegi'){
+              document.querySelector('#Cheb').src=IMG[1].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[1].alt);
+              // O_o hands style
+              window.location.hash='#chelBegi'
+              ClickImg=2;
+            }else if(window.location.hash=='#BussinesLadi'){
+              document.querySelector('#Cheb').src=IMG[2].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[2].alt);
+              // O_o hands style
+              window.location.hash='#BussinesLadi';
+              ClickImg=3;
+            }else if(window.location.hash=='#BigGirl'){
+              document.querySelector('#Cheb').src=IMG[3].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[3].alt);
+              // O_o hands style
+              window.location.hash='#BigGirl';
+              ClickImg=4;
+            }else if(window.location.hash=='#Chiburashka'){
+              document.querySelector('#Cheb').src=IMG[4].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[4].alt);
+              // Proslushka click
+                  window.location.hash='#Chiburashka';
+                ClickImg=5;
+            }else if(window.location.hash=='#Amir'){
+              document.querySelector('#Cheb').src=IMG[5].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[5].alt);
+              // Proslushka click
+                  window.location.hash='#Amir';
+                ClickImg=6;
+            }else if(window.location.hash=='#document.querySelector'){
+              document.querySelector('#Cheb').src=IMG[6].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[6].alt);
+              // Proslushka click
+                  window.location.hash='#document.querySelector';
+                ClickImg=7;
+            }else if(window.location.hash=='#KodGallery'){
+              document.querySelector('#Cheb').src=IMG[7].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[7].alt);
+              // Proslushka click
+                  window.location.hash='#KodGallery';
+                ClickImg=8;
+            }else if(window.location.hash=='#kofe'){
+              document.querySelector('#Cheb').src=IMG[8].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[8].alt);
+              // Proslushka click
+                  window.location.hash='#kofe';
+                ClickImg=9;
+            }else if(window.location.hash=='#100GRandGO'){
+              document.querySelector('#Cheb').src=IMG[9].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[9].alt);
+              // Proslushka click
+                  window.location.hash='#100GRandGO';
+                ClickImg=10;
+            }else if(window.location.hash=='#KOD'){
+              document.querySelector('#Cheb').src=IMG[10].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[10].alt);
+              // Proslushka click
+                  window.location.hash='#KOD';
+                ClickImg=11;
+            }else if(window.location.hash=='#Shikarno'){
+              document.querySelector('#Cheb').src=IMG[11].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[11].alt);
+              // Proslushka click
+                  window.location.hash='#Shikarno';
+                ClickImg=12;
+            }else if(window.location.hash=='#mobile-trafik'){
+              document.querySelector('#Cheb').src=IMG[12].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[12].alt);
+              // Proslushka click
+                  window.location.hash='#mobile-trafik';
+                ClickImg=13;
+            }else if(window.location.hash=='#the-outside-world'){
+              document.querySelector('#Cheb').src=IMG[13].src;
+              document.querySelector('#Cheb').setAttribute('alt', IMG[13].alt);
+              // Proslushka click
+                  window.location.hash='#the-outside-world';
+                ClickImg=14;
+            }else{
+              ClickImg=0;
+              console.log('Ok');
+            }
+
+          };
+              let ClickImg=+0;
+              document.querySelector('#rightButton').addEventListener('click', gangIMG);
+
+
+              document.querySelector('#leftButton').addEventListener('click', MinusaIMG);
+              function MinusaIMG(){
+                ClickImg--;
+                if(ClickImg>=15){
+                  ClickImg=14
+                  document.querySelector('#Cheb').src=IMG[13].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[13].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[13].hash;
+                }else if(ClickImg==13){
+                  document.querySelector('#Cheb').src=IMG[12].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[12].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[12].hash;
+                }else if(ClickImg==12){
+                  document.querySelector('#Cheb').src=IMG[11].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[11].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[11].hash;
+                    // ClickImg=0;
+                }else if(ClickImg==11){
+                  document.querySelector('#Cheb').src=IMG[10].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[10].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[10].hash;
+                    // ClickImg=10;
+                }else if(ClickImg==10){
+                  document.querySelector('#Cheb').src=IMG[9].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[9].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[9].hash;
+                    // ClickImg=9;
+                }else if(ClickImg==9){
+                  document.querySelector('#Cheb').src=IMG[8].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[8].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[8].hash;
+                    // ClickImg=8;
+                }else if(ClickImg==8){
+                  document.querySelector('#Cheb').src=IMG[7].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[7].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[7].hash;
+                    // ClickImg=7;
+                }else if(ClickImg==7){
+                  document.querySelector('#Cheb').src=IMG[6].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[6].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[6].hash;
+                    // ClickImg=6;
+                }else if(ClickImg==6){
+                  document.querySelector('#Cheb').src=IMG[5].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[5].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[5].hash;
+                    // ClickImg=5;
+                }else if(ClickImg==5){
+                  document.querySelector('#Cheb').src=IMG[4].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[4].alt);
+                  // Proslushka click
+                      window.location.hash=IMG[4].hash;
+                    // ClickImg=5;
+                }else if(ClickImg==4){
+                  document.querySelector('#Cheb').src=IMG[3].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[3].alt);
+                  // O_o hands style
+                  window.location.hash=IMG[3].hash;
+                  ClickImg=4;
+                }else if(ClickImg==3){
+                  document.querySelector('#Cheb').src=IMG[2].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[2].alt);
+                  // O_o hands style
+                  window.location.hash=IMG[2].hash;
+                  // ClickImg=3;
+                }else if(ClickImg==2){
+                    document.querySelector('#Cheb').src=IMG[1].src;
+                    document.querySelector('#Cheb').setAttribute('alt', IMG[1].alt);
+                    // O_o hands style
+                    window.location.hash=IMG[1].hash;
+                    // ClickImg=2;
+              }else if(ClickImg==1){
+                document.querySelector('#Cheb').src=IMG[0].src;
+                document.querySelector('#Cheb').setAttribute('alt', IMG[0].alt);
+                // console.log(`${IMG[0].src}`);
+                window.location.hash=IMG[0].hash;
+                ClickImg=14;
+              }else{
+                ClickImg=14;
+                console.log("yyyy");
+                }
+              }
+
+              function gangIMG(){
+                ClickImg++;
+                if(ClickImg==1){
+                  document.querySelector('#Cheb').src=IMG[0].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[0].alt);
+                  // console.log(`${IMG[0].src}`);
+                  window.location.hash=IMG[0].hash;
+                }else if(ClickImg==2){
+                  document.querySelector('#Cheb').src=IMG[1].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[1].alt);
+                  // O_o hands style
+                  window.location.hash=IMG[1].hash;
+                  // ClickImg=2;
+                }else if(ClickImg==3){
+                  document.querySelector('#Cheb').src=IMG[2].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[2].alt);
+                  // O_o hands style
+                  window.location.hash=IMG[2].hash;
+                  // ClickImg=3;
+                }else if(ClickImg==4){
+                  document.querySelector('#Cheb').src=IMG[3].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[3].alt);
+                  // O_o hands style
+                  window.location.hash=IMG[3].hash;
+                  ClickImg=4;
+                }else if(ClickImg==5){
+                  document.querySelector('#Cheb').src=IMG[4].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[4].alt);
+                  // Proslushka click
+                      window.location.hash=IMG[4].hash;
+                    // ClickImg=5;
+                }else if(ClickImg==6){
+                  document.querySelector('#Cheb').src=IMG[5].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[5].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[5].hash;
+                    // ClickImg=5;
+                }else if(ClickImg==7){
+                  document.querySelector('#Cheb').src=IMG[6].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[6].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[6].hash;
+                    // ClickImg=6;
+                }else if(ClickImg==8){
+                  document.querySelector('#Cheb').src=IMG[7].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[7].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[7].hash;
+                    // ClickImg=7;
+                }else if(ClickImg==9){
+                  document.querySelector('#Cheb').src=IMG[8].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[8].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[8].hash;
+                    // ClickImg=8;
+                }else if(ClickImg==10){
+                  document.querySelector('#Cheb').src=IMG[9].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[9].alt);
+                  // Proslushka click
+                  window.location.hash=IMG[9].hash;
+                    // ClickImg=9;
+                }else if(ClickImg==11){
+                  document.querySelector('#Cheb').src=IMG[10].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[10].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[10].hash;
+                    // ClickImg=10;
+                }else if(ClickImg==12){
+                  document.querySelector('#Cheb').src=IMG[11].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[11].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[11].hash;
+                    // ClickImg=0;
+                }else if(ClickImg==13){
+                  document.querySelector('#Cheb').src=IMG[12].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[12].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[12].hash;
+                    // ClickImg=0;
+                }else if(ClickImg==14){
+                  document.querySelector('#Cheb').src=IMG[13].src;
+                  document.querySelector('#Cheb').setAttribute('alt', IMG[13].alt);
+                  // Proslushka click
+                        window.location.hash=IMG[13].hash;
+                    ClickImg=0;
+                }else{
+                  ClickImg=0;
+                  console.log('Ok');
+                }
+              };
+          </script>
+</html>

@@ -42,7 +42,7 @@
                 max-width: 100%;
             }
             aside{display: none;}
-            @media(min-width:500px){
+            @media(min-width:900px){
                 aside{
                     display:flex;
                     position:sticky;
@@ -116,7 +116,7 @@
         "@id": "https://nasobe.ru/enable-disable-on-javascript.html"
      },
       "datePublished" : "2021-03-28",
-      "dateModified": "2021-03-29",
+      "dateModified": "2021-11-21",
       "image" : "https://nasobe.ru/images/imagesWindow.png",
       "articleSection" : "Пример на javascript который можно вставить прямо отсюда.",
       "articleBody" : "Самый простой вариант установить счетчик кликов по элементу и при достижении порога 2, обнулять. В javascript можно столкнуться с тем что namber определиться как строка и не произведет математическое вычисление. Поэтому надо записать перед новой функцией let number =+0; // это добавит уверенности что переменная number будет числом",
@@ -259,8 +259,8 @@
                     if(number==1){
                         document.querySelector('#un').style.display="flex";//изменения с none on flex
                         console.log('bolshe'+document.documentElement.clientWidth);
-                        if(window.innerWidth<500){ // будет отображаться менюшка от кнопки если экран маленький
-                            console.log('>500');
+                        if(window.innerWidth<900){ // будет отображаться менюшка от кнопки если экран маленький
+                            console.log('>900');
                             let newMenu = document.createElement('div');
                             newMenu.className="OOjj"; // Надо было добавить класс, чтобы потом его можно было удалить.
                             newMenu.style.cssText=`
@@ -290,7 +290,7 @@
                     }else{
                         document.querySelector('#un').style.display="none";//вернуть на свои круги
                         number=0;
-                        if(window.innerWidth<500){
+                        if(window.innerWidth<900){
                         document.querySelector('.OOjj').remove();// Удалить потому что так работает.
                         }
                         // document.getElementById("Cool").remove();
