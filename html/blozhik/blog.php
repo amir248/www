@@ -48,8 +48,8 @@ $allPostsText=mysqli_fetch_all($posText);
     <meta name="robots" content="all">
     <meta name="autor" content="Amir Navrutdinov">
     <meta name='description' content="<?= $description ?>">
-    <meta name='keywords' content="ключивики">
-    <link rel="canonical" href="https://nasobe.ru/blozhik/">
+    <meta name='keywords' content="">
+    <link rel="canonical" href="">
     <meta name="theme-color" content="#FFD700">
     <!-- Yandex.RTB -->
 <script>window.yaContextCb=window.yaContextCb||[]</script>
@@ -181,17 +181,17 @@ $allPostsText=mysqli_fetch_all($posText);
         if(window.location.href==`https://nasobe.ru/blozhik/blog.php`){
           // document.querySelector('#search').style.background=`green`;
           document.querySelector('#search').style.display=`block`;
-          console.log(window.location);
+          // console.log(window.location);
         }else if(window.location.href==`https://nasobe.ru/blozhik/`){
           document.querySelector('#search').style.display=`block`;
-          console.log(window.location);
+          // console.log(window.location);
         }else{
           console.log('else !==');
         }
       </script>
       <script>
       if(window.location=='https://nasobe.ru/blozhik/blog.php'){ // https://nasobe.ru/blozhik/blog.php
-        console.log('blog.php'+"__"+window.location);
+        // console.log('blog.php'+"__"+window.location);
         document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/');
       }else if(window.location==window.location){
         console.log('else if');
@@ -200,7 +200,7 @@ $allPostsText=mysqli_fetch_all($posText);
       document.querySelector('meta[name="keywords"]').setAttribute("content", '<?= $keywords ?>');
       document.title='<?= $title3 ?>';
       }else{
-        console.log('Canonical '+window.location.href);
+        // console.log('Canonical '+window.location.href);
       document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/');
       document.querySelector('meta[name="description"]').setAttribute("content", '<?= $description ?>');
       document.querySelector('meta[name="keywords"]').setAttribute("content", '<?= $keywords ?>');

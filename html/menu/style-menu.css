@@ -44,11 +44,28 @@
     .font{
         display: flex;
         flex: 0 100%;
+        border: 1px solid green;
         justify-content: center;
         align-items: center;
         margin: 2%;
         background-color:rgb(65, 184, 56);
         min-height: 50px;
+    }
+    .font3{
+      display: flex;
+      flex: 0 100%;
+      border: 1px solid green;
+      justify-content: center;
+      align-items: center;
+      margin: 2%;
+      background-color:rgb(253 255 81);
+      min-height: 50px;
+    }
+    .font3:hover{
+      background: black;
+      text-shadow: yellow 1px 1px 2px;
+      border: 1px solid yellow;
+      color:white;
     }
     .font:hover{
         background-color:rgba(0, 255, 0, 0.3);

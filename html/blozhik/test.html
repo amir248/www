@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel='icon' href='../images/greenStarHTMLcoder.svg' >
+    <style>
+      *{
+        margin:0;
+      }
+      body{
+        background:green;
+      }
+      main{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width:100%;
+      }
+      article{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-widtht:100%;
+        width:900px;
+        flex-direction:column;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <!-- Разметка JSON-LD, созданная Мастером разметки структурированных данных Google. -->
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Article",
+  "name" : "Фавикон",
+  "headline": "Установить favicon.svg на сайт",
+  "author" : {
+    "@type" : "Person",
+    "name" : "Амир Наврутдинов",
+    "alternateName": ["Amir Shikarno", "Amir Navrutdinov"],
+    "url" : "https://nasobe.ru/resume/resume.html"
+  },
+  "datePublished" : "2022-01-02",
+  "image" : "https://nasobe.ru/images/greenStarHTMLcoder.svg",
+  "articleSection" : "Тег для подстановки изображения с фавиконом:",
+  "articleBody" : "&lt;link rel=&quot;icon&quot; href=&quot;favicon.svg&quot; type=&quot;image/svg+xml&quot;&gt;</SPAN></P> <P>Подставить независимый фавикон svg в любое место раздела head. Так-же для подстраховки можно оставить в корневой директории сайта старый фавикон который определяться самостоятельно на всех страницах директории: favicon.ico. Таким образом если на странице не указан линк рел икон с путем изображения svg, будет отображаться фавикон ико.</P>            <P>Favicon svg подставляется в красивую иконку в браузере, помогает ориентироваться и понимать обозначение.",
+  "url" : "https://nasobe.ru/blozhik/?favicon",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "Веб мастерская имени Барона Сайтоверстаузена",
+    "logo": {
+        "@type": "ImageObject",
+        "url": "https://nasobe.ru/images/logo.png"
+      }
+    }
+}
+</script>
+        <h1>yy</h1>
+                Фавикон
+          <p>Тег для подстановки изображения с фавиконом:
+          <p style='background:green;color:#a0ffff;width:900px;max-width:100%;text-shadow:1px 1px 2px black;'><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel="icon" href="favicon.svg" type="image/svg+xml"&gt;</span></p>
+          <p>Подставить независимый фавикон svg в любое место раздела head. Так-же для подстраховки можно оставить в корневой директории сайта старый фавикон который определяться самостоятельно на всех страницах директории: favicon.ico. Таким образом если на странице не указан линк рел икон с путем изображения svg, будет отображаться фавикон ико.</p>
+
+          <p>Favicon svg подставляется в красивую иконку в браузере, помогает ориентироваться и понимать обозначение. <a href='https://yandex.ru/support/webmaster/search-results/favicon.html'>Яндекс рекомендует использовать размеры 120*120 пикселей.</a></p>
+
+          <h2>Сделать фавикон svg</h2>
+          <p>С помощью векторного редактора в моем случае это <a hfref='https://inkscape.org/ru/'>inkscape</a> потому что он бесплатный. )
+на вкладке: File в разделе Document Properties… нужно указать размеры width:120px; и Height:120px;
+</p>
+          <img src='../images/greenStarHTMLcoder.svg' alt='фавикон'>
+
+          <p>После чего останется лишь написать информацию для отображения и можно со спокойной и чистой совестью получать поздравления. Все: Ваш фавикон готов!</p>
+          <span id='ok'></span>
+
+          <script>
+            document.querySelector('link[rel="icon"]').setAttribute('href','../images/HTML-CSS-JS.svg');
+            const II={
+                cell0 : 'empty',
+                cell1 : 'empty',
+                cell2 : 'empty',
+                cell3 : 'empty',
+                cell4 : 'empty',
+                cell5 : 'empty',
+                cell6 : 'empty',
+                cell7 : 'empty',
+                cell8 : 'empty'
+              };
+              function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+          }
+          let random=`${getRandomIntInclusive(0,8)}`;
+            class User{
+              constructor(name){
+                this.name=name;
+              }
+              sayHi(){
+                  alert(this.name);
+                }
+              saHi(){
+                document.querySelector('#ok').innerHTML=this.name;
+                console.log('f');
+              }
+              Obj(){
+                alert(this.name);
+              }
+              countObj(){
+                alert(this.name.length);
+              }
+            }
+
+
+class toMove{
+  constructor(x){
+        this.x = x;
+    }
+
+    // объявление метода run
+     run(){
+        // обращение к собственному атрибуту через this
+        this.x += `${getRandomIntInclusive(0,8)}`;
+        // return `${random}`;
+    }
+    toHod(){
+      II.cell0='box';
+      console.log(II);
+    }
+}
+            </script>
+        </article>
+    </main>
+  </body>
+</html>

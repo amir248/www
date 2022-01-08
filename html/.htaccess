@@ -15,7 +15,7 @@ RewriteCond %{HTTP_HOST} ^www.nasobe.ru$ [NC]
 RewriteRule ^(.*)$ https://nasobe.ru/$1 [R=301,L]
 
 
-DirectoryIndex page.html blog.php index.php
+DirectoryIndex page.html blog.php index.php index.html
 
 
 #<IfModule ssl_module>

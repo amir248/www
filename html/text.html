@@ -92,6 +92,20 @@
       <template>
         <div id='new'></div>
       </template>
+      Установить каноникал правильно.
+
+  О_о: поисковики сначало индексирует заголовок страницы и когда бекенд отдаёт отрисовку, то именно она и остается. А яваскрипт вообще не читается роботом поисковика, потому что робот поисковика опознает только отданную страницу с сервера и нет никаких данных о выполнении JS.
+
+  Посмотреть как будет отображаться заголовок при обходе поисковиком: <a href=’https://bertal.ru/’>https://bertal.ru/</a>
+  Таким образом чтобы указать <a href=’https://yandex.ru/support/webmaster/robot-workings/canonical.html’>канонический адрес страницы</a>, нужно отдавать его бэкендом. И если конструировать яваскриптом
+  <div style='background:green; width:100%;text-align:center;margin:1%;'><p style='border:3px solid red;word-break: break-all;text-shadow:1px 1px 2px black; color:white;'>
+        document.querySelector("link[rel=canonical]").setAttribute("href", 'https://nasobe.ru/blozhik/'+window.location.search);
+  </p></div>
+
+  Необходимо удалить каноникал, а оставить пустое значение, потому что перезатирать яваскриптом канонический адрес не выйдет. Робот поисковика не выполняет яваскрипт.
+  И первым делом отрисуется то что указано хедере, но и яваскрипт попадает в хедер, если тег каноникал оставить пустым. Хотя в заголовках этого не видно, но в вебмастере временами материализуется. Видимо совершенно случайно. Как это происходит и кто может знать, наверняка? Остаётся остросюжетной загадкой, запутанной завесой форсмажорных догадок с элементами катастрофы, авиационной, с участием инопланетян…
+
+
 <p id='yY'></p><span id='iO'></span>
 <!-- <p>!!! в скрипте галереи IMG < - это объект из json в котором расфасованы все изображения. </p>
 <h3 style='display:flex; justify-content: center; align-items: center; color:white; background:coral;width:calc(900px - 3%);border:3px solid coral;max-width:calc(100% - 3%);text-align:center;text-shadow:black 1px 1px 2px;border-radius:10px 10px 0 0;text-align:center;' id='scriptGallery'><span>Script Gallery</span> <a href='https://github.com/amir248/gallery_from_crutches' style='margin-left:10%;'><img src='blozhik/img/github_icon.svg' style='width:37px; max-width:100%;text-align:center;'></a></h3>

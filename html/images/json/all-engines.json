@@ -1,0 +1,36 @@
+let IMG={};
+IMG=[
+{
+name:"",
+count:'1',
+alt:"working",
+src:"https://nasobe.ru/images/CPANCH/DSC_6770.JPG",
+srcset:"",
+hash:"foto-odin",
+title: "Ура на трех мониторах сразу писать куда удобней!"
+},{
+name:"",
+count:'2',
+alt:"working",
+src:"https://nasobe.ru/images/CPANCH/DSC_6765.JPG",
+srcset:"",
+hash:"foto-dwa",
+title: "Этот скрипт гениален, потому что надо быть гением чтобы придуать такой великолепный скрипт."
+},{
+name:"",
+count:'3',
+alt:"working",
+src:"https://nasobe.ru/images/CPANCH/DSC_6766.JPG",
+srcset:"",
+hash:"foto-fryy",
+title: "О_о а вот и СпанчБоб!"
+},{
+name:"",
+count:'4',
+alt:"working",
+src:"https://nasobe.ru/images/CPANCH/DSC_6778.JPG",
+srcset:"",
+hash:"foto-fryyY",
+title: "Это Спанч Боб показывает радугу руками, но видно ли её (радугу в реальной жизни), останется загадкой. "
+}
+]

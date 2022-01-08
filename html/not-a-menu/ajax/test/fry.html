@@ -1,0 +1,123 @@
+<section>
+  <h2>fryy</h2>
+</section>
+<script src="https://nasobe.ru/images/json/fotoos.json"></script>
+<style scoped>
+
+  margin:0;
+}
+html{
+  background: linear-gradient(yellow,green,orange,cyan,yellow,blue);
+  min-height: 100vh;
+}
+body{
+  font-size: 20px;
+}
+main{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+}
+article{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width:900px;
+  flex-direction: column;
+}
+img{
+  max-width: 100%;
+  width:900px;
+}
+#iO{
+  max-width:100%;
+  width:900px;
+}
+#sigCommentsBlock{
+  max-width: 100%;
+  width:900px;
+}
+
+  .BoxButton{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:900px;
+  max-width:100%;
+  flex-direction: row;
+}
+#buttonLeft{
+  width:50%;
+  background: yellowgreen;
+  text-align: center;
+  border: 3px solid #98e200;
+  border-radius: 10px;
+}
+#buttonRight{
+  width:50%;
+  background: yellowgreen;
+  text-align: center;
+  border: 3px solid #98e200;
+  border-radius: 10px;
+}
+#buttonLeft:hover{ background: darkgreen; }
+#buttonRight:hover{ background: darkgreen; }
+</style>
+<picture>
+  <img src='https://nasobe.ru/blozhik/img/beg/P11111-132550.jpg' alt='gallery-from-crutches' title='#' id="worms">
+ </picture>
+    <div class="BoxButton">
+        <div id='buttonLeft'><span style="font-size:35px;">👈</span></div><div id="buttonRight"><span style="font-size:35px;">👉</span></div>
+      </div>
+
+
+<script>
+  console.log('Это просто подгруженный скрипт из этого апокалипсиса!')
+  document.querySelector('#iO').addEventListener('click',()=>{
+    console.log('worms');
+  });
+  // document.querySelector('#json-holder').innerHTML =JSON.stringify(IMG);
+// console.log(JSON.stringify(IMG));
+
+document.addEventListener("DOMContentLoaded",GoClick);
+window.addEventListener("hashchange",GoClick);
+document.querySelector('img').addEventListener('click',Plus);
+let CountClick=+0;
+function Plus(){
+  console.log('click');
+  CountClick++;
+  if(CountClick>=IMG.length){
+    CountClick=0;
+  }
+    // console.log("coutnClick"+'__'+CountClick);
+    for(let newi=0;newi<IMG.length;newi++){
+      if(IMG[newi].count==CountClick){
+        // console.log('nu vot'+IMG[newi].count+'__'+CountClick);
+        document.querySelector('img').src=IMG[newi].src;
+        document.querySelector('img').setAttribute('alt',IMG[newi].alt);
+        document.querySelector('img').setAttribute('title',IMG[newi].title);
+          window.location.hash='#'+IMG[newi].hash;
+      }
+    }
+}
+
+function GoClick(){
+  for(let aj=0;aj<IMG.length;aj++){
+    if(window.location.hash=='#'+IMG[aj].hash){
+    document.querySelector('img').src=IMG[aj].src;
+    document.querySelector('img').setAttribute('alt',IMG[aj].alt);
+    document.querySelector('img').setAttribute('title',IMG[aj].title);
+      // console.log(IMG[aj].count+"_"+IMG[aj].hash);
+      if(IMG[aj].srcset=={}){
+        // console.log('pusto');
+      }else{
+        document.querySelector('img').srcset=IMG[aj].srcset;
+        // console.log("nePusto");
+      }
+      // localStorage.setItem(CountClick,IMG[aj].count);
+    }
+  }
+}
+</script>

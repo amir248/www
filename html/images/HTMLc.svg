@@ -9,13 +9,13 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="512"
-   height="512"
-   viewBox="0 0 135.46666 135.46667"
+   width="120"
+   height="120"
+   viewBox="0 0 31.749999 31.750001"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)"
-   sodipodi:docname="greenStar.svg">
+   sodipodi:docname="HTMLc.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -25,14 +25,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="86.888429"
-     inkscape:cy="282.24526"
-     inkscape:document-units="mm"
+     inkscape:zoom="0.7"
+     inkscape:cx="13.417027"
+     inkscape:cy="266.00144"
+     inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:object-paths="true"
      inkscape:window-width="1848"
      inkscape:window-height="1016"
      inkscape:window-x="1352"
@@ -46,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -54,37 +53,20 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-161.53332)">
-    <path
-       sodipodi:type="star"
-       style="opacity:1;fill:#00ff00;fill-opacity:1;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       id="path39"
-       sodipodi:sides="5"
-       sodipodi:cx="71.437502"
-       sodipodi:cy="231.98807"
-       sodipodi:r1="68.484138"
-       sodipodi:r2="34.242062"
-       sodipodi:arg1="0.74245583"
-       sodipodi:arg2="1.3707744"
-       inkscape:flatsided="false"
-       inkscape:rounded="0"
-       inkscape:randomized="0"
-       d="M 121.89733,278.29015 78.241083,265.54742 42.994542,294.28635 41.623083,248.82907 3.3989599,224.18843 l 42.8086341,-15.3514 11.622734,-43.96768 27.828649,35.96959 45.407373,-2.53289 -25.60959,37.58184 z"
-       inkscape:transform-center-x="4.2048474"
-       inkscape:transform-center-y="-2.4102197" />
+     transform="translate(0,-265.24999)">
     <flowRoot
        xml:space="preserve"
-       id="flowRoot816"
+       id="flowRoot815"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.3584772,0,0,0.40285977,-5.1309201,140.34892)"><flowRegion
-         id="flowRegion818"><rect
-           id="rect820"
-           width="380.71429"
-           height="345.71429"
-           x="39.285713"
-           y="102.71429" /></flowRegion><flowPara
-         id="flowPara822"
-         style="font-size:96px;fill:#0000ff">HTML</flowPara><flowPara
-         id="flowPara824"
-         style="font-size:96px;fill:#a02c2c">coder</flowPara></flowRoot>  </g>
+       transform="matrix(0.18520033,0,0,0.18520033,-3.0167443,212.1982)"><flowRegion
+         id="flowRegion817"><rect
+           id="rect819"
+           width="600"
+           height="425.71429"
+           x="25.714285"
+           y="311.09113" /></flowRegion><flowPara
+         id="flowPara821"
+         style="font-size:53.33333588px">html</flowPara><flowPara
+         id="flowPara823"
+         style="font-size:53.33333588px">coder</flowPara></flowRoot>  </g>
 </svg>

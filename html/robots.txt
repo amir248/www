@@ -1,0 +1,9 @@
+User-agent: *
+host: https://nasobe.ru
+Allow: /
+sitemap: https://nasobe.ru/sitemap.xml
+disallow: /cgi-bin/
+
+disallow: /scandirmenu.php
+disallow: /sitemap.php
+disallow: /admin-of-this-site.php

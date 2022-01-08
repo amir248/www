@@ -220,6 +220,8 @@ background-attachment: fixed;
         </div>
 <!-- Большой скрпт мультилендинговой основы с локейшин сёрч -->
         <script>
+        let figmaTitle;
+        // ~!!!! что это выше нужно проверить
         let header;
         let annotatio;
         let figmaText;
@@ -428,23 +430,17 @@ undText=" ";
 
               <button id="button1">отправить</button>
 
-
-                  <!--dkfedf -->
-                    <!--captcha na site -->
-                      <!-- добавление элемента div -->
+<!--
                       <div class="g-recaptcha" data-sitekey="6LdmJNEZAAAAAC4NVgJ9KsjAEseUVTUoubETN0U4" data-callback="enableBtn"></div>
 
-                      <!-- элемент для вывода ошибок -->
                       <div class="text-danger" id="recaptchaError"></div>
 
-                      <!-- js-скрипт гугл капчи -->
-                      <script src='https://www.google.com/recaptcha/api.js'></script>
+                      <script src='https://www.google.com/recaptcha/api.js'></script> -->
 
 
                   <script>
                   // 1. Получить ответ гугл капчи
                   var captcha = grecaptcha.getResponse();
-
                   // 2. Если ответ пустой, то выводим сообщение о том, что пользователь не прошёл тест.
                   // Такую форму не будем отправлять на сервер.
                   if (!captcha.length) {
@@ -469,8 +465,6 @@ undText=" ";
                     // вывести её в элемент у которого id=recaptchaError
                     $('#recaptchaError').text($data.msg);
                   }
-
-
                     document.getElementById("button1").disabled = true;
                     function enableBtn(){
                       document.getElementById("button1").disabled = false;
