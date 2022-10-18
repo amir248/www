@@ -9,7 +9,7 @@ if($_SERVER['SERVER_NAME']=="localhost9"){
   $servername = "localhost"; // На Серваке вклчюаяю поключение
   $database = "nasoberu_nasite";
   $username = "nasoberu_nasite";
-  $password = "gfhjkmgfhjkm";
+  $password = "password";
 }
 //---------------------------------------------
 // $urlBlozhka=$revers[$i][4];
